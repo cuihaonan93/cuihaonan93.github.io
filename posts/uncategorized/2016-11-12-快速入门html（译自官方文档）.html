@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>html第一课（翻译自官方文档） | 崔浩楠的网站</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="翻译教程," />
+  
+
+  <meta name="description" content="什么是htmlHTML 是用来写网页的一种标准标记语言。
+
+H(Hyber) T(Text) M(Markup) L(language)超文本标记语言html用标记的形式来描述网页结构html 元素是html页面的基本块（block，暂时想不起更好的翻译）标签Tags代表了html的基本元素内容的标签（label）叫做html tagsWeb 浏览器的作用是读取 HTML 文档，并以网页的形式显示">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html第一课（翻译自官方文档）">
+<meta property="og:url" content="http://yoursite.com/posts/uncategorized/2016-11-12-快速入门html（译自官方文档）.html">
+<meta property="og:site_name" content="崔浩楠的网站">
+<meta property="og:description" content="什么是htmlHTML 是用来写网页的一种标准标记语言。
+
+H(Hyber) T(Text) M(Markup) L(language)超文本标记语言html用标记的形式来描述网页结构html 元素是html页面的基本块（block，暂时想不起更好的翻译）标签Tags代表了html的基本元素内容的标签（label）叫做html tagsWeb 浏览器的作用是读取 HTML 文档，并以网页的形式显示">
+<meta property="og:image" content="http://yoursite.com/asset/blogimg/page_structure.jpg">
+<meta property="og:updated_time" content="2016-11-14T14:31:36.978Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html第一课（翻译自官方文档）">
+<meta name="twitter:description" content="什么是htmlHTML 是用来写网页的一种标准标记语言。
+
+H(Hyber) T(Text) M(Markup) L(language)超文本标记语言html用标记的形式来描述网页结构html 元素是html页面的基本块（block，暂时想不起更好的翻译）标签Tags代表了html的基本元素内容的标签（label）叫做html tagsWeb 浏览器的作用是读取 HTML 文档，并以网页的形式显示">
+<meta name="twitter:image" content="http://yoursite.com/asset/blogimg/page_structure.jpg">
+
+  
+
+  
+    <link rel="icon" href="/asset/img/B.ico">
+  
+
+  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">有的酒</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">有的酒</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是html"><span class="toc-text">什么是html</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#小例子："><span class="toc-text">小例子：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">My First Heading</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-的Tags"><span class="toc-text">HTML 的Tags</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web-Browsers（网页浏览器）"><span class="toc-text">Web Browsers（网页浏览器）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网页的结构"><span class="toc-text">网页的结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lt-DOCTYPE-gt-是什么？"><span class="toc-text"><!DOCTYPE > 是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML的发展"><span class="toc-text">HTML的发展</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-快速入门html（译自官方文档）" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">html第一课（翻译自官方文档）</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.11.12</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>崔浩楠</span>
+        </span>
+      
+
+      
+
+
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="什么是html"><a href="#什么是html" class="headerlink" title="什么是html"></a>什么是html</h1><p>HTML 是用来写网页的一种标准标记语言。</p>
+<blockquote>
+<p>H(Hyber) T(Text) M(Markup) L(language)<br>超文本标记语言<br>html用标记的形式来描述网页结构<br>html 元素是html页面的基本块（block，暂时想不起更好的翻译）<br>标签Tags代表了html的基本元素<br>内容的标签（label）叫做html tags<br>Web 浏览器的作用是读取 HTML 文档，并以网页的形式显示出它们。浏览器不会显示 HTML 标签，而是使用标签来解释页面的内容</p>
+</blockquote>
+<h2 id="小例子："><a href="#小例子：" class="headerlink" title="小例子："></a>小例子：</h2>  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Page Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>My First Heading<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>My first paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>出来的效果会是这样：</p>
+<html><br><head><br><title>Page Title</title><br></head><br><body><br><br><h1>My First Heading</h1><br><p>My first paragraph.</p><br><br></body><br></html>
+
+<p><code>&lt;html&gt;</code>是html页面的基本要素<br><code>&lt;head&gt;</code>包含了html文档的主要信息<br><code>&lt;title&gt;</code>你的网页（网页实际上就是一篇文档）的标题<br><code>&lt;body&gt;</code>文档的主要内容<br><code>&lt;h1&gt;</code>标题的格式，h1是大标题，有h1到h6<br><code>&lt;p&gt;</code>paragraph，正文</p>
+<h2 id="HTML-的Tags"><a href="#HTML-的Tags" class="headerlink" title="HTML 的Tags"></a>HTML 的Tags</h2><ul>
+<li>成对出现&lt;&gt; &lt;/&gt;</li>
+<li>尖括号内填tag的内容，（tag实质上就是你定义了你的文档怎么去显示）</li>
+<li>结束的tag比开始时多了/,问号的那个斜杠</li>
+</ul>
+<h2 id="Web-Browsers（网页浏览器）"><a href="#Web-Browsers（网页浏览器）" class="headerlink" title="Web Browsers（网页浏览器）"></a>Web Browsers（网页浏览器）</h2><p>之前说了，浏览器读取你的html文档，展示成网页，利用tags，但不把tags展示出来。</p>
+<h2 id="网页的结构"><a href="#网页的结构" class="headerlink" title="网页的结构"></a>网页的结构</h2><p><img src="/asset/blogimg/page_structure.jpg" alt="结构"></p>
+<h2 id="lt-DOCTYPE-gt-是什么？"><a href="#lt-DOCTYPE-gt-是什么？" class="headerlink" title="&lt;!DOCTYPE &gt; 是什么？"></a>&lt;!DOCTYPE &gt; 是什么？</h2><p>&lt;!DOCTYPE&gt;从文本是理解就是文档类型，它声明了这份document 的类型，比如<code>&lt;!DOCTYPE html&gt;</code>声明这是html文档，以便于浏览器正确的展示页面。</p>
+<h2 id="HTML的发展"><a href="#HTML的发展" class="headerlink" title="HTML的发展"></a>HTML的发展</h2><table>
+<thead>
+<tr>
+<th>版本</th>
+<th>年份</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTML</td>
+<td>1991</td>
+</tr>
+<tr>
+<td>HTML 2.0</td>
+<td>1995</td>
+</tr>
+<tr>
+<td>HTML 3.2</td>
+<td>1997</td>
+</tr>
+<tr>
+<td>HTML 4.01</td>
+<td>1999</td>
+</tr>
+<tr>
+<td>XHTML</td>
+<td>2000</td>
+</tr>
+<tr>
+<td>HTML 5</td>
+<td>2014</td>
+</tr>
+</tbody>
+</table>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+  <section class="duoshuo-comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="http://yoursite.com/posts/uncategorized/2016-11-12-快速入门html（译自官方文档）.html" data-title="html第一课（翻译自官方文档）" data-url="http://yoursite.com/posts/uncategorized/2016-11-12-快速入门html（译自官方文档）.html"></div>
+    <!-- 多说评论框 end -->
+  </section>
+
+
+
+
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"浩楠93"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

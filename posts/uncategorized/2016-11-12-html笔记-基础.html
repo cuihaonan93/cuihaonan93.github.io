@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>html笔记-基础 | 崔浩楠的网站</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="html笔记," />
+  
+
+  <meta name="description" content="开始写之前
+无论什么东西，快速了解都是有可能的，之后就要通过反复使用、反复操作获得并磨炼熟练程度。很多人被误导，总是以为“一定要学到一定程度才算学会，才可以拿出手……” 这是肤浅的。要尽快掌握“最少必要知识”（MAKE），然后就开始行动、开始践行…… 真正的熟练，只能在践行之中通过试错、改进、总结、纠正等必要的环节才能获得。
+摘自《人人都是工程师》–李笑来
+
+开始读之前打开你的浏览器，点击右键，查">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html笔记-基础">
+<meta property="og:url" content="http://yoursite.com/posts/uncategorized/2016-11-12-html笔记-基础.html">
+<meta property="og:site_name" content="崔浩楠的网站">
+<meta property="og:description" content="开始写之前
+无论什么东西，快速了解都是有可能的，之后就要通过反复使用、反复操作获得并磨炼熟练程度。很多人被误导，总是以为“一定要学到一定程度才算学会，才可以拿出手……” 这是肤浅的。要尽快掌握“最少必要知识”（MAKE），然后就开始行动、开始践行…… 真正的熟练，只能在践行之中通过试错、改进、总结、纠正等必要的环节才能获得。
+摘自《人人都是工程师》–李笑来
+
+开始读之前打开你的浏览器，点击右键，查">
+<meta property="og:image" content="http://yoursite.com/asset/blogimg/dog.jpg">
+<meta property="og:updated_time" content="2016-11-13T09:25:18.103Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html笔记-基础">
+<meta name="twitter:description" content="开始写之前
+无论什么东西，快速了解都是有可能的，之后就要通过反复使用、反复操作获得并磨炼熟练程度。很多人被误导，总是以为“一定要学到一定程度才算学会，才可以拿出手……” 这是肤浅的。要尽快掌握“最少必要知识”（MAKE），然后就开始行动、开始践行…… 真正的熟练，只能在践行之中通过试错、改进、总结、纠正等必要的环节才能获得。
+摘自《人人都是工程师》–李笑来
+
+开始读之前打开你的浏览器，点击右键，查">
+<meta name="twitter:image" content="http://yoursite.com/asset/blogimg/dog.jpg">
+
+  
+
+  
+    <link rel="icon" href="/asset/img/B.ico">
+  
+
+  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">有的酒</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">有的酒</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#开始写之前"><span class="toc-text">开始写之前</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#开始读之前"><span class="toc-text">开始读之前</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OK-Let’s-start-from-here"><span class="toc-text">OK !  Let’s start from here !</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML基础-Tags"><span class="toc-text">HTML基础 Tags</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#写HTML要牢记："><span class="toc-text">写HTML要牢记：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Headings"><span class="toc-text">Headings</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">This is heading 1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">This is heading 2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Paragraphs"><span class="toc-text">Paragraphs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tags的Attributes-特性"><span class="toc-text">Tags的Attributes(特性)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语言"><span class="toc-text">语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#标题"><span class="toc-text">标题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#链接"><span class="toc-text">链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#图片的尺寸"><span class="toc-text">图片的尺寸</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Good-luck-to-you-！"><span class="toc-text">Good luck to you ！</span></a>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-html笔记-基础" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">html笔记-基础</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.11.12</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>崔浩楠</span>
+        </span>
+      
+
+      
+
+
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h4 id="开始写之前"><a href="#开始写之前" class="headerlink" title="开始写之前"></a>开始写之前</h4><blockquote>
+<p>无论什么东西，快速了解都是有可能的，之后就要通过反复使用、反复操作获得并磨炼熟练程度。很多人被误导，总是以为“一定要学到一定程度才算学会，才可以拿出手……” 这是肤浅的。要尽快掌握“最少必要知识”（MAKE），然后就开始行动、开始践行…… 真正的熟练，只能在践行之中通过试错、改进、总结、纠正等必要的环节才能获得。</p>
+<p>摘自《人人都是工程师》–李笑来</p>
+</blockquote>
+<h4 id="开始读之前"><a href="#开始读之前" class="headerlink" title="开始读之前"></a>开始读之前</h4><p>打开你的浏览器，点击右键，查看网页源代码，你会看到一堆看不懂的玩意儿，那就是html代码，这个系列笔记就是去简单地介绍html语言，并希望你们能去读懂它。给自己设个小目标吧，你希望从这个笔记中得到什么，是写代码还是能读懂就行？Anyway，定了目标，然后去做吧！</p>
+<blockquote>
+<p>我们来举一个不太恰当的例子，简单解释一下网页。开始想象，打开局域网，你应该可以访问你的网上邻居(如果你有的话)的共享文件夹，打开文件夹，里面是他分享的一些文件，你可以浏览。<br>现在你把局域网换成外部网络，共享的文件夹当成网站，里面的文件就是网页，可你怎么看呢？浏览器就是你电脑上的文件浏览器。我们经常说把网站部署到server上，其实就是把文件在一台主机上共享出来。</p>
+</blockquote>
+<h3 id="OK-Let’s-start-from-here"><a href="#OK-Let’s-start-from-here" class="headerlink" title="OK !  Let’s start from here !"></a>OK !  Let’s start from here !</h3><h2 id="HTML基础-Tags"><a href="#HTML基础-Tags" class="headerlink" title="HTML基础 Tags"></a>HTML基础 Tags</h2><h3 id="写HTML要牢记："><a href="#写HTML要牢记：" class="headerlink" title="写HTML要牢记："></a>写HTML要牢记：</h3><ul>
+<li>所有HTML文档必须以<code>&lt;!DOCTYPE   html&gt;</code>开头</li>
+<li>文档内以<code>&lt;html&gt;</code>开始，<code>&lt;/html&gt;</code>结束</li>
+<li>牢记，浏览器<strong>展示出来</strong>的是<code>&lt;body&gt;</code>与<code>&lt;/body&gt;</code>之间的内容！！！</li>
+<li>记得所有的tags都要<strong>小写</strong></li>
+</ul>
+<h3 id="Headings"><a href="#Headings" class="headerlink" title="Headings"></a>Headings</h3><blockquote>
+<p>Headings就是浏览器的标签页上显示的名字</p>
+</blockquote>
+<ul>
+<li>标题有<strong>六种</strong>大小,从<code>&lt;h1&gt;</code>到<code>&lt;h6&gt;</code></li>
+<li>Headings很重要，它在一定程度上反映了html页面的结构，而Headings中的title则反映了页面的主要内容</li>
+<li><p>你可以在<code>&lt;head&gt;</code>与<code>&lt;/head&gt;</code>之间定义你的title，甚至字符编码，就像这样：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>My First HTML<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>&lt;hr&gt;</code>则可以定义内容主题的<strong>改变</strong>（很拗口是吗？简单点，加条横线，换一页）</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span> !不要忘记了</div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is heading 1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>This is heading 2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is some other text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>This is heading 2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is some other text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>就会展示成如下：</p>
+<html><br><body><br><br><h1>This is heading 1</h1><br><p>This is some text.</p><br><hr><br><br><h2>This is heading 2</h2><br><p>This is some other text.</p><br><hr><br><br></body><br></html>
+
+<h3 id="Paragraphs"><a href="#Paragraphs" class="headerlink" title="Paragraphs"></a>Paragraphs</h3><p>用<code>&lt;p&gt;</code>来展示段落正文，<code>&lt;/p&gt;</code>来结束</p>
+<blockquote>
+<p><code>&lt;br&gt;</code>即break，暂时理解成换行吧，</p>
+</blockquote>
+<p><strong>注意！<br>在浏览器展示html页面时，它会自动忽略空格与缩进，这时<code>&lt;br&gt;</code>就很有用了</strong></p>
+<p><strong>B！U!T!!!</strong><br>HTML提供了一个很有用的tag，就是<code>&lt;pre&gt;</code>,preformatted–预格式化，<code>&lt;pre&gt;</code>元素内的文本以固定宽度的字体（通常为Courier）显示，并且它保留空格和换行符，（你基本上可以理解为，你写成什么样，展示出来什么样！）</p>
+<h3 id="Tags的Attributes-特性"><a href="#Tags的Attributes-特性" class="headerlink" title="Tags的Attributes(特性)"></a>Tags的Attributes(特性)</h3><h4 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h4><p>标记在<code>&lt;html&gt;</code>中，如：<code>&lt;html lang=&quot;en-US&quot;&gt;</code></p>
+<p>这声明了你的语言类型，这对搜索引擎和展示页面来说，是非常重要的</p>
+<h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><p>可以声明在你的正文内：<code>&lt;p title=&quot;I&#39;m pretty&quot;&gt;</code>这样，你把鼠标放在那段正文上，会出现这个title</p>
+<h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><p>链接用<code>&lt;a&gt;</code>标签，用法如下：<code>&lt;a href=&quot;http://www.baidu.com&quot;&gt;This is baidu&#39;s  link&lt;/a&gt;</code><br><a href="http://www.w3schools.com" target="_blank" rel="external">This is baidu’s link</a>,你可以试试！</p>
+<h4 id="图片的尺寸"><a href="#图片的尺寸" class="headerlink" title="图片的尺寸"></a>图片的尺寸</h4><p>在<code>&lt;img&gt;</code>中去定义weight和height，</p>
+<blockquote>
+<p>src 是source的意思，源文件</p>
+</blockquote>
+<p><code>&lt;img src=&quot;/asset/blogimg/dog.jpg&quot; width=&quot;170&quot; height=&quot;142&quot;&gt;</code><br><img src="/asset/blogimg/dog.jpg" width="170" height="142"></p>
+<blockquote>
+<p><code>&lt;alt&gt;</code>标签，当无法显示图像时，alt属性指定要使用的替代文本。<br>属性的值可以由屏幕阅读器读取。 这样，某人“收听”网页，例如 一个盲人，可以“听到”的元素。</p>
+</blockquote>
+<p>今天先写到这里，做一个小复习：</p>
+<ul>
+<li>Headings有<code>&lt;h1&gt;</code>到<code>&lt;h6&gt;</code>标题大小,<code>&lt;hr&gt;</code>加横线，<code>&lt;title&gt;</code>写标题</li>
+<li>PAragraph中<code>&lt;p&gt;</code>写正文，<code>&lt;br&gt;</code>换行，<code>&lt;pre&gt;</code>预格式化</li>
+<li>语言，标题，链接，图片尺寸几个Attributes</li>
+<li>别忘了，要<strong>小写</strong>！</li>
+</ul>
+<h1 id="Good-luck-to-you-！"><a href="#Good-luck-to-you-！" class="headerlink" title="Good luck to you ！"></a>Good luck to you ！</h1>
+    
+  </div>
+</article>
+
+</div>
+
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+  <section class="duoshuo-comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="http://yoursite.com/posts/uncategorized/2016-11-12-html笔记-基础.html" data-title="html笔记-基础" data-url="http://yoursite.com/posts/uncategorized/2016-11-12-html笔记-基础.html"></div>
+    <!-- 多说评论框 end -->
+  </section>
+
+
+
+
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"浩楠93"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
