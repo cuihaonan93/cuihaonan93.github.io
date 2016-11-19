@@ -15,16 +15,30 @@
     <meta name="keywords" content="html笔记," />
   
 
-  <meta name="description" content="东北大学">
+  <meta name="description" content="在这一章中，我们来大致的说说，html的布局，字符类型，解码，以及尺寸（适应不同的浏览器） 等等，比较杂乱的东西。
+head 在head元素中，它包含了元数据(metadata)，我们可以这么理解，它是用来解释html的代码，在 &amp;lt;head&amp;gt;中 我们常常定义:
+
+&amp;lt;title&amp;gt;在你的标签页上，或者你添加收藏时的名字
+&amp;lt;style&amp;gt;这个不用再讲了，页面的好看与否">
 <meta property="og:type" content="article">
 <meta property="og:title" content="html笔记-杂项">
 <meta property="og:url" content="http://yoursite.com/posts/uncategorized/2016-11-19-html笔记-杂项.html">
 <meta property="og:site_name" content="崔浩楠的网站">
-<meta property="og:description" content="东北大学">
-<meta property="og:updated_time" content="2016-11-19T06:25:15.031Z">
+<meta property="og:description" content="在这一章中，我们来大致的说说，html的布局，字符类型，解码，以及尺寸（适应不同的浏览器） 等等，比较杂乱的东西。
+head 在head元素中，它包含了元数据(metadata)，我们可以这么理解，它是用来解释html的代码，在 &amp;lt;head&amp;gt;中 我们常常定义:
+
+&amp;lt;title&amp;gt;在你的标签页上，或者你添加收藏时的名字
+&amp;lt;style&amp;gt;这个不用再讲了，页面的好看与否">
+<meta property="og:image" content="http://yoursite.com/asset/blogimg/zatan/html.jpg">
+<meta property="og:updated_time" content="2016-11-19T07:23:47.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html笔记-杂项">
-<meta name="twitter:description" content="东北大学">
+<meta name="twitter:description" content="在这一章中，我们来大致的说说，html的布局，字符类型，解码，以及尺寸（适应不同的浏览器） 等等，比较杂乱的东西。
+head 在head元素中，它包含了元数据(metadata)，我们可以这么理解，它是用来解释html的代码，在 &amp;lt;head&amp;gt;中 我们常常定义:
+
+&amp;lt;title&amp;gt;在你的标签页上，或者你添加收藏时的名字
+&amp;lt;style&amp;gt;这个不用再讲了，页面的好看与否">
+<meta name="twitter:image" content="http://yoursite.com/asset/blogimg/zatan/html.jpg">
 
   
 
@@ -134,6 +148,11 @@
 </div>
 
 
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#head"><span class="toc-text">head</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#小彩蛋"><span class="toc-text">小彩蛋</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#布局"><span class="toc-text">布局</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#响应式设计"><span class="toc-text">响应式设计</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#结束"><span class="toc-text">结束</span></a></li></ol>
+  </div>
+
 
 
 <div class="content content-post CENTER">
@@ -164,7 +183,34 @@
 
   <div class="article-content">
     
-      
+      <p> 在这一章中，我们来大致的说说，html的布局，字符类型，解码，以及尺寸（适应不同的浏览器）<br> 等等，比较杂乱的东西。</p>
+<h1 id="head"><a href="#head" class="headerlink" title="head"></a>head</h1><p> 在head元素中，它包含了元数据(metadata)，我们可以这么理解，它是用来解释html的代码，在 <code>&lt;head&gt;</code>中<br> 我们常常定义:</p>
+<ul>
+<li><code>&lt;title&gt;</code>在你的标签页上，或者你添加收藏时的名字</li>
+<li><code>&lt;style&gt;</code>这个不用再讲了，页面的好看与否<ul>
+<li><code>&lt;link rel=stylesheet href=&quot;mystyle.css&quot;&gt;</code>之前说过了，可以单独引入CSS文件</li>
+</ul>
+</li>
+<li><p><code>&lt;meta&gt;</code>中可以定义许多，</p>
+<ul>
+<li>比如字符的解码， <code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>但如果包含中文的话，建议用charset=gb2312。</li>
+<li>比如description，arthur，keyword格式是这样： <code>&lt;meta name=&quot;arthur&quot; content=&quot;Andy Cui&quot;&gt;</code></li>
+</ul>
+<h4 id="小彩蛋"><a href="#小彩蛋" class="headerlink" title="小彩蛋"></a>小彩蛋</h4><p>记得高中的时候，手机刚刚能上网，我们就用诺基亚看球，当时一分钟一刷新，觉得非常神奇，可以这么来实现：</p>
+<p><code>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;60&quot;&gt;</code></p>
+<p>就实现了60s的刷新</p>
+</li>
+</ul>
+<h1 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h1><p>你可以把网站的布局想象成报纸，分栏，分块</p>
+<p>直接看一下html5布局英文的描述：<br><img src="/asset/blogimg/zatan/html.jpg" alt="html.jpg"></p>
+<p>实现布局强烈建议用CSS 框架或CSS flexbox，<br>至于详细的教程，可以看看<a href="http://www.w3schools.com/css/default.asp" target="_blank" rel="external">这个教程</a></p>
+<h1 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h1><p>Responsive Design可以确保你在不同尺寸的终端浏览器上，比如手机，平板，电脑，等等，都可以获得很好的浏览体验。<br>想学的话，还要看看CSS<a href="http://www.w3schools.com/css/default.asp" target="_blank" rel="external">这个教程</a></p>
+<h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>写到这里，其实仅仅是介绍了一些html的标签，目的是可以看得懂一些网站的源代码，一些html代码，<br>当然，我们也可以写出一些漂亮的，但是非常简陋的html页面，还要学习的还有很多，CSS，bootstrap，Jquery等等。</p>
+<p>就像之前说过的一句话，</p>
+<blockquote>
+<p>学习是一种生活方式，笑着学习，高兴着去了解更多，我们不一定要以此为生，但多看看，总是好的，这个世界总比我们所知道的更精彩</p>
+</blockquote>
+
     
   </div>
 </article>
