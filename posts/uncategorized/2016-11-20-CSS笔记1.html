@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS笔记1 | 崔浩楠的网站</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="CSS笔记," />
+  
+
+  <meta name="description" content="什么是CSS在之前的html笔记系列中，提到过一点CSS，它的作用是用来定义html文档如何更优雅的展示在用户的浏览器上。
+
+官方定义：
+
+CSS stands for Cascading Style Sheets
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS笔记1">
+<meta property="og:url" content="http://yoursite.com/posts/uncategorized/2016-11-20-CSS笔记1.html">
+<meta property="og:site_name" content="崔浩楠的网站">
+<meta property="og:description" content="什么是CSS在之前的html笔记系列中，提到过一点CSS，它的作用是用来定义html文档如何更优雅的展示在用户的浏览器上。
+
+官方定义：
+
+CSS stands for Cascading Style Sheets
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+CSS">
+<meta property="og:image" content="http://www.w3schools.com/css/selector.gif">
+<meta property="og:image" content="http://yoursite.com/asset/blogimg/css/backgroud.jpg">
+<meta property="og:image" content="http://yoursite.com/asset/blogimg/css/margin2.jpg">
+<meta property="og:image" content="http://yoursite.com/asset/blogimg/css/margin.jpg">
+<meta property="og:updated_time" content="2016-11-20T06:28:30.631Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS笔记1">
+<meta name="twitter:description" content="什么是CSS在之前的html笔记系列中，提到过一点CSS，它的作用是用来定义html文档如何更优雅的展示在用户的浏览器上。
+
+官方定义：
+
+CSS stands for Cascading Style Sheets
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+CSS">
+<meta name="twitter:image" content="http://www.w3schools.com/css/selector.gif">
+
+  
+
+  
+    <link rel="icon" href="/asset/img/B.ico">
+  
+
+  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">有的酒</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">有的酒</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是CSS"><span class="toc-text">什么是CSS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS的语法"><span class="toc-text">CSS的语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#selector的形式"><span class="toc-text">selector的形式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#element"><span class="toc-text">element</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ID"><span class="toc-text">ID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#class"><span class="toc-text">class</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS的使用"><span class="toc-text">CSS的使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS中的颜色"><span class="toc-text">CSS中的颜色</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#颜色名字"><span class="toc-text">颜色名字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RGB表示"><span class="toc-text">RGB表示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEX表示"><span class="toc-text">HEX表示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS的背景"><span class="toc-text">CSS的背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS中的边线"><span class="toc-text">CSS中的边线</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#杂项"><span class="toc-text">杂项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#偏边界"><span class="toc-text">偏边界</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Padding"><span class="toc-text">Padding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#height-and-width"><span class="toc-text">height and width</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-CSS笔记1" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">CSS笔记1</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.11.20</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>崔浩楠</span>
+        </span>
+      
+
+      
+
+
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="什么是CSS"><a href="#什么是CSS" class="headerlink" title="什么是CSS"></a>什么是CSS</h1><p>在之前的html笔记系列中，提到过一点CSS，它的作用是用来定义html文档如何更优雅的展示在用户的浏览器上。</p>
+<blockquote>
+<p>官方定义：<br></p>
+<ul>
+<li>CSS stands for Cascading Style Sheets</li>
+<li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+<li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+<li>External stylesheets are stored in CSS files</li>
+</ul>
+</blockquote>
+<p>看得懂吧？</p>
+<h1 id="CSS的语法"><a href="#CSS的语法" class="headerlink" title="CSS的语法"></a>CSS的语法</h1><p><img src="http://www.w3schools.com/css/selector.gif" alt="css.jpg"></p>
+<p>前面是selector，收集器（有点直），后面declaration，声明</p>
+<p>指定哪个部分，去如何展示！</p>
+<p>如何指定就是selector<br>如何展示就是declaration</p>
+<h2 id="selector的形式"><a href="#selector的形式" class="headerlink" title="selector的形式"></a>selector的形式</h2><p>指定的方式有很多种，比如：</p>
+<ul>
+<li>element name 元素</li>
+<li>id</li>
+<li>class</li>
+</ul>
+<h3 id="element"><a href="#element" class="headerlink" title="element"></a>element</h3><p>这是最常见的，<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">    <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="ID"><a href="#ID" class="headerlink" title="ID"></a>ID</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#para1</span> &#123;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">    <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.center &#123;</div><div class="line">    text-align: center;</div><div class="line">    color: red;</div><div class="line">&#125;</div><div class="line">p/h1.center &#123;</div><div class="line">    text-align: center;</div><div class="line">    color: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这个有点复杂，</p>
+<ul>
+<li>第一种形式，意思是所有的 <code>&lt;class=&quot;center&quot;&gt;</code>都会居中，红字</li>
+<li>第二种形式，则加了一个 <code>&lt;p&gt;</code>元素，就是说，段落中所有的 <code>&lt;class=&quot;center&quot;&gt;</code>都会居中，红字</li>
+</ul>
+<h1 id="CSS的使用"><a href="#CSS的使用" class="headerlink" title="CSS的使用"></a>CSS的使用</h1><p>之前提过一次，想用CSS有三种方式：</p>
+<ul>
+<li>引用外部文件</li>
+<li>在 <code>&lt;head&gt;</code> 中定义css style</li>
+<li>内嵌代码</li>
+</ul>
+<p>外部的引用如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"mystyle.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h1 id="CSS中的颜色"><a href="#CSS中的颜色" class="headerlink" title="CSS中的颜色"></a>CSS中的颜色</h1><p>颜色的表示有三种（之前也提过）</p>
+<ul>
+<li>a valid color name - like “red”</li>
+<li>an RGB value - like “rgb(255, 0, 0)”</li>
+<li>a HEX value - like “#ff0000”</li>
+</ul>
+<h2 id="颜色名字"><a href="#颜色名字" class="headerlink" title="颜色名字"></a>颜色名字</h2><p><table class="w3-table-all notranslate"><br>  <tr><th style="width:50%">Color</th><br>    <th>Name</th></tr><br>  <tr><td style="background-color:red">&nbsp;</td><td>Red</td></tr><br>  <tr><td style="background-color:green">&nbsp;</td><td>Green</td></tr><br>  <tr><td style="background-color:blue">&nbsp;</td><td>Blue</td></tr><br>  <tr><td style="background-color:orange">&nbsp;</td><td>Orange</td></tr><br>  <tr><td style="background-color:yellow">&nbsp;</td><td>Yellow</td></tr><br>  <tr><td style="background-color:cyan">&nbsp;</td><td>Cyan</td></tr><br>  <tr><td style="background-color:black">&nbsp;</td><td>Black</td></tr><br></table><br>（其实我建议，到了现在这个水平，您可以去读一下网页的源代码了，试着把上面这个表的源码扣出来）</p>
+<h2 id="RGB表示"><a href="#RGB表示" class="headerlink" title="RGB表示"></a>RGB表示</h2><div class="w3-responsive"><br><table class="w3-table-all notranslate"><br>  <tr><br>    <th style="width:50%">Color</th><br>    <th>RGB</th><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(255, 0, 0)">&nbsp;</td><br>    <td>rgb(255,0,0)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(0, 255, 0)">&nbsp;</td><br>    <td>rgb(0,255,0)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(0, 0, 255)">&nbsp;</td><br>    <td>rgb(0,0,255)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(255, 165, 0)">&nbsp;</td><br>    <td>rgb(255,165,0)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(255, 255, 0)">&nbsp;</td><br>    <td>rgb(255,255,0)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(0, 255, 255)">&nbsp;</td><br>    <td>rgb(0,255,255)</td><br>  </tr><br></table><br></div>
+
+<h2 id="HEX表示"><a href="#HEX表示" class="headerlink" title="HEX表示"></a>HEX表示</h2><p>这个留作业，自己查一下，因为html5更偏爱这个</p>
+<h1 id="CSS的背景"><a href="#CSS的背景" class="headerlink" title="CSS的背景"></a>CSS的背景</h1><p>CSS的background是用来定义html页面的背景的，可以有：</p>
+<ul>
+<li>背景颜色</li>
+<li>背景图片</li>
+<li>是否重复</li>
+<li>背景图片的位置</li>
+<li>背景固定</li>
+<li>shorthand（简写）</li>
+</ul>
+<p>正常写：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">    <span class="attribute">background-color</span>: white;</div><div class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">"img_tree.png"</span>);</div><div class="line">    <span class="attribute">background-repeat</span>:no-repeat;</div><div class="line">    <span class="attribute">background-position</span>:right top;</div><div class="line">    <span class="attribute">background-attachment</span>: fixed;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>shorthand的写法：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">      <span class="attribute">background</span>:  white <span class="built_in">url</span>(<span class="string">"img_tree.png"</span>) no-repeat right top;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is a Heading<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is a paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is another paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>效果如下：<br><img src="/asset/blogimg/css/backgroud.jpg" alt="background.jpg"></p>
+<h1 id="CSS中的边线"><a href="#CSS中的边线" class="headerlink" title="CSS中的边线"></a>CSS中的边线</h1><p>边线有很多形式，实线，点线等等：</p>
+<ul>
+<li>dotted - Defines a dotted border</li>
+<li>dashed - Defines a dashed border</li>
+<li>solid - Defines a solid border</li>
+<li>double - Defines a double border</li>
+<li>groove - Defines a 3D grooved border. Theeffect depends on the border-color value</li>
+<li>ridge - Defines a 3D ridged border. The effect depends on the border-color value</li>
+<li>inset - Defines a 3D inset border. The effect depends on the border-color value</li>
+<li>outset - Defines a 3D outset border. The effect depends on the border-color value</li>
+<li>none - Defines no border</li>
+<li>hidden - Defines a hidden border</li>
+</ul>
+<p>结果：<br><img src="/asset/blogimg/css/margin2.jpg" alt="margin2.jpg"></p>
+<h2 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h2><ul>
+<li>border的width</li>
+<li>border的color</li>
+<li>shorthand<br>用法：<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">p.three &#123;</div><div class="line">    border-style: dotted;</div><div class="line">    border-width: 2px;/medium/thick;</div><div class="line">    border-color: green;</div><div class="line">&#125;</div><div class="line">/*简写*/</div><div class="line">p &#123;</div><div class="line">    border: 5px solid red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="偏边界"><a href="#偏边界" class="headerlink" title="偏边界"></a>偏边界</h2><p>比如左边界：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span> <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"><span class="selector-tag">p</span> &#123;</span></div><div class="line">    <span class="attribute">border-left</span>: <span class="number">6px</span> solid pink;</div><div class="line">    <span class="attribute">background-color</span>: lightgrey;</div><div class="line">&#125;<span class="tag">&lt;/<span class="name">style</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span> 看看效果 <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><img src="/asset/blogimg/css/margin.jpg" alt="margin.jpg"></p>
+<h2 id="Padding"><a href="#Padding" class="headerlink" title="Padding"></a>Padding</h2><p>Padding填充，是这个区域内的填充，与margin的方式一样，有个小技巧，比如我们想把上下填充50px，左右25px，可以这么写：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">    <span class="attribute">background-color</span>: lightblue;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">50px</span> <span class="number">25px</span>;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="height-and-width"><a href="#height-and-width" class="headerlink" title="height and width"></a>height and width</h2><p>定义所在的标签，比如 <code>&lt;h1&gt;</code> 和 <code>&lt;p&gt;</code> 以及 <code>&lt;div&gt;</code>的高度和宽度，这里就不写了。</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+  <section class="duoshuo-comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="http://yoursite.com/posts/uncategorized/2016-11-20-CSS笔记1.html" data-title="CSS笔记1" data-url="http://yoursite.com/posts/uncategorized/2016-11-20-CSS笔记1.html"></div>
+    <!-- 多说评论框 end -->
+  </section>
+
+
+
+
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"浩楠93"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
