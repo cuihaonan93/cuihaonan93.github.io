@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>js学习2 | 崔浩楠的网站</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="js学习," />
+  
+
+  <meta name="description" content="变量上次写到了，函数，方法的使用，这里呢有一个要注意的地方。就是局部变量与全局变量(Local JavaScript Variables and Global JavaScript Variables).
+很好理解，看你把变量的声明（declare，其实就是那个var）写在哪。看下面的代码1234567891011// code here can not use carNamefunction m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js学习2">
+<meta property="og:url" content="http://yoursite.com/posts/uncategorized/2016-11-25-js学习2.html">
+<meta property="og:site_name" content="崔浩楠的网站">
+<meta property="og:description" content="变量上次写到了，函数，方法的使用，这里呢有一个要注意的地方。就是局部变量与全局变量(Local JavaScript Variables and Global JavaScript Variables).
+很好理解，看你把变量的声明（declare，其实就是那个var）写在哪。看下面的代码1234567891011// code here can not use carNamefunction m">
+<meta property="og:updated_time" content="2016-11-25T09:09:43.841Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js学习2">
+<meta name="twitter:description" content="变量上次写到了，函数，方法的使用，这里呢有一个要注意的地方。就是局部变量与全局变量(Local JavaScript Variables and Global JavaScript Variables).
+很好理解，看你把变量的声明（declare，其实就是那个var）写在哪。看下面的代码1234567891011// code here can not use carNamefunction m">
+
+  
+
+  
+    <link rel="icon" href="/asset/img/B.ico">
+  
+
+  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">有的酒</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">有的酒</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-text">变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Events"><span class="toc-text">Events</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#String"><span class="toc-text">String</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String’s-methods"><span class="toc-text">String’s methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简单的方法"><span class="toc-text">简单的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#切片"><span class="toc-text">切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Replace"><span class="toc-text">Replace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#大小写"><span class="toc-text">大小写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串的连接"><span class="toc-text">字符串的连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他"><span class="toc-text">其他</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Number"><span class="toc-text">Number</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Number’s-method"><span class="toc-text">Number’s method</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Js中的数学方法"><span class="toc-text">Js中的数学方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#生成随机数"><span class="toc-text">生成随机数</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-js学习2" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">js学习2</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.11.25</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>崔浩楠</span>
+        </span>
+      
+
+      
+
+
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>上次写到了，函数，方法的使用，这里呢有一个要注意的地方。<br>就是局部变量与全局变量(Local JavaScript Variables and Global JavaScript Variables).</p>
+<p>很好理解，看你把变量的声明（declare，其实就是那个<code>var</code>）写在哪。看下面的代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// code here can not use carName</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> carName = <span class="string">"Volvo"</span>;</div><div class="line">    <span class="comment">// code here can use carName</span></div><div class="line">&#125;</div><div class="line">------------------------------------------------</div><div class="line"><span class="keyword">var</span> carName = <span class="string">" Volvo"</span>;</div><div class="line"><span class="comment">// code here can use carName</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// code here can use carName</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>很好懂吧？上面是局部，下面是全局！</p>
+<h1 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h1><p>事件，在JS中是一个很重要的概念，它可以用于改变html页面的元素，比如：</p>
+<ul>
+<li>An HTML web page has finished loading</li>
+<li>An HTML input field was changed</li>
+<li>An HTML button was clicked</li>
+</ul>
+<p>在这些时候，绑定一个事件，将会发生。<br>比如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo').innerHTML=Date()"</span>&gt;</span>The time is?<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+<p></p><p id="demo"></p><br>它把获取当前时间这个函数绑定在了button上，onclick时，就是改变页面文档的<code>id = &quot;demo&quot;</code>处为，当前时间。<p></p>
+<p>但更常见的，我们这么写：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Click the button to display the date.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"displayDate()"</span>&gt;</span>The time is?<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">displayDate</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="built_in">Date</span>();</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>把这个过程封装成一个函数，减少代码的重复性！（很重要的概念）</p>
+<p>当然了，动作不仅仅onclick（点击）这一个动作，更多的<a href="http://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank" rel="external">在这里</a></p>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>字符串，这是每个编程语言都会设计到的，js也不例外，它的字符串特性也没有什么例外的。</p>
+<blockquote>
+<p>但更建议用双引号，如<code>&quot;&quot;</code></p>
+</blockquote>
+<p>简要的写一些：</p>
+<ul>
+<li>双引号中可以加单引号，如：<code>var answer = &quot;It&#39;s alright&quot;;</code></li>
+<li>都是双引号，用<code>\</code>转义，如：<code>var y = &quot;We are the so-called &quot;Vikings&quot; from the north.&quot;</code></li>
+<li><code>\\</code>表示它本身，</li>
+</ul>
+<p>常见的转义：</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\b</code></td>
+<td>Backspace</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>Carriage Return</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>Form Feed</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>Horizontal Tabulator</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>Vertical Tabulator</td>
+</tr>
+</tbody>
+</table>
+<h2 id="String’s-methods"><a href="#String’s-methods" class="headerlink" title="String’s methods"></a>String’s methods</h2><h3 id="简单的方法"><a href="#简单的方法" class="headerlink" title="简单的方法"></a>简单的方法</h3><p>length（长度），返回字符串的长度：<br><code>sln = txt.length;</code></p>
+<p><code>indexof()</code>寻找字符串在另一个字符串中的位置，下面的会返回<code>7</code>,用法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"Please locate where 'locate' occurs!"</span>;</div><div class="line"><span class="keyword">var</span> pos = str.indexOf(<span class="string">"locate"</span>);</div></pre></td></tr></table></figure></p>
+<p><code>serach()</code>与indexof同样，但是serach更强大。</p>
+<h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><p><code>slice(start, end)</code> 会返回切好的字符</p>
+<blockquote>
+<p>start与end可正可负，与所有的编程语言一样，从零开始。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"Apple, Banana, Kiwi"</span>;</div><div class="line"><span class="keyword">var</span> res = str.slice(<span class="number">7</span>,<span class="number">13</span>);</div></pre></td></tr></table></figure>
+<p>返回：<code>Banana</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"Apple, Banana, Kiwi"</span>;</div><div class="line"><span class="keyword">var</span> res = str.slice(<span class="number">-12</span>,<span class="number">-6</span>);</div></pre></td></tr></table></figure></p>
+<p>返回：<code>Banana</code></p>
+<p><code>substring</code>与<code>slice</code>类似，只不过不接受负值。<br><code>substr</code>与<code>slice</code>基本一样，但那个<code>(end)</code>变成了想要的字符串的长度，比如刚刚那个<code>Banana</code>长度是6，<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"Apple, Banana, Kiwi"</span>;</div><div class="line"><span class="keyword">var</span> res = str.slice(<span class="number">7</span>,<span class="number">6</span>);</div></pre></td></tr></table></figure></p>
+<p>返回：<code>Banana</code>，这样更方便了！</p>
+<h3 id="Replace"><a href="#Replace" class="headerlink" title="Replace"></a>Replace</h3><p>替换，这个更加简单，用法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">str = <span class="string">"Please visit Microsoft!"</span>;</div><div class="line"><span class="keyword">var</span> n = str.replace(<span class="string">"Microsoft"</span>,<span class="string">"W3Schools"</span>);</div></pre></td></tr></table></figure></p>
+<p>但这个<code>replace</code>只匹配第一个，要想全换掉，就得用正则，用<code>g</code>为标志：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">str = <span class="string">"Please visit Microsoft!"</span>;</div><div class="line"><span class="keyword">var</span> n = str.replace(<span class="regexp">/Microsoft/g</span>,<span class="string">"W3Schools"</span>);</div></pre></td></tr></table></figure></p>
+<h3 id="大小写"><a href="#大小写" class="headerlink" title="大小写"></a>大小写</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> text1 = <span class="string">"Hello World!"</span>;       <span class="comment">// String</span></div><div class="line"><span class="keyword">var</span> text2 = text1.toLowerCase();  <span class="comment">// text2</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> text1 = <span class="string">"Hello World!"</span>;       <span class="comment">// String</span></div><div class="line"><span class="keyword">var</span> text2 = text1.toUpperCase();</div></pre></td></tr></table></figure>
+<h3 id="字符串的连接"><a href="#字符串的连接" class="headerlink" title="字符串的连接"></a>字符串的连接</h3><p>用<code>concat()</code>这个函数，用法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> text1 = <span class="string">"Hello"</span>;</div><div class="line"><span class="keyword">var</span> text2 = <span class="string">"World"</span>;</div><div class="line">text3 = text1.concat(<span class="string">" "</span>,text2);</div></pre></td></tr></table></figure></p>
+<p>之前写过可以用加号，这个与加号一样。</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>与其他编程语言一样，你可以做很多，我做了个简表，你看看。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>方法的描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str.charAt(数字)</td>
+<td>返回字符串中第几个字符</td>
+</tr>
+<tr>
+<td>str[]</td>
+<td>可以把字符串当成了数组array</td>
+</tr>
+<tr>
+<td>str.split(“./,/ “)</td>
+<td>分割字符串，标志分别为 <code>. ,  空格</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><p>number就像我们生活中的数字，只不过在JS中，数字永远都是64位的浮点数，储存的位置如下：</p>
+<table>
+<thead>
+<tr>
+<th>Value (aka Fraction/Mantissa)</th>
+<th>Exponent</th>
+<th>Sign</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>52 bits (0 - 51)&nbsp;</td>
+<td>11 bits (52 - 62)</td>
+<td>1 bit (63)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>别的就没有什么了，支持转换成2进制，16进制等等，但我建议不用。</p>
+</blockquote>
+<h3 id="Number’s-method"><a href="#Number’s-method" class="headerlink" title="Number’s method"></a>Number’s method</h3><table>
+<thead>
+<tr>
+<th>function</th>
+<th>description</th>
+<th>usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>toString()</td>
+<td>返回成字符串</td>
+<td><code>(123).toString();</code></td>
+</tr>
+<tr>
+<td>toFixed()</td>
+<td>固定小数点后的位数，四舍五入</td>
+<td><code>(9.656).toFixed(2);           // returns 9.66</code></td>
+</tr>
+<tr>
+<td>toPrecision()</td>
+<td>固定长度</td>
+<td><code>(9.656)toPrecision(2);       // returns 9.7</code></td>
+</tr>
+</tbody>
+</table>
+<p>常用的就是这几个，还有许多，请看<a href="http://www.w3schools.com/jsref/jsref_obj_number.asp" target="_blank" rel="external">这里</a></p>
+<h2 id="Js中的数学方法"><a href="#Js中的数学方法" class="headerlink" title="Js中的数学方法"></a>Js中的数学方法</h2><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abs(x)</td>
+<td>Returns the absolute value of x</td>
+</tr>
+<tr>
+<td>acos(x)</td>
+<td>Returns the arccosine of x, in radians</td>
+</tr>
+<tr>
+<td>asin(x)</td>
+<td>Returns the arcsine of x, in radians</td>
+</tr>
+<tr>
+<td>atan(x)</td>
+<td>Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians</td>
+</tr>
+<tr>
+<td>atan2(y,x)</td>
+<td>Returns the arctangent of the quotient of its arguments</td>
+</tr>
+<tr>
+<td>ceil(x)</td>
+<td>Returns the value of x rounded up to its nearest integer</td>
+</tr>
+<tr>
+<td>cos(x)</td>
+<td>Returns the cosine of x (x is in radians)</td>
+</tr>
+<tr>
+<td>exp(x)</td>
+<td>Returns the value of Ex</td>
+</tr>
+<tr>
+<td>floor(x)</td>
+<td>Returns the value of x rounded down to its nearest integer</td>
+</tr>
+<tr>
+<td>log(x)</td>
+<td>Returns the natural logarithm (base E) of x</td>
+</tr>
+<tr>
+<td>max(x,y,z,…,n)</td>
+<td>Returns the number with the highest value</td>
+</tr>
+<tr>
+<td>min(x,y,z,…,n)</td>
+<td>Returns the number with the lowest value</td>
+</tr>
+<tr>
+<td>pow(x,y)</td>
+<td>Returns the value of x to the power of y</td>
+</tr>
+<tr>
+<td>random()</td>
+<td>Returns a random number between 0 and 1</td>
+</tr>
+<tr>
+<td>round(x)</td>
+<td>Returns the value of x rounded to its nearest integer</td>
+</tr>
+<tr>
+<td>sin(x)</td>
+<td>Returns the sine of x (x is in radians)</td>
+</tr>
+<tr>
+<td>sqrt(x)</td>
+<td>Returns the square root of x</td>
+</tr>
+<tr>
+<td>tan(x)</td>
+<td>Returns the tangent of an angle</td>
+</tr>
+</tbody>
+</table>
+<h3 id="生成随机数"><a href="#生成随机数" class="headerlink" title="生成随机数"></a>生成随机数</h3><p>这是个有趣的功能，相信我，在你的编程生涯中，你一定会遇到，而解决办法各种各样。<br>在Js中 <code>Math.random();              // returns a random number</code></p>
+<blockquote>
+<p>但是，它会返回一个[0,1)的数，非常不方便，如果要整数怎么办呢、？</p>
+</blockquote>
+<p>上一部分中有个 <code>floor()</code>函数，(floor,地板，往下)因此，它的作用是向下取整。比如<code>floor(4.7)</code>，会返回4.</p>
+<p>因此，<code>Math.floor(Math.random() * 10);     // returns a number between 0 and 9</code></p>
+<p>但是，在实际写代码时，我们一般把生成随机数的这个过程封装成一个函数，就像之前提过的：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo').innerHTML = getRndInteger(0,10)"</span>&gt;</span>Click Me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRndInteger</span>(<span class="params">min, max</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (max - min)) + min;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+  <section class="duoshuo-comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="http://yoursite.com/posts/uncategorized/2016-11-25-js学习2.html" data-title="js学习2" data-url="http://yoursite.com/posts/uncategorized/2016-11-25-js学习2.html"></div>
+    <!-- 多说评论框 end -->
+  </section>
+
+
+
+
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"浩楠93"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
