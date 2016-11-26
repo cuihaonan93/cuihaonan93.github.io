@@ -1,20 +1,13 @@
 <!DOCTYPE html>
-
-
-  <html class="light page-post">
-
-
+<html>
 <head>
   <meta charset="utf-8">
   
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
   <title>html第一课（翻译自官方文档） | 崔浩楠的网站</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  
-    <meta name="keywords" content="翻译教程," />
-  
-
   <meta name="description" content="什么是htmlHTML 是用来写网页的一种标准标记语言。
 
 H(Hyber) T(Text) M(Markup) L(language)超文本标记语言html用标记的形式来描述网页结构html 元素是html页面的基本块（block，暂时想不起更好的翻译）标签Tags代表了html的基本元素内容的标签（label）叫做html tagsWeb 浏览器的作用是读取 HTML 文档，并以网页的形式显示">
@@ -33,151 +26,140 @@ H(Hyber) T(Text) M(Markup) L(language)超文本标记语言html用标记的形�
 
 H(Hyber) T(Text) M(Markup) L(language)超文本标记语言html用标记的形式来描述网页结构html 元素是html页面的基本块（block，暂时想不起更好的翻译）标签Tags代表了html的基本元素内容的标签（label）叫做html tagsWeb 浏览器的作用是读取 HTML 文档，并以网页的形式显示">
 <meta name="twitter:image" content="http://yoursite.com/asset/blogimg/page_structure.jpg">
-
   
-
+    <link rel="alternative" href="/atom.xml" title="崔浩楠的网站" type="application/atom+xml">
+  
   
     <link rel="icon" href="/asset/img/B.ico">
   
-
-  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
-
-
+  <link rel="stylesheet" href="/main.css">
   
-    <link rel="stylesheet" href="/css/personal-style.css">
-  
-
-  
-
-  
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
 
 </head>
 
 <body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/asset/img/lion.jpg" class="js-avatar">
+			
+		</a>
 
+		<hgroup>
+		  <h1 class="header-author"><a href="/">崔浩楠</a></h1>
+		</hgroup>
 
-  
-    <span id="toolbox-mobile" class="toolbox-mobile">有的酒</span>
-  
+		
+		<p class="header-subtitle">面朝大海     以梦为马</p>
+		
 
-  <div class="post-header CENTER">
-   
-  <div class="toolbox">
-    <a class="toolbox-entry" href="/">
-      <span class="toolbox-entry-text">有的酒</span>
-      <i class="icon-angle-down"></i>
-      <i class="icon-home"></i>
-    </a>
-    <ul class="list-toolbox">
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/archives/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            博客
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/tag/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            标签
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/link/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            友链
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/about/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            关于
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/search/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            搜索
-          </a>
-        </li>
-      
-    </ul>
-  </div>
-
-
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/杂谈/">杂谈</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/cuihaonan93" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
 </div>
 
-
-  <div id="toc" class="toc-article">
-    <strong class="toc-title">Posts List</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是html"><span class="toc-text">什么是html</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#小例子："><span class="toc-text">小例子：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">My First Heading</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-的Tags"><span class="toc-text">HTML 的Tags</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web-Browsers（网页浏览器）"><span class="toc-text">Web Browsers（网页浏览器）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网页的结构"><span class="toc-text">网页的结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lt-DOCTYPE-gt-是什么？"><span class="toc-text"><!DOCTYPE > 是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML的发展"><span class="toc-text">HTML的发展</span></a></li></ol></li></ol>
-  </div>
-
-
-
-<div class="content content-post CENTER">
-   <article id="post-快速入门html（译自官方文档）" class="article article-type-post" itemprop="blogPost">
-  <header class="article-header">
-    <h1 class="post-title">html第一课（翻译自官方文档）</h1>
-
-    <div class="article-meta">
-      <span>
-        <i class="icon-calendar"></i>
-        <span>2016.11.12</span>
-      </span>
-
-      
-        <span class="article-author">
-          <i class="icon-user"></i>
-          <span>崔浩楠</span>
-        </span>
-      
-
-      
-
-
-      
-
     </div>
-  </header>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">崔浩楠</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/asset/img/lion.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">崔浩楠</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">面朝大海     以梦为马</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/杂谈/">杂谈</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/cuihaonan93" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
 
-  <div class="article-content">
+      <div class="body-wrap">
+        <article id="post-快速入门html（译自官方文档）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-      <h1 id="什么是html"><a href="#什么是html" class="headerlink" title="什么是html"></a>什么是html</h1><p>HTML 是用来写网页的一种标准标记语言。</p>
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      html第一课（翻译自官方文档）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="什么是html"><a href="#什么是html" class="headerlink" title="什么是html"></a>什么是html</h1><p>HTML 是用来写网页的一种标准标记语言。</p>
 <blockquote>
 <p>H(Hyber) T(Text) M(Markup) L(language)<br>超文本标记语言<br>html用标记的形式来描述网页结构<br>html 元素是html页面的基本块（block，暂时想不起更好的翻译）<br>标签Tags代表了html的基本元素<br>内容的标签（label）叫做html tags<br>Web 浏览器的作用是读取 HTML 文档，并以网页的形式显示出它们。浏览器不会显示 HTML 标签，而是使用标签来解释页面的内容</p>
 </blockquote>
@@ -229,156 +211,247 @@ H(Hyber) T(Text) M(Markup) L(language)超文本标记语言html用标记的形�
 </tbody>
 </table>
 
-    
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-11-12-快速入门html（译自官方文档）.html" class="archive-article-date">
+  	<time datetime="2016-11-12T03:43:52.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-12</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻译教程/">翻译教程</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
 
+  
+<nav id="article-nav">
+  
+    <a href="/posts/uncategorized/2016-11-12-html笔记-基础.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          html笔记-基础
+        
+      </div>
+    </a>
+  
+  
+    <a href="/posts/uncategorized/2016-11-11-How-to-use-Markdown-easily.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">How to use Markdown easily</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
 </div>
 
 
 
 
 
-  <a id="backTop" class="back-top">
-    <i class="icon-angle-up"></i>
-  </a>
 
-
-
-
-  <div class="modal" id="modal">
-  <span id="cover" class="cover hide"></span>
-  <div id="modal-dialog" class="modal-dialog hide-dialog">
-    <div class="modal-header">
-      <span id="close" class="btn-close">Close</span>
-    </div>
-    <hr>
-    <div class="modal-body">
-      <ul class="list-toolbox">
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/archives/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              博客
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/tag/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              标签
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/link/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              友链
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/about/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              关于
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/search/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              搜索
-            </a>
-          </li>
-        
-      </ul>
-
-    </div>
-  </div>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="快速入门html（译自官方文档）" data-title="html第一课（翻译自官方文档）" data-url="http://yoursite.com/posts/uncategorized/2016-11-12-快速入门html（译自官方文档）.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
 </div>
 
 
 
-  
-      <div class="fexo-comments comments-post">
-    
-
-    
-  <section class="duoshuo-comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="http://yoursite.com/posts/uncategorized/2016-11-12-快速入门html（译自官方文档）.html" data-title="html第一课（翻译自官方文档）" data-url="http://yoursite.com/posts/uncategorized/2016-11-12-快速入门html（译自官方文档）.html"></div>
-    <!-- 多说评论框 end -->
-  </section>
 
 
-
-
-  <script type="text/javascript">
-  var duoshuoQuery = {short_name:"浩楠93"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-
-
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 崔浩楠
+    	</div>
+      	<div class="footer-right">
+      		这个主题是 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
   </div>
+</footer>
 
-  
-
-  <script type="text/javascript">
-  function loadScript(url, callback) {
-    var script = document.createElement('script')
-    script.type = 'text/javascript';
-
-    if (script.readyState) { //IE
-      script.onreadystatechange = function() {
-        if (script.readyState == 'loaded' ||
-          script.readyState == 'complete') {
-          script.onreadystatechange = null;
-          callback();
-        }
-      };
-    } else { //Others
-      script.onload = function() {
-        callback();
-      };
-    }
-
-    script.src = url;
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }
-
-  window.onload = function() {
-    loadScript('/js/bundle.js?235683', function() {
-      // load success
-    });
-  }
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
 </script>
 
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 10px;">js学习</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://xiaolai.li/">笑来的网站</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br&gt; 你好&lt;/br&gt;&lt;br&gt;我是崔浩楠&lt;/br&gt;&lt;br&gt;爱爸妈，爱朋友&lt;/br&gt;想去北极</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
 </body>
 </html>

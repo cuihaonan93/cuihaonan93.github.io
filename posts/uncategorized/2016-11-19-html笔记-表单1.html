@@ -1,20 +1,13 @@
 <!DOCTYPE html>
-
-
-  <html class="light page-post">
-
-
+<html>
 <head>
   <meta charset="utf-8">
   
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
   <title>html笔记-表单1 | 崔浩楠的网站</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  
-    <meta name="keywords" content="html笔记," />
-  
-
   <meta name="description" content="html的表单 我单独把表单拿出来了，写一篇笔记，是因为我觉得重要，因为在几个月前，我在Atom实习时，需要做一个登陆界面，涉及到了表单（Form）的知识，我认为这个很重要，因此，单拿出来写。
 什么是form
 官方定义： The HTML &amp;lt;form&amp;gt; element defines a form that is used to collect user input
@@ -37,151 +30,140 @@
 官方定义： The HTML &amp;lt;form&amp;gt; element defines a form that is used to collect user input
 
  回忆一下，你在">
-
   
-
+    <link rel="alternative" href="/atom.xml" title="崔浩楠的网站" type="application/atom+xml">
+  
   
     <link rel="icon" href="/asset/img/B.ico">
   
-
-  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
-
-
+  <link rel="stylesheet" href="/main.css">
   
-    <link rel="stylesheet" href="/css/personal-style.css">
-  
-
-  
-
-  
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
 
 </head>
 
 <body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/asset/img/lion.jpg" class="js-avatar">
+			
+		</a>
 
+		<hgroup>
+		  <h1 class="header-author"><a href="/">崔浩楠</a></h1>
+		</hgroup>
 
-  
-    <span id="toolbox-mobile" class="toolbox-mobile">有的酒</span>
-  
+		
+		<p class="header-subtitle">面朝大海     以梦为马</p>
+		
 
-  <div class="post-header CENTER">
-   
-  <div class="toolbox">
-    <a class="toolbox-entry" href="/">
-      <span class="toolbox-entry-text">有的酒</span>
-      <i class="icon-angle-down"></i>
-      <i class="icon-home"></i>
-    </a>
-    <ul class="list-toolbox">
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/archives/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            博客
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/tag/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            标签
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/link/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            友链
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/about/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            关于
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/search/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            搜索
-          </a>
-        </li>
-      
-    </ul>
-  </div>
-
-
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/杂谈/">杂谈</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/cuihaonan93" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
 </div>
 
-
-  <div id="toc" class="toc-article">
-    <strong class="toc-title">Posts List</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#html的表单"><span class="toc-text">html的表单</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是form"><span class="toc-text">什么是form</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fieldset"><span class="toc-text">fieldset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#action"><span class="toc-text">action</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#method"><span class="toc-text">method</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#form中的input"><span class="toc-text">form中的input</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#text"><span class="toc-text">text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#radio"><span class="toc-text">radio</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#submit"><span class="toc-text">submit</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#form标签"><span class="toc-text">form标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#select"><span class="toc-text">select</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#button"><span class="toc-text">button</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#html5中的标签"><span class="toc-text">html5中的标签</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#input中的type"><span class="toc-text">input中的type</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Password和Reset"><span class="toc-text">Password和Reset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#radio和checkbox"><span class="toc-text">radio和checkbox</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Button"><span class="toc-text">Button</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#html5中的方便标签"><span class="toc-text">html5中的方便标签</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数字"><span class="toc-text">数字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#颜色"><span class="toc-text">颜色</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#范围"><span class="toc-text">范围</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#日期"><span class="toc-text">日期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#邮件"><span class="toc-text">邮件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#链接"><span class="toc-text">链接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果"><span class="toc-text">效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特性"><span class="toc-text">特性</span></a></li></ol></li></ol>
-  </div>
-
-
-
-<div class="content content-post CENTER">
-   <article id="post-html笔记-表单1" class="article article-type-post" itemprop="blogPost">
-  <header class="article-header">
-    <h1 class="post-title">html笔记-表单1</h1>
-
-    <div class="article-meta">
-      <span>
-        <i class="icon-calendar"></i>
-        <span>2016.11.19</span>
-      </span>
-
-      
-        <span class="article-author">
-          <i class="icon-user"></i>
-          <span>崔浩楠</span>
-        </span>
-      
-
-      
-
-
-      
-
     </div>
-  </header>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">崔浩楠</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/asset/img/lion.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">崔浩楠</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">面朝大海     以梦为马</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/杂谈/">杂谈</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/cuihaonan93" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
 
-  <div class="article-content">
+      <div class="body-wrap">
+        <article id="post-html笔记-表单1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-      <h1 id="html的表单"><a href="#html的表单" class="headerlink" title="html的表单"></a>html的表单</h1><p> 我单独把表单拿出来了，写一篇笔记，是因为我觉得重要，因为在几个月前，我在Atom实习时，需要做一个登陆界面，涉及到了表单（Form）的知识，我认为这个很重要，因此，单拿出来写。</p>
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      html笔记-表单1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="html的表单"><a href="#html的表单" class="headerlink" title="html的表单"></a>html的表单</h1><p> 我单独把表单拿出来了，写一篇笔记，是因为我觉得重要，因为在几个月前，我在Atom实习时，需要做一个登陆界面，涉及到了表单（Form）的知识，我认为这个很重要，因此，单拿出来写。</p>
 <h2 id="什么是form"><a href="#什么是form" class="headerlink" title="什么是form"></a>什么是form</h2><blockquote>
 <p>官方定义：<br><br> The HTML <code>&lt;form&gt;</code> element defines a form that is used to collect user input</p>
 </blockquote>
@@ -245,156 +227,247 @@
 <h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p>在 <code>&lt;input&gt;</code> 中还有许多特性，比如disabled（禁用，你在text表单中加上这个，这一栏就不能更改了），再比如 <code>&lt;input type=&quot;text&quot; name=&quot;名字&quot; size=&quot;30&quot;&gt;</code>，这个意思就是最长允许输入30个字符</p>
 <p>还有很多，边用边学吧！</p>
 
-    
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-11-19-html笔记-表单1.html" class="archive-article-date">
+  	<time datetime="2016-11-19T08:31:01.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-19</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html笔记/">html笔记</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
 
+  
+<nav id="article-nav">
+  
+    <a href="/posts/uncategorized/2016-11-20-CSS笔记1.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS笔记1
+        
+      </div>
+    </a>
+  
+  
+    <a href="/posts/uncategorized/2016-11-19-杂谈-驴得水.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">杂谈-驴得水</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
 </div>
 
 
 
 
 
-  <a id="backTop" class="back-top">
-    <i class="icon-angle-up"></i>
-  </a>
 
-
-
-
-  <div class="modal" id="modal">
-  <span id="cover" class="cover hide"></span>
-  <div id="modal-dialog" class="modal-dialog hide-dialog">
-    <div class="modal-header">
-      <span id="close" class="btn-close">Close</span>
-    </div>
-    <hr>
-    <div class="modal-body">
-      <ul class="list-toolbox">
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/archives/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              博客
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/tag/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              标签
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/link/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              友链
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/about/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              关于
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/search/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              搜索
-            </a>
-          </li>
-        
-      </ul>
-
-    </div>
-  </div>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="html笔记-表单1" data-title="html笔记-表单1" data-url="http://yoursite.com/posts/uncategorized/2016-11-19-html笔记-表单1.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
 </div>
 
 
 
-  
-      <div class="fexo-comments comments-post">
-    
-
-    
-  <section class="duoshuo-comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="http://yoursite.com/posts/uncategorized/2016-11-19-html笔记-表单1.html" data-title="html笔记-表单1" data-url="http://yoursite.com/posts/uncategorized/2016-11-19-html笔记-表单1.html"></div>
-    <!-- 多说评论框 end -->
-  </section>
 
 
-
-
-  <script type="text/javascript">
-  var duoshuoQuery = {short_name:"浩楠93"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-
-
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 崔浩楠
+    	</div>
+      	<div class="footer-right">
+      		这个主题是 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
   </div>
+</footer>
 
-  
-
-  <script type="text/javascript">
-  function loadScript(url, callback) {
-    var script = document.createElement('script')
-    script.type = 'text/javascript';
-
-    if (script.readyState) { //IE
-      script.onreadystatechange = function() {
-        if (script.readyState == 'loaded' ||
-          script.readyState == 'complete') {
-          script.onreadystatechange = null;
-          callback();
-        }
-      };
-    } else { //Others
-      script.onload = function() {
-        callback();
-      };
-    }
-
-    script.src = url;
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }
-
-  window.onload = function() {
-    loadScript('/js/bundle.js?235683', function() {
-      // load success
-    });
-  }
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
 </script>
 
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 10px;">js学习</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://xiaolai.li/">笑来的网站</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br&gt; 你好&lt;/br&gt;&lt;br&gt;我是崔浩楠&lt;/br&gt;&lt;br&gt;爱爸妈，爱朋友&lt;/br&gt;想去北极</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
 </body>
 </html>
