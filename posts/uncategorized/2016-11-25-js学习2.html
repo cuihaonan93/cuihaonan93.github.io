@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="崔浩楠的网站">
 <meta property="og:description" content="变量上次写到了，函数，方法的使用，这里呢有一个要注意的地方。就是局部变量与全局变量(Local JavaScript Variables and Global JavaScript Variables).
 很好理解，看你把变量的声明（declare，其实就是那个var）写在哪。看下面的代码1234567891011// code here can not use carNamefunction m">
-<meta property="og:updated_time" content="2016-11-25T09:09:43.841Z">
+<meta property="og:updated_time" content="2016-11-25T09:11:57.603Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js学习2">
 <meta name="twitter:description" content="变量上次写到了，函数，方法的使用，这里呢有一个要注意的地方。就是局部变量与全局变量(Local JavaScript Variables and Global JavaScript Variables).
@@ -406,6 +406,7 @@
 <p>因此，<code>Math.floor(Math.random() * 10);     // returns a number between 0 and 9</code></p>
 <p>但是，在实际写代码时，我们一般把生成随机数的这个过程封装成一个函数，就像之前提过的：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo').innerHTML = getRndInteger(0,10)"</span>&gt;</span>Click Me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRndInteger</span>(<span class="params">min, max</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (max - min)) + min;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>会生成[0,9]的随机数。</p>
 
     
   </div>
