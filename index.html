@@ -134,6 +134,174 @@
       <div class="body-wrap">
         
   
+    <article id="post-js学习2.5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-11-28-js学习2.5.html">js学习2.5</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Js中的时间"><a href="#Js中的时间" class="headerlink" title="Js中的时间"></a>Js中的时间</h1><h2 id="时间的格式"><a href="#时间的格式" class="headerlink" title="时间的格式"></a>时间的格式</h2><p>首先要了解一个小知识，即我们在许多编程语言当中会认为时间的开始是1970.01.01。</p>
+<blockquote>
+<p>一个很懒的解释：<br><br>很多编程语言起源于UNIX系统，而UNIX系统认为1970年1月1日0点是时间纪元，<br>所以我们常说的UNIX时间戳是以1970年1月1日0点为计时起点时间的。</p>
+</blockquote>
+<p>还有详细的，可以自己去搜一下。</p>
+<p>因此，javascript中有四种时间的对象：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>()</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(milliseconds)</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(dateString)</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(year, month, day, hours, minutes, seconds, milliseconds)</div></pre></td></tr></table></figure></p>
+<p>我写个简单的代码，你们可以看一下效果：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo1').innerHTML=d1"</span>&gt;</span>Date1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo1"</span>&gt;</span> <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo2').innerHTML=d2"</span>&gt;</span>Date2<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo2"</span>&gt;</span> <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo3').innerHTML=d3"</span>&gt;</span>Date3<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo3"</span>&gt;</span> <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo4').innerHTML=d4"</span>&gt;</span>Date4<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo4"</span>&gt;</span> <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">var</span> d1 = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="keyword">var</span> d2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"October 13, 2014 11:13:00"</span>);</div><div class="line"><span class="keyword">var</span> d3 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">74382198478</span>);</div><div class="line"><span class="keyword">var</span> d4 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">93</span>,<span class="number">05</span>,<span class="number">05</span>,<span class="number">02</span>,<span class="number">30</span>,<span class="number">0</span>); <span class="comment">//我的生日930606，但是我在一开始就说了，从零开始！</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<button onclick="document.getElementById('demo1').innerHTML=d1">Date1</button>
+
+<p id="demo1"> </p><br><button onclick="document.getElementById('demo2').innerHTML=d2.toString()">Date2</button><br><br><p id="demo2"> </p><br><button onclick="document.getElementById('demo3').innerHTML=d3.toUTCString()">Date3</button><br><br><p id="demo3"> </p><br><button onclick="document.getElementById('demo4').innerHTML=d4.toDateString()">Date4</button><br><br><p id="demo4"> </p>
+
+<script>
+var d1 = new Date();
+var d2 = new Date("October 13, 2014 11:13:00");
+var d3 = new Date(74382198478);
+var d4 = new Date(93,05,05,02,30,0);
+</script>
+
+<p>Date3中，我随便加了个数，单位是秒（s）。</p>
+<blockquote>
+<p>我没有把展示时间即 <code>document.getElementById(&#39;demo4&#39;).innerHTML=d</code>写成一个函数，是因为我想展示的更清楚，而且时间的展示格式也不同。但你们以后再写的时候要写成函数（尽量少写重复代码）</p>
+</blockquote>
+<h2 id="时间的展示"><a href="#时间的展示" class="headerlink" title="时间的展示"></a>时间的展示</h2><p>展示时间基本上都是字符串的形式。</p>
+<ul>
+<li><code>toString</code>就是默认的展示方式，上面出现的那几种都是。</li>
+<li><code>toUTCString</code>是以UTC（一种标准）的形式来展示。</li>
+<li><code>toDateString</code>就是我们平常看到的那种形式。</li>
+</ul>
+<blockquote>
+<p>上面的例子都有，自己琢磨一下。</p>
+</blockquote>
+<p>还有许多时间的格式，你可以看看<a href="http://www.w3schools.com/js/js_date_formats.asp" target="_blank" rel="external">这个网站</a></p>
+<h2 id="时间的函数"><a href="#时间的函数" class="headerlink" title="时间的函数"></a>时间的函数</h2><p>有很多，get类和set类,看下面的两个表：</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getDate()</td>
+<td>Get the day as a number (1-31)</td>
+</tr>
+<tr>
+<td>getDay()</td>
+<td>Get the weekday as a number (0-6)</td>
+</tr>
+<tr>
+<td>getFullYear()</td>
+<td>Get the four digit year (yyyy)</td>
+</tr>
+<tr>
+<td>getHours()</td>
+<td>Get the hour (0-23)</td>
+</tr>
+<tr>
+<td>getMilliseconds()</td>
+<td>Get the milliseconds (0-999)</td>
+</tr>
+<tr>
+<td>getMinutes()</td>
+<td>Get the minutes (0-59)</td>
+</tr>
+<tr>
+<td>getMonth()</td>
+<td>Get the month (0-11)</td>
+</tr>
+<tr>
+<td>getSeconds()</td>
+<td>Get the seconds (0-59)</td>
+</tr>
+<tr>
+<td>getTime()</td>
+<td>Get the time (milliseconds since January 1, 1970)</td>
+</tr>
+<tr>
+<td>———————</td>
+<td>——————-</td>
+</tr>
+<tr>
+<td>setDate()</td>
+<td>Set the day as a number (1-31)</td>
+</tr>
+<tr>
+<td>setFullYear()</td>
+<td>Set the year (optionally month and day)</td>
+</tr>
+<tr>
+<td>setHours()</td>
+<td>Set the hour (0-23)</td>
+</tr>
+<tr>
+<td>setMilliseconds()</td>
+<td>Set the milliseconds (0-999)</td>
+</tr>
+<tr>
+<td>setMinutes()</td>
+<td>Set the minutes (0-59)</td>
+</tr>
+<tr>
+<td>setMonth()</td>
+<td>Set the month (0-11)</td>
+</tr>
+<tr>
+<td>setSeconds()</td>
+<td>Set the seconds (0-59)</td>
+</tr>
+<tr>
+<td>setTime()</td>
+<td>Set the time (milliseconds since January 1, 1970)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>对了，在Js中，时间是可以很容易比较的，看下面的例子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">var</span> today, someday, text;</div><div class="line">today = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">someday = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">someday.setFullYear(<span class="number">2100</span>, <span class="number">0</span>, <span class="number">14</span>);</div><div class="line"></div><div class="line"><span class="keyword">if</span> (someday &gt; today) &#123;</div><div class="line">    text = <span class="string">"Today is before January 14, 2100."</span>;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    text = <span class="string">"Today is after January 14, 2100."</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = text;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>你说会 <code>&lt;p&gt;</code>那里会变成那句话呢？</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-11-28-js学习2.5.html" class="archive-article-date">
+  	<time datetime="2016-11-28T09:23:46.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-28</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js学习/">js学习</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-js学习2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -444,7 +612,7 @@
 <li>Border - A border that goes around the padding and content</li>
 <li>Margin - Clears an area outside the border. The margin is transparent</li>
 </ul>
-<p>定义的方法和从前一样：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">background-color</span>: lightblue;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">25px</span>;</div><div class="line">    <span class="attribute">border</span>: <span class="number">25px</span> solid navy;</div><div class="line">    <span class="attribute">margin</span>:<span class="number">25px</span>;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>定义的方法和从前一样：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">div &#123;</div><div class="line">    background-color: lightblue;</div><div class="line">    width: 200px;</div><div class="line">    padding: 25px;</div><div class="line">    border: 25px solid navy;</div><div class="line">    margin:25px;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <h1 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h1><p>我们知道了“box model”之后，就明白了网页布局的形式了，下面我们专注于如何将网页上的文字更好的呈现。<br>文字有许多特性，下面可以看看这个表(考考你们的英文)：</p>
 <table>
 <thead>
@@ -509,7 +677,7 @@
 </tbody>
 </table>
 <p>详情请看<a href="http://www.w3schools.com/cssref/default.asp" target="_blank" rel="external">这个网址</a></p>
-<h2 id="简单用法："><a href="#简单用法：" class="headerlink" title="简单用法："></a>简单用法：</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">p</span><span class="selector-class">.small</span> &#123;</div><div class="line">    <span class="attribute">color</span>:blue;</div><div class="line">    <span class="attribute">line-height</span>: <span class="number">0.7</span>;</div><div class="line">    <span class="attribute">text-align</span>:center;</div><div class="line">    <span class="attribute">text-decoration</span>:overline;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="selector-tag">p</span><span class="selector-class">.big</span> &#123;</div><div class="line">    <span class="attribute">color</span>:red;</div><div class="line">    <span class="attribute">text-indent</span>: <span class="number">5px</span>;</div><div class="line">    <span class="attribute">line-height</span>: <span class="number">2.8</span>;</div><div class="line">    <span class="attribute">text-transform</span>: uppercase;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">This is a paragraph with a standard line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">The default line height in most browsers is about 110% to 120%.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"small"</span>&gt;</span></div><div class="line">This is a paragraph with a smaller line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">This is a paragraph with a smaller line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"big"</span>&gt;</span></div><div class="line">This is a paragraph with a bigger line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">This is a paragraph with a bigger line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="简单用法："><a href="#简单用法：" class="headerlink" title="简单用法："></a>简单用法：</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">p.small &#123;</div><div class="line">    color:blue;</div><div class="line">    line-height: 0.7;</div><div class="line">    text-align:center;</div><div class="line">    text-decoration:overline;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">p.big &#123;</div><div class="line">    color:red;</div><div class="line">    text-indent: 5px;</div><div class="line">    line-height: 2.8;</div><div class="line">    text-transform: uppercase;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">This is a paragraph with a standard line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">The default line height in most browsers is about 110% to 120%.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"small"</span>&gt;</span></div><div class="line">This is a paragraph with a smaller line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">This is a paragraph with a smaller line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"big"</span>&gt;</span></div><div class="line">This is a paragraph with a bigger line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">This is a paragraph with a bigger line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>效果：</p>
 <p><style><br>p.small {<br>    color:blue;<br>    line-height: 0.7;<br>    text-align:center;<br>    text-decoration:overline;<br>}</p>
 <p>p.big {<br>    color:red;<br>    text-indent: 5px;<br>    line-height: 2.8;<br>    text-transform: uppercase;<br>}<br>}<br></style><br></p>
@@ -527,7 +695,7 @@
 <li>是否加粗： <code>&lt;font-weight: bold;/normal;&gt;</code></li>
 <li>字体的大小： <code>&lt;font-size:40px;&gt;</code></li>
 </ul>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>可以把自己的链接做的更漂亮一点，比如下面的例子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span>, <span class="selector-tag">a</span><span class="selector-pseudo">:visited</span> &#123;</div><div class="line">    <span class="attribute">background-color</span>: powderblue;</div><div class="line">    <span class="attribute">color</span>: white;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">14px</span> <span class="number">25px</span>;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">    <span class="attribute">text-decoration</span>: underline;</div><div class="line">    <span class="attribute">display</span>: inline-block;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>, <span class="selector-tag">a</span><span class="selector-pseudo">:active</span> &#123;</div><div class="line">    <span class="attribute">background-color</span>: pink;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"www.baidu.com"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>This is a link<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>可以把自己的链接做的更漂亮一点，比如下面的例子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">a:link, a:visited &#123;</div><div class="line">    background-color: powderblue;</div><div class="line">    color: white;</div><div class="line">    padding: 14px 25px;</div><div class="line">    text-align: center;</div><div class="line">    text-decoration: underline;</div><div class="line">    display: inline-block;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">a:hover, a:active &#123;</div><div class="line">    background-color: pink;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"www.baidu.com"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>This is a link<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>效果是这样：<br><img src="/asset/blogimg/css/link.jpg" alt="link.jpg"><br>当你把鼠标放在链接上，会变成粉色，（hover的作用）：<br><img src="/asset/blogimg/css/link2.jpg" alt="link2.jpg"></p>
 <h1 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h1><p>原文是：Pseudo-class，它的作用是为某一个元素定义一个特定的展示方式。<br>比如：hover，active，visited，focus，等等。</p>
 <p>给你个<a href="http://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank" rel="external">网址</a>，自己看看，非常详细。</p>
@@ -535,7 +703,7 @@
 <p>同样的，还有<a href="http://www.w3schools.com/css/css_pseudo_elements.asp" target="_blank" rel="external">伪元素</a>。</p>
 </blockquote>
 <h2 id="list的补充"><a href="#list的补充" class="headerlink" title="list的补充"></a>list的补充</h2><p>之前在html笔记中提过了，list 的样式，有个更全的，这是<a href="http://www.w3schools.com/css/tryit.asp?filename=trycss_list-style-type_all" target="_blank" rel="external">网址</a></p>
-<h1 id="Overflow"><a href="#Overflow" class="headerlink" title="Overflow"></a>Overflow</h1><p>溢出，这个是什么呢？<br>就是比如页面中有一个 <code>&lt;div&gt;</code>，里面有很多字，我们想更友好的显示它，看下面的例子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">background-color</span>: <span class="number">#eee</span>;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">    <span class="attribute">border</span>: <span class="number">1px</span> dotted black;</div><div class="line">    <span class="attribute">overflow-x</span>: hidden;</div><div class="line">    <span class="attribute">overflow-y</span>: scroll;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h1 id="Overflow"><a href="#Overflow" class="headerlink" title="Overflow"></a>Overflow</h1><p>溢出，这个是什么呢？<br>就是比如页面中有一个 <code>&lt;div&gt;</code>，里面有很多字，我们想更友好的显示它，看下面的例子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">div &#123;</div><div class="line">    background-color: #eee;</div><div class="line">    width: 200px;</div><div class="line">    height: 50px;</div><div class="line">    border: 1px dotted black;</div><div class="line">    overflow-x: hidden;</div><div class="line">    overflow-y: scroll;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>其实就是加个滚动条</p>
 <h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>其实CSS还有很多内容，我没有写，以后有时间我会把那些没用涉及到的写出来。</p>
 <p>网页的设计是非常零碎的知识，它不是一棵大树那样，有一条主干，反而像房子，用许多砖头盖起来，我们现在就是烧制砖头的时候！加油！！！</p>
@@ -551,139 +719,6 @@
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS笔记/">CSS笔记</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-js学习1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-11-20-js学习1.html">js学习1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><p>神奇的语言，用了JAVA的名儿，却和人家一点关系都没有。</p>
-<h2 id="什么是javascript"><a href="#什么是javascript" class="headerlink" title="什么是javascript"></a>什么是javascript</h2><p>是浏览器端的html和web的编程语言，任何一个搞前段的都要学会。</p>
-<blockquote>
-<p>什么是浏览器端？<br><br>把浏览器想象成一个操作系统，html就是那里的文档，web server就是主机，而浏览器就是我们的显示器，我们需要类似于C语言一样的编程语言，可以编程，把这个电脑的界面变得更酷炫！</p>
-</blockquote>
-<p>大致是这样的，如有不对，恳请指出！</p>
-<h2 id="js可以干什么"><a href="#js可以干什么" class="headerlink" title="js可以干什么"></a>js可以干什么</h2><p>主要针对的是html，所以，它能干的非常多，比如：</p>
-<ul>
-<li>改变页面的内容</li>
-<li>改变图片</li>
-<li>改变CSS</li>
-<li>可以把某个html元素隐藏起来</li>
-</ul>
-<h2 id="js写在哪"><a href="#js写在哪" class="headerlink" title="js写在哪"></a>js写在哪</h2><p>它和css一样，三种：</p>
-<ul>
-<li>放在 <code>&lt;head&gt;</code>里</li>
-<li>放在 <code>&lt;body&gt;</code>里</li>
-<li>外部文件，被引入，后缀名是xxx.js</li>
-</ul>
-<h2 id="js的输出"><a href="#js的输出" class="headerlink" title="js的输出"></a>js的输出</h2><p>js与我们操作系统端的许多编程语言都不一样，它没有内建的output，比如，python，你可以<br><code>print(&quot;你好啊&quot;)</code>，ruby，你可以<code>puts &quot;你好啊！&quot;</code><br>但是JS没有，但它很神奇，有四个方法能间接的看到：</p>
-<ul>
-<li>window.alert() 弹窗提醒</li>
-<li>document.write() 重写html页面</li>
-<li>innerHTML 改变html的某个元素（通过id匹配）</li>
-<li>console.log() 控制台的log，在浏览器窗口按F12，你就明白了</li>
-</ul>
-<h2 id="js的语法"><a href="#js的语法" class="headerlink" title="js的语法"></a>js的语法</h2><p>js是一种脚本语言，就是它会告诉浏览器做什么，然后被执行。<br>因此它的基本语法有五个：</p>
-<blockquote>
-<p>Values, Operators, Expressions, Keywords, and Comments.<br><br> 值，操作器（运算符），表达式，关键词，注释</p>
-</blockquote>
-<p> 对了，js以分号<code>;</code>为分隔符</p>
-<h3 id="Value"><a href="#Value" class="headerlink" title="Value"></a>Value</h3><p> Value有两种，一种是定值，一种是变量。</p>
-<p> 定值可以是数字，也可以说是“string”（你要习惯这个说法）</p>
-<blockquote>
-<p><code>1820/29.33       &quot;Andy Cui&quot;</code></p>
-</blockquote>
-<p>变量则更简单了，未知数</p>
-<blockquote>
-<p><code>var x         x=66</code>把66这个值赋给(=)了x这个变量(用var来声明)</p>
-</blockquote>
-<h3 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h3><p>与数学一样，<code>+ - * / sqrt</code><br>当然了，它还有很多的运算符，我把一个<a href="http://www.w3schools.com/js/js_operators.asp" target="_blank" rel="external">网址</a>给你，有时间一定要看看。</p>
-<h3 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h3><p>这个是定义，声明function时用的，后面细讲，刚刚的var就是</p>
-<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>记得吗？我说过，自己写注释是很有用的一种学习方式，在js中用<code>//</code>或<code>/*</code>与<code>*/</code>来表示</p>
-<h3 id="函数名"><a href="#函数名" class="headerlink" title="函数名"></a>函数名</h3><p>任何一门编程语言都会讲到这个，因为到后期，你的函数名越来越长，是很多个单词的组合，比如<br><code>myapple</code>–&gt;<code>MyApple</code>,<code>my-apple</code>,<code>my_apple</code><br>常见的这三种命名方式，JS中推荐用第一种，叫”camel”，驼峰式！</p>
-<blockquote>
-<p>对了，js对大小写敏感，Apple和apple不一样的</p>
-</blockquote>
-<h3 id="js的数据类型"><a href="#js的数据类型" class="headerlink" title="js的数据类型"></a>js的数据类型</h3><p>为什么要知道数据类型？那样处理起来数据会更加得心应手，js的数据一般有：数字，字符串，数组，对象等等（给你们英文：numbers, strings, arrays, objects and more）</p>
-<blockquote>
-<p>var length = 16;                               // Number <br><br>var lastName = “Johnson”;                      // String<br><br>var cars = [“Saab”, “Volvo”, “BMW”];           // Array<br><br>var x = {firstName:”John”, lastName:”Doe”};    // Object</p>
-</blockquote>
-<p>举个例子：</p>
-<p><code>var x = 16 + 4 + &quot;Volvo&quot;;</code> –&gt;<code>&quot;20Volvo&quot;</code> <br><br><code>var x =  &quot;Volvo&quot;+16 + 4 ;</code>–&gt;<code>&quot;Volvo164&quot;</code><br>所以，在js中，同时处理字符串和数字时，是将数字变成字符串来处理的，就是这样：<code>18</code>–&gt;<code>&quot;18&quot;</code></p>
-<h4 id="js中的数组"><a href="#js中的数组" class="headerlink" title="js中的数组"></a>js中的数组</h4><p>JavaScript数组用方括号写成。<br>数组项用逗号分隔。<br>以下代码声明（创建）一个名为cars的数组，其中包含三个项目（汽车名称）：</p>
-<p><code>var cars = [&quot;Saab&quot;, &quot;Volvo&quot;, &quot;BMW&quot;];</code></p>
-<h4 id="js中的对象"><a href="#js中的对象" class="headerlink" title="js中的对象"></a>js中的对象</h4><p>JavaScript对象用大括号写。对象属性写为名称-值对，用逗号分隔。</p>
-<p>对于一个零基础的人来讲，官方定义非常不好去理解，借用python的概念，字典。<br>把对象想成字典，词：释义。</p>
-<p>这样是不是明白多了？<br><code>var person = {firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;};</code></p>
-<blockquote>
-<p>在js中array是object的一种啊！</p>
-</blockquote>
-<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><p>在文章中曾多次出现了<code>function</code>这个词，它的中文意思是：功能，函数。</p>
-<blockquote>
-<p>官方定义：<br><br>A JavaScript function is a block of code designed to perform a particular task.<br><br>A JavaScript function is executed when “something” invokes it (calls it).</p>
-</blockquote>
-<p>实质上，就是特定命令的集合块儿！</p>
-<p>比如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">p1, p2</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> p1 * p2;</div><div class="line">&#125;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = myFunction(<span class="number">4</span>, <span class="number">3</span>);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>结果会是<code>12</code><br>如果myFunction(9,9),结果是<code>81</code></p>
-<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><p>用这样的语法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">name</span>(<span class="params">parameter1, parameter2, parameter3</span>) </span>&#123;</div><div class="line">    code to be executed</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>应该可以看得懂吧？</p>
-<blockquote>
-<p>注意啊！<br><br><code>()</code>括号中的变量，在声明时的参数(形式参数，意义是未知数)，仅仅用符号来代替即可，因此一定要用自己熟悉的命名方式去命名变量。<br>在函数调用时，也会得到参数，但这时的参数已经是真正的参数。<br></p>
-</blockquote>
-<p>比如上面的例子，声明参数（parameter）为p1,p2<br>实际参数（arguement）为（4,3;9,9)</p>
-<h4 id="函数的调用"><a href="#函数的调用" class="headerlink" title="函数的调用"></a>函数的调用</h4><p>有三种：</p>
-<ul>
-<li>定义一个事件与函数绑定（比如按按钮=弹窗）</li>
-<li>在js中被另一个使用</li>
-<li>自动执行</li>
-</ul>
-<h4 id="return"><a href="#return" class="headerlink" title="return"></a>return</h4><p>这个statement很有意思，在很多编程语言中都有，它就相当于，我们在做数学题时的<code>综上所述</code>，最后一步，会得出一个结论。</p>
-<p>比如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = myFunction(<span class="number">4</span>, <span class="number">3</span>);        <span class="comment">// Function is called, return value will end up in x</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> a * b;                <span class="comment">// Function returns the product of a and b</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>会<code>return</code>出一个结果：12</p>
-<h2 id="今天先到这"><a href="#今天先到这" class="headerlink" title="今天先到这"></a>今天先到这</h2><p>去锻炼了，加油！！！</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/posts/uncategorized/2016-11-20-js学习1.html" class="archive-article-date">
-  	<time datetime="2016-11-20T06:43:10.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-20</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js学习/">js学习</a></li></ul>
 	</div>
 
       
@@ -769,7 +804,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 10px;">js学习</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
+    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 15px;">js学习</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
     			</div>
     	</section>
     

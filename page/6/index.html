@@ -134,6 +134,106 @@
       <div class="body-wrap">
         
   
+    <article id="post-快速入门html（译自官方文档）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-11-12-快速入门html（译自官方文档）.html">html第一课（翻译自官方文档）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="什么是html"><a href="#什么是html" class="headerlink" title="什么是html"></a>什么是html</h1><p>HTML 是用来写网页的一种标准标记语言。</p>
+<blockquote>
+<p>H(Hyber) T(Text) M(Markup) L(language)<br>超文本标记语言<br>html用标记的形式来描述网页结构<br>html 元素是html页面的基本块（block，暂时想不起更好的翻译）<br>标签Tags代表了html的基本元素<br>内容的标签（label）叫做html tags<br>Web 浏览器的作用是读取 HTML 文档，并以网页的形式显示出它们。浏览器不会显示 HTML 标签，而是使用标签来解释页面的内容</p>
+</blockquote>
+<h2 id="小例子："><a href="#小例子：" class="headerlink" title="小例子："></a>小例子：</h2>  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Page Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>My First Heading<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>My first paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>出来的效果会是这样：</p>
+<html><br><head><br><title>Page Title</title><br></head><br><body><br><br><h1>My First Heading</h1><br><p>My first paragraph.</p><br><br></body><br></html>
+
+<p><code>&lt;html&gt;</code>是html页面的基本要素<br><code>&lt;head&gt;</code>包含了html文档的主要信息<br><code>&lt;title&gt;</code>你的网页（网页实际上就是一篇文档）的标题<br><code>&lt;body&gt;</code>文档的主要内容<br><code>&lt;h1&gt;</code>标题的格式，h1是大标题，有h1到h6<br><code>&lt;p&gt;</code>paragraph，正文</p>
+<h2 id="HTML-的Tags"><a href="#HTML-的Tags" class="headerlink" title="HTML 的Tags"></a>HTML 的Tags</h2><ul>
+<li>成对出现&lt;&gt; &lt;/&gt;</li>
+<li>尖括号内填tag的内容，（tag实质上就是你定义了你的文档怎么去显示）</li>
+<li>结束的tag比开始时多了/,问号的那个斜杠</li>
+</ul>
+<h2 id="Web-Browsers（网页浏览器）"><a href="#Web-Browsers（网页浏览器）" class="headerlink" title="Web Browsers（网页浏览器）"></a>Web Browsers（网页浏览器）</h2><p>之前说了，浏览器读取你的html文档，展示成网页，利用tags，但不把tags展示出来。</p>
+<h2 id="网页的结构"><a href="#网页的结构" class="headerlink" title="网页的结构"></a>网页的结构</h2><p><img src="/asset/blogimg/page_structure.jpg" alt="结构"></p>
+<h2 id="lt-DOCTYPE-gt-是什么？"><a href="#lt-DOCTYPE-gt-是什么？" class="headerlink" title="&lt;!DOCTYPE &gt; 是什么？"></a>&lt;!DOCTYPE &gt; 是什么？</h2><p>&lt;!DOCTYPE&gt;从文本是理解就是文档类型，它声明了这份document 的类型，比如<code>&lt;!DOCTYPE html&gt;</code>声明这是html文档，以便于浏览器正确的展示页面。</p>
+<h2 id="HTML的发展"><a href="#HTML的发展" class="headerlink" title="HTML的发展"></a>HTML的发展</h2><table>
+<thead>
+<tr>
+<th>版本</th>
+<th>年份</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTML</td>
+<td>1991</td>
+</tr>
+<tr>
+<td>HTML 2.0</td>
+<td>1995</td>
+</tr>
+<tr>
+<td>HTML 3.2</td>
+<td>1997</td>
+</tr>
+<tr>
+<td>HTML 4.01</td>
+<td>1999</td>
+</tr>
+<tr>
+<td>XHTML</td>
+<td>2000</td>
+</tr>
+<tr>
+<td>HTML 5</td>
+<td>2014</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-11-12-快速入门html（译自官方文档）.html" class="archive-article-date">
+  	<time datetime="2016-11-12T03:43:52.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-12</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻译教程/">翻译教程</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-How-to-use-Markdown-easily" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -337,7 +437,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 10px;">js学习</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
+    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 15px;">js学习</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
     			</div>
     	</section>
     

@@ -134,6 +134,139 @@
       <div class="body-wrap">
         
   
+    <article id="post-js学习1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-11-20-js学习1.html">js学习1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><p>神奇的语言，用了JAVA的名儿，却和人家一点关系都没有。</p>
+<h2 id="什么是javascript"><a href="#什么是javascript" class="headerlink" title="什么是javascript"></a>什么是javascript</h2><p>是浏览器端的html和web的编程语言，任何一个搞前段的都要学会。</p>
+<blockquote>
+<p>什么是浏览器端？<br><br>把浏览器想象成一个操作系统，html就是那里的文档，web server就是主机，而浏览器就是我们的显示器，我们需要类似于C语言一样的编程语言，可以编程，把这个电脑的界面变得更酷炫！</p>
+</blockquote>
+<p>大致是这样的，如有不对，恳请指出！</p>
+<h2 id="js可以干什么"><a href="#js可以干什么" class="headerlink" title="js可以干什么"></a>js可以干什么</h2><p>主要针对的是html，所以，它能干的非常多，比如：</p>
+<ul>
+<li>改变页面的内容</li>
+<li>改变图片</li>
+<li>改变CSS</li>
+<li>可以把某个html元素隐藏起来</li>
+</ul>
+<h2 id="js写在哪"><a href="#js写在哪" class="headerlink" title="js写在哪"></a>js写在哪</h2><p>它和css一样，三种：</p>
+<ul>
+<li>放在 <code>&lt;head&gt;</code>里</li>
+<li>放在 <code>&lt;body&gt;</code>里</li>
+<li>外部文件，被引入，后缀名是xxx.js</li>
+</ul>
+<h2 id="js的输出"><a href="#js的输出" class="headerlink" title="js的输出"></a>js的输出</h2><p>js与我们操作系统端的许多编程语言都不一样，它没有内建的output，比如，python，你可以<br><code>print(&quot;你好啊&quot;)</code>，ruby，你可以<code>puts &quot;你好啊！&quot;</code><br>但是JS没有，但它很神奇，有四个方法能间接的看到：</p>
+<ul>
+<li>window.alert() 弹窗提醒</li>
+<li>document.write() 重写html页面</li>
+<li>innerHTML 改变html的某个元素（通过id匹配）</li>
+<li>console.log() 控制台的log，在浏览器窗口按F12，你就明白了</li>
+</ul>
+<h2 id="js的语法"><a href="#js的语法" class="headerlink" title="js的语法"></a>js的语法</h2><p>js是一种脚本语言，就是它会告诉浏览器做什么，然后被执行。<br>因此它的基本语法有五个：</p>
+<blockquote>
+<p>Values, Operators, Expressions, Keywords, and Comments.<br><br> 值，操作器（运算符），表达式，关键词，注释</p>
+</blockquote>
+<p> 对了，js以分号<code>;</code>为分隔符</p>
+<h3 id="Value"><a href="#Value" class="headerlink" title="Value"></a>Value</h3><p> Value有两种，一种是定值，一种是变量。</p>
+<p> 定值可以是数字，也可以说是“string”（你要习惯这个说法）</p>
+<blockquote>
+<p><code>1820/29.33       &quot;Andy Cui&quot;</code></p>
+</blockquote>
+<p>变量则更简单了，未知数</p>
+<blockquote>
+<p><code>var x         x=66</code>把66这个值赋给(=)了x这个变量(用var来声明)</p>
+</blockquote>
+<h3 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h3><p>与数学一样，<code>+ - * / sqrt</code><br>当然了，它还有很多的运算符，我把一个<a href="http://www.w3schools.com/js/js_operators.asp" target="_blank" rel="external">网址</a>给你，有时间一定要看看。</p>
+<h3 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h3><p>这个是定义，声明function时用的，后面细讲，刚刚的var就是</p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>记得吗？我说过，自己写注释是很有用的一种学习方式，在js中用<code>//</code>或<code>/*</code>与<code>*/</code>来表示</p>
+<h3 id="函数名"><a href="#函数名" class="headerlink" title="函数名"></a>函数名</h3><p>任何一门编程语言都会讲到这个，因为到后期，你的函数名越来越长，是很多个单词的组合，比如<br><code>myapple</code>–&gt;<code>MyApple</code>,<code>my-apple</code>,<code>my_apple</code><br>常见的这三种命名方式，JS中推荐用第一种，叫”camel”，驼峰式！</p>
+<blockquote>
+<p>对了，js对大小写敏感，Apple和apple不一样的</p>
+</blockquote>
+<h3 id="js的数据类型"><a href="#js的数据类型" class="headerlink" title="js的数据类型"></a>js的数据类型</h3><p>为什么要知道数据类型？那样处理起来数据会更加得心应手，js的数据一般有：数字，字符串，数组，对象等等（给你们英文：numbers, strings, arrays, objects and more）</p>
+<blockquote>
+<p>var length = 16;                               // Number <br><br>var lastName = “Johnson”;                      // String<br><br>var cars = [“Saab”, “Volvo”, “BMW”];           // Array<br><br>var x = {firstName:”John”, lastName:”Doe”};    // Object</p>
+</blockquote>
+<p>举个例子：</p>
+<p><code>var x = 16 + 4 + &quot;Volvo&quot;;</code> –&gt;<code>&quot;20Volvo&quot;</code> <br><br><code>var x =  &quot;Volvo&quot;+16 + 4 ;</code>–&gt;<code>&quot;Volvo164&quot;</code><br>所以，在js中，同时处理字符串和数字时，是将数字变成字符串来处理的，就是这样：<code>18</code>–&gt;<code>&quot;18&quot;</code></p>
+<h4 id="js中的数组"><a href="#js中的数组" class="headerlink" title="js中的数组"></a>js中的数组</h4><p>JavaScript数组用方括号写成。<br>数组项用逗号分隔。<br>以下代码声明（创建）一个名为cars的数组，其中包含三个项目（汽车名称）：</p>
+<p><code>var cars = [&quot;Saab&quot;, &quot;Volvo&quot;, &quot;BMW&quot;];</code></p>
+<h4 id="js中的对象"><a href="#js中的对象" class="headerlink" title="js中的对象"></a>js中的对象</h4><p>JavaScript对象用大括号写。对象属性写为名称-值对，用逗号分隔。</p>
+<p>对于一个零基础的人来讲，官方定义非常不好去理解，借用python的概念，字典。<br>把对象想成字典，词：释义。</p>
+<p>这样是不是明白多了？<br><code>var person = {firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;};</code></p>
+<blockquote>
+<p>在js中array是object的一种啊！</p>
+</blockquote>
+<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><p>在文章中曾多次出现了<code>function</code>这个词，它的中文意思是：功能，函数。</p>
+<blockquote>
+<p>官方定义：<br><br>A JavaScript function is a block of code designed to perform a particular task.<br><br>A JavaScript function is executed when “something” invokes it (calls it).</p>
+</blockquote>
+<p>实质上，就是特定命令的集合块儿！</p>
+<p>比如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">p1, p2</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> p1 * p2;</div><div class="line">&#125;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = myFunction(<span class="number">4</span>, <span class="number">3</span>);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>结果会是<code>12</code><br>如果myFunction(9,9),结果是<code>81</code></p>
+<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><p>用这样的语法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">name</span>(<span class="params">parameter1, parameter2, parameter3</span>) </span>&#123;</div><div class="line">    code to be executed</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>应该可以看得懂吧？</p>
+<blockquote>
+<p>注意啊！<br><br><code>()</code>括号中的变量，在声明时的参数(形式参数，意义是未知数)，仅仅用符号来代替即可，因此一定要用自己熟悉的命名方式去命名变量。<br>在函数调用时，也会得到参数，但这时的参数已经是真正的参数。<br></p>
+</blockquote>
+<p>比如上面的例子，声明参数（parameter）为p1,p2<br>实际参数（arguement）为（4,3;9,9)</p>
+<h4 id="函数的调用"><a href="#函数的调用" class="headerlink" title="函数的调用"></a>函数的调用</h4><p>有三种：</p>
+<ul>
+<li>定义一个事件与函数绑定（比如按按钮=弹窗）</li>
+<li>在js中被另一个使用</li>
+<li>自动执行</li>
+</ul>
+<h4 id="return"><a href="#return" class="headerlink" title="return"></a>return</h4><p>这个statement很有意思，在很多编程语言中都有，它就相当于，我们在做数学题时的<code>综上所述</code>，最后一步，会得出一个结论。</p>
+<p>比如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = myFunction(<span class="number">4</span>, <span class="number">3</span>);        <span class="comment">// Function is called, return value will end up in x</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> a * b;                <span class="comment">// Function returns the product of a and b</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>会<code>return</code>出一个结果：12</p>
+<h2 id="今天先到这"><a href="#今天先到这" class="headerlink" title="今天先到这"></a>今天先到这</h2><p>去锻炼了，加油！！！</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-11-20-js学习1.html" class="archive-article-date">
+  	<time datetime="2016-11-20T06:43:10.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-20</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js学习/">js学习</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-CSS笔记1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -377,84 +510,6 @@
 
 
   
-    <article id="post-杂谈-驴得水" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-11-19-杂谈-驴得水.html">杂谈-驴得水</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="我将真心付给了你"><a href="#我将真心付给了你" class="headerlink" title="我将真心付给了你"></a>我将真心付给了你</h1><p><img src="http://pic.yesky.com/uploadImages/2016/292/33/0X5U11R0Z4TQ.jpg" alt="rensuxi.jpg"><br>我的好朋友爱看电影，我比较喜欢电视剧。</p>
-<p>因为我的代入感总是很强烈，我总认为我就是剧中的一个人，跟着角色一起生活，一起开心，一起悲伤。但电影时间太短，我就会有“我只活了两个小时”的感觉，因此我更喜欢电视剧，尤其是长篇的，武林外传80集，我就会觉得自己活得久了些。</p>
-<p>看电影，爱看搞笑片（注意，不是喜剧，是搞笑片），看一看嘻嘻哈哈，看一看吵吵闹闹。</p>
-<p>这个毛病，一直保留到了现在。所以前几天，本想轻松一下，去电影院刷《驴得水》，结果发现我错了。</p>
-<p><img src="http://fun.youth.cn/yl24xs/201611/W020161024390054258278.png" alt=""></p>
-<p>这里想提一句，《驴得水》在网上吵得火热，但我没看影评，所以才会错得那么彻底，以为真是一部喜剧…剧透的感觉，就像小时候攒了好久的零花钱，终于换到一根棒棒糖，准备带回家自己咂摸甜味时，一个小屁孩过来指着你的棒棒糖，牛逼哄哄得说：“昨天我妈刚给我买了，一点都不好吃”。</p>
-<p>好吃不好吃不重要，探索的过程却变得索然无味。</p>
-<p>驴得水的上半场，我几乎是睡过来的。主人公夸张的表情、舞台剧的荒诞表现方式、剧情衔接的断层，一切都太刻意。</p>
-<p>直到一首歌进来……</p>
-<div><br><embed src="http://music.163.com/style/swf/widget.swf?sid=437292675&type=2&auto=0&width=320&height=66" width="340" height="86" allownetworking="all"><br></div>
-
-<p>还有老狼版本~</p>
-<p><div></div></p>
-<embed src="http://music.163.com/style/swf/widget.swf?sid=436514254&type=2&auto=0&width=320&height=66" width="340" height="86" allownetworking="all">
-
-<p><br>这首歌伴随着剧情的转变，我困意全无。此处就不剧透了，整整下半场，我的眼睛始终盯着大屏幕。</p>
-<p>剧情结束，身边的朋友问：“这部电影是不是在讽刺男权主义？”</p>
-<p>我白了他一眼，没说话。</p>
-<p>他继续问：“你应该特别喜欢张一曼吧？”</p>
-<p>我沉默了一会，回答：“对呀，她很性感，但她也很真实。”</p>
-<p>在张一曼身上，有太多矛盾。剧中，大量素材不断暗示她是“婊子”的人物设定，丝毫不避讳谈性，镜头更是不掩饰。赤裸、咬耳朵、亲吻、娇嗔……玩弄、调教男人是家常便饭，她享受性，并以此为乐。<br><img src="http://upload-images.jianshu.io/upload_images/2510601-4dcf95752368c0c0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>但镜头一转，张一曼身着素袍，坐在椅子上，秋日的阳光铺满一地的安静。她轻声哼唱《我要你》，清澈的音色飘散在空荡的原野，风悄悄地压弯了野草。眯起眼睛的她，将剥下的蒜皮一挥，幻成漫天雪花。</p>
-<p><img src="http://ww1.sinaimg.cn/orj480/650c7c29jw1f9apedmvz6j20rs0bo40i.jpg" alt=""></p>
-<p>在这个女人身上，我看到了曾经说爱你的人不可得后的报复、当局者的利益被蚕食时从皮肤里渗出来的欲望、无能愤怒的人变成了听话的牲口、衣冠楚楚的人变成了双眼铮红的嗜血鬼，然而这些人活着好好的人，都“死”了。</p>
-<p>电影中死去的张一曼，却是唯一“活”着的人。其他人呢？宽容的人，成了小人；淳朴的人，成了恶棍；正面向上的人，总在行骗。</p>
-<p>活着的，已经死去，而死去的，却依然活着</p>
-<p>导演一定是偏爱张一曼的，才会让她选择自己的结局，如此惨烈，如此动容。</p>
-<p>电影结束后，我满脑子都是美国诗人罗伯特·弗罗斯特的墓志铭：“我和这个世界有过情人般的争吵。”</p>
-<p>是啊，这样的女子…</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/posts/uncategorized/2016-11-19-杂谈-驴得水.html" class="archive-article-date">
-  	<time datetime="2016-11-19T08:04:44.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-19</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -521,7 +576,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 10px;">js学习</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
+    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 15px;">js学习</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
     			</div>
     	</section>
     
