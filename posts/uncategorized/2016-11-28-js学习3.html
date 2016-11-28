@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>js学习3 | 崔浩楠的网站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="数组Array与字典Object什么是数组？举个例子，你想买一些东西，都有：苹果，酸奶，卫生纸等等
+你可以用 list来表示，但是这里有一个更好的，叫Array，数组，实际上就是一堆东西的集合，比如像这样：var  buy_things = [&amp;quot;apple&amp;quot;,&amp;quot;yogurt&amp;quot;,&amp;quot;toilet paper&amp;quot;]无论是看起来，还是整理起来都非常">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js学习3">
+<meta property="og:url" content="http://yoursite.com/posts/uncategorized/2016-11-28-js学习3.html">
+<meta property="og:site_name" content="崔浩楠的网站">
+<meta property="og:description" content="数组Array与字典Object什么是数组？举个例子，你想买一些东西，都有：苹果，酸奶，卫生纸等等
+你可以用 list来表示，但是这里有一个更好的，叫Array，数组，实际上就是一堆东西的集合，比如像这样：var  buy_things = [&amp;quot;apple&amp;quot;,&amp;quot;yogurt&amp;quot;,&amp;quot;toilet paper&amp;quot;]无论是看起来，还是整理起来都非常">
+<meta property="og:updated_time" content="2016-11-28T12:01:21.736Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js学习3">
+<meta name="twitter:description" content="数组Array与字典Object什么是数组？举个例子，你想买一些东西，都有：苹果，酸奶，卫生纸等等
+你可以用 list来表示，但是这里有一个更好的，叫Array，数组，实际上就是一堆东西的集合，比如像这样：var  buy_things = [&amp;quot;apple&amp;quot;,&amp;quot;yogurt&amp;quot;,&amp;quot;toilet paper&amp;quot;]无论是看起来，还是整理起来都非常">
+  
+    <link rel="alternative" href="/atom.xml" title="崔浩楠的网站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/asset/img/B.ico">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/asset/img/lion.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">崔浩楠</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">面朝大海     以梦为马</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/杂谈/">杂谈</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/cuihaonan93" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">崔浩楠</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/asset/img/lion.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">崔浩楠</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">面朝大海     以梦为马</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/杂谈/">杂谈</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/cuihaonan93" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-js学习3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js学习3
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数组Array与字典Object"><a href="#数组Array与字典Object" class="headerlink" title="数组Array与字典Object"></a>数组Array与字典Object</h1><h2 id="什么是数组？"><a href="#什么是数组？" class="headerlink" title="什么是数组？"></a>什么是数组？</h2><p>举个例子，你想买一些东西，都有：苹果，酸奶，卫生纸等等</p>
+<p>你可以用 <code>list</code>来表示，但是这里有一个更好的，叫Array，数组，实际上就是一堆东西的集合，<br>比如像这样：<code>var  buy_things = [&quot;apple&quot;,&quot;yogurt&quot;,&quot;toilet paper&quot;]</code>无论是看起来，还是整理起来都非常方便。</p>
+<h2 id="数组的方法"><a href="#数组的方法" class="headerlink" title="数组的方法"></a>数组的方法</h2><p>刚刚说了看起来和整理起来都非常方便，那我们分别来讨论一下“看”和“整理”的方法。</p>
+<h3 id="“看”的方法"><a href="#“看”的方法" class="headerlink" title="“看”的方法"></a>“看”的方法</h3><p>看，实际上就是显示数组<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo2"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">var</span> fruits = [<span class="string">"Banana"</span>, <span class="string">"Orange"</span>, <span class="string">"Apple"</span>, <span class="string">"Mango"</span>];</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = fruits.toString();</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo2"</span>).innerHTML = fruits;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo3"</span>).innerHTML = fruits.join(<span class="string">" * "</span>);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>两种方法显示的是一样的，因为默认数组展示是字符串，但如果你把数组中第一项改成数字，<br>然后   <code>document.getElementById(&quot;demo2&quot;).innerHTML = typeof(fruits[0])</code><br>(这句话同样解释了怎么看数组的某一项)，会返回 <code>number</code>，明白了吧！</p>
+<blockquote>
+<p> <code>demo3</code>会返回：<code>Banana * Orange * Apple * Mango</code></p>
+</blockquote>
+<h3 id="“整理”的方法"><a href="#“整理”的方法" class="headerlink" title="“整理”的方法"></a>“整理”的方法</h3><table>
+<thead>
+<tr>
+<th>描述</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>改变某一项的值</td>
+<td><code>fruits[3]=&quot;Strawberry&quot;</code>第4项变成草莓</td>
+</tr>
+<tr>
+<td>删除最后一项</td>
+<td><code>fruits.pop();</code>芒果就没了</td>
+</tr>
+<tr>
+<td>删除第一项</td>
+<td><code>fruits.shift();</code>香蕉会被删掉</td>
+</tr>
+<tr>
+<td>在最后加一项</td>
+<td><code>fruits.push(&quot;Bear&quot;) ;</code>最后多一个梨子</td>
+</tr>
+<tr>
+<td>删除第一项</td>
+<td><code>fruits.unshift();</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="删除、添加和切片"><a href="#删除、添加和切片" class="headerlink" title="删除、添加和切片"></a>删除、添加和切片</h4><p>在Js中你可以用delete来删除数组中的某一项，但是，删完之后会留一个空（hole）在那，那个空是undefined，非常难看。<br>因此常常用 <code>splice(2,0,&quot;Lemon&quot;,&quot;Kiwi&quot;)</code>这个函数：</p>
+<blockquote>
+<p>The first parameter (2) defines the position where new elements should be changed (spliced in).<br>The second parameter (0) defines how many elements should be removed.<br>The rest of the parameters (“Lemon” , “Kiwi”) define the new elements to be added.这两个可以省略的！</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fruits = [<span class="string">"Banana"</span>, <span class="string">"Orange"</span>, <span class="string">"Apple"</span>, <span class="string">"Mango"</span>];</div><div class="line">fruits.splice(<span class="number">2</span>, <span class="number">0</span>, <span class="string">"Lemon"</span>, <span class="string">"Kiwi"</span>); <span class="comment">//Return:Banana,Orange,Lemon,Kiwi,Apple,Mango</span></div><div class="line"></div><div class="line">fruits.splice(<span class="number">0</span>, <span class="number">1</span>);  <span class="comment">// Removes the first element of fruits</span></div></pre></td></tr></table></figure>
+<p>切片是 <code>slice()</code>,项一把刀，你指哪切哪，只要剩下的。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fruits = [<span class="string">"Banana"</span>, <span class="string">"Orange"</span>, <span class="string">"Lemon"</span>, <span class="string">"Apple"</span>, <span class="string">"Mango"</span>];</div><div class="line"><span class="keyword">var</span> citrus = fruits.slice(<span class="number">1</span>);  <span class="comment">//Return "Orange","Lemon", "Apple", "Mango"</span></div><div class="line"><span class="keyword">var</span> citrus = fruits.slice(<span class="number">3</span>);  <span class="comment">//Return "Apple", "Mango"</span></div><div class="line"><span class="keyword">var</span> citrus = fruits.slice(<span class="number">1</span>,<span class="number">3</span>);    <span class="comment">//Return"Orange", "Lemon"</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>留下限，不留上限，这样的形式：[low,up)</p>
+</blockquote>
+<h3 id="关于排序"><a href="#关于排序" class="headerlink" title="关于排序"></a>关于排序</h3><p>排序是最重要的一个方法了，字符串的排序就是 <code>a-z</code>，数字的排序就是从小到大了。<br>两个方法：</p>
+<ul>
+<li><code>array.sort()</code> 正序</li>
+<li><code>array.reverse()</code> 倒序</li>
+</ul>
+<p>至于别的，因为我的笔记的目的并不是希望做一个前端工程师，仅仅是希望了解更多。因此，原则就是<strong>遇到再说！</strong></p>
+<blockquote>
+<p>但如果你有兴趣，给你个<a href="http://www.w3schools.com/js/js_array_sort.asp" target="_blank" rel="external">网址</a>,你可以自己看看。</p>
+</blockquote>
+<h1 id="比较comparison"><a href="#比较comparison" class="headerlink" title="比较comparison"></a>比较comparison</h1><p>比较很好理解，这个一般我们用在函数里，我们希望程序按我们预期的发展，一般会用到比较，比如，最近很火的总统大选，你得满18才能投票。这其实是一个condition条件，但是第一步是比较！</p>
+<h2 id="简单的比较"><a href="#简单的比较" class="headerlink" title="简单的比较"></a>简单的比较</h2><p>比较的形式也有很多，比如，等于，不等于，大于，小于等等。</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>equal to    x == 8    false</td>
+</tr>
+<tr>
+<td>===</td>
+<td>equal value and equal type</td>
+<td>x === 5    true</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>not equal</td>
+<td>x != 8    true</td>
+</tr>
+<tr>
+<td>!==</td>
+<td>not equal value or not equal type</td>
+<td>x !== 5    false</td>
+</tr>
+<tr>
+<td>></td>
+<td>greater than</td>
+<td>x &gt; 8    false</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>less than</td>
+<td>x &lt; 8    true</td>
+</tr>
+<tr>
+<td>>=</td>
+<td>greater than or equal to</td>
+<td>x &gt;= 8    false</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>less than or equal to</td>
+<td>x &lt;= 8    true</td>
+</tr>
+</tbody>
+</table>
+<p>还有逻辑比较，与（<code>&amp;&amp;</code>,and），或（<code>||</code>,or），非（<code>!</code>,not）</p>
+<h2 id="比较后赋值"><a href="#比较后赋值" class="headerlink" title="比较后赋值"></a>比较后赋值</h2><p>就是在你比较后，如果yes返回a，not返回b。<br>语法如下：<br><code>variablename = (condition) ? A : B</code></p>
+<blockquote>
+<p>一定要注意比较，尽量去同类型比较，因此建议先转一下类型，看下面的例子</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Input your age and click the button:<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"age"</span> <span class="attr">placeholder</span>=<span class="string">"18"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"myFunction()"</span>&gt;</span>Commit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> age, voteable;</div><div class="line">    age = <span class="built_in">document</span>.getElementById(<span class="string">"age"</span>).value;</div><div class="line">    age = <span class="built_in">Number</span>(age);</div><div class="line"><span class="keyword">if</span> (<span class="built_in">isNaN</span>(age)) &#123;</div><div class="line">    voteable = <span class="string">"Error in input"</span>;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    voteable = (age &lt; <span class="number">18</span>) ? <span class="string">"Too young"</span> : <span class="string">"Old enough"</span>;</div><div class="line">&#125;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = voteable + <span class="string">" to vote."</span>;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Input your age and click the button:</p>
+
+<input id="age" placeholder="18">
+
+<button onclick="myFunction()">Commit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var age, voteable;
+    age = document.getElementById("age").value;
+    age = Number(age);
+if (isNaN(age)) {
+    voteable = "Error in input";
+} else {
+    voteable = (age < 18) ? "Too young" : "Old enough";
+}
+    document.getElementById("demo").innerHTML = voteable + " to vote.";
+}
+</script>
+
+
+<p>今天就先到这里，加油！</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-11-28-js学习3.html" class="archive-article-date">
+  	<time datetime="2016-11-28T10:36:24.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-28</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js学习/">js学习</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/posts/uncategorized/2016-11-28-js学习2.5.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js学习2.5</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="js学习3" data-title="js学习3" data-url="http://yoursite.com/posts/uncategorized/2016-11-28-js学习3.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 崔浩楠
+    	</div>
+      	<div class="footer-right">
+      		这个主题是 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 15px;">js学习</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://xiaolai.li/">笑来的网站</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br&gt; 你好&lt;/br&gt;&lt;br&gt;我是崔浩楠&lt;/br&gt;&lt;br&gt;爱爸妈，爱朋友&lt;/br&gt;想去北极</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

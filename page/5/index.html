@@ -134,6 +134,86 @@
       <div class="body-wrap">
         
   
+    <article id="post-html笔记-美化2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-11-14-html笔记-美化2.html">html笔记-美化(2)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="新的一天，加油"><a href="#新的一天，加油" class="headerlink" title="新的一天，加油"></a>新的一天，加油</h1><h2 id="html-中的链接"><a href="#html-中的链接" class="headerlink" title="html 中的链接"></a>html 中的链接</h2><p>链接，你们一定非常熟悉，通俗点讲就是一个<strong>路径</strong>，在鼠标点击这条链接时，可以完成页面的跳转，即打开这个html文档。</p>
+<h3 id="简单语法"><a href="#简单语法" class="headerlink" title="简单语法"></a>简单语法</h3><p>类似于加一个超链接，<br>语法如下：<code>&lt;a href=&quot;链接地址&quot;&gt;你的描述&lt;/a&gt;</code></p>
+<blockquote>
+<p>太简单了，不举例子了</p>
+</blockquote>
+<h3 id="定义好看的颜色"><a href="#定义好看的颜色" class="headerlink" title="定义好看的颜色"></a>定义好看的颜色</h3><p><html></html></p>
+<p><head></head></p>
+<p><style><br>a:link {<br>    color: green;<br>    background-color: transparent;<br>    text-decoration: none;<br>}<br>a:visited {<br>    color: pink;<br>    background-color: red;<br>    text-decoration: none;<br>}<br>a:hover {<br>    color: red;<br>    background-color: transparent;<br>    text-decoration: underline;<br>}<br>a:active {<br>    color: yellow;<br>    background-color: transparent;<br>    text-decoration: underline;<br>}<br></style><br></p>
+<body>
+
+<p>You can change the default colors of links</p>
+
+<p><a href="http://www.baidu.com/" target="_blank">Try it</a></p>
+<p></p></body><br><br>我把源代码贴上，看看就懂了：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span> &#123;</div><div class="line">    <span class="attribute">color</span>: green;</div><div class="line">    <span class="attribute">background-color</span>: transparent;</div><div class="line">    <span class="attribute">text-decoration</span>: none;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visited</span> &#123;</div><div class="line">    <span class="attribute">color</span>: pink;</div><div class="line">    <span class="attribute">background-color</span>: red;</div><div class="line">    <span class="attribute">text-decoration</span>: none;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">    <span class="attribute">color</span>: red;</div><div class="line">    <span class="attribute">background-color</span>: transparent;</div><div class="line">    <span class="attribute">text-decoration</span>: underline;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:active</span> &#123;</div><div class="line">    <span class="attribute">color</span>: yellow;</div><div class="line">    <span class="attribute">background-color</span>: transparent;</div><div class="line">    <span class="attribute">text-decoration</span>: underline;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>You can change the default colors of links<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com/"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>Try it<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure><p></p>
+<h2 id="链接的target属性"><a href="#链接的target属性" class="headerlink" title="链接的target属性"></a>链接的target属性</h2><p>题目说的不具体，简单来说，就是你希望怎么打开这个链接，你可以用几个标签来定义这个属性，常见的有如下2个：</p>
+<ul>
+<li>_blank：在新的标签页中打开</li>
+<li>_self：用这个标签页打开，一般默认是这个</li>
+<li>还有_parent和_top，这两个涉及到了框架的知识，先<strong>放着</strong>，过些日子解决！</li>
+</ul>
+<p>用法如：<code>&lt;a href=&quot;http://www.baidu.com/&quot; target=&quot;_blank&quot;&gt;Visit Baidu!&lt;/a&gt;</code></p>
+<h3 id="创建书签"><a href="#创建书签" class="headerlink" title="创建书签"></a>创建书签</h3><p>先用<code>id</code>属性，创建一个书签<br><br>然后再用href去链接那个id</p>
+<blockquote>
+<p>之前说过，链接实际上就是一个地址，因此你可以在一个页面中加书签，也可以在别的页面中加书签。</p>
+</blockquote>
+<p>比如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#C4"</span>&gt;</span>Jump to Chapter 4<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>Chapter 1<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This chapter explains ba bla bla<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>Chapter 2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This chapter explains ba bla bla<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>Chapter 3<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This chapter explains ba bla bla<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">"C4"</span>&gt;</span>Chapter 4<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This chapter explains ba bla bla<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>点击jump，就会跳到Chapter 4</p>
+<h2 id="先更到这里"><a href="#先更到这里" class="headerlink" title="先更到这里"></a>先更到这里</h2><p>这几天要准备课题组的汇报，时间有点赶，不过明天继续！</p>
+<blockquote>
+<p>上次问为什么展示html效果时，没有贴源码，直接上的图片，因为加入html源码时在渲染时，会将文章的正文，标题什么的一起渲染掉，So did you get it?</p>
+</blockquote>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-11-14-html笔记-美化2.html" class="archive-article-date">
+  	<time datetime="2016-11-14T06:45:03.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-14</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html笔记/">html笔记</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-html笔记-美化" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -389,110 +469,6 @@
       
       <a href="/posts/uncategorized/2016-11-13-html笔记-基础（2）.html" class="archive-article-date">
   	<time datetime="2016-11-13T01:12:19.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-13</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html笔记/">html笔记</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-html笔记-基础" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-11-12-html笔记-基础.html">html笔记-基础</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="开始写之前"><a href="#开始写之前" class="headerlink" title="开始写之前"></a>开始写之前</h4><blockquote>
-<p>无论什么东西，快速了解都是有可能的，之后就要通过反复使用、反复操作获得并磨炼熟练程度。很多人被误导，总是以为“一定要学到一定程度才算学会，才可以拿出手……” 这是肤浅的。要尽快掌握“最少必要知识”（MAKE），然后就开始行动、开始践行…… 真正的熟练，只能在践行之中通过试错、改进、总结、纠正等必要的环节才能获得。</p>
-<p>摘自《人人都是工程师》–李笑来</p>
-</blockquote>
-<h4 id="开始读之前"><a href="#开始读之前" class="headerlink" title="开始读之前"></a>开始读之前</h4><p>打开你的浏览器，点击右键，查看网页源代码，你会看到一堆看不懂的玩意儿，那就是html代码，这个系列笔记就是去简单地介绍html语言，并希望你们能去读懂它。给自己设个小目标吧，你希望从这个笔记中得到什么，是写代码还是能读懂就行？Anyway，定了目标，然后去做吧！</p>
-<blockquote>
-<p>我们来举一个不太恰当的例子，简单解释一下网页。开始想象，打开局域网，你应该可以访问你的网上邻居(如果你有的话)的共享文件夹，打开文件夹，里面是他分享的一些文件，你可以浏览。<br>现在你把局域网换成外部网络，共享的文件夹当成网站，里面的文件就是网页，可你怎么看呢？浏览器就是你电脑上的文件浏览器。我们经常说把网站部署到server上，其实就是把文件在一台主机上共享出来。</p>
-</blockquote>
-<h3 id="OK-Let’s-start-from-here"><a href="#OK-Let’s-start-from-here" class="headerlink" title="OK !  Let’s start from here !"></a>OK !  Let’s start from here !</h3><h2 id="HTML基础-Tags"><a href="#HTML基础-Tags" class="headerlink" title="HTML基础 Tags"></a>HTML基础 Tags</h2><h3 id="写HTML要牢记："><a href="#写HTML要牢记：" class="headerlink" title="写HTML要牢记："></a>写HTML要牢记：</h3><ul>
-<li>所有HTML文档必须以<code>&lt;!DOCTYPE   html&gt;</code>开头</li>
-<li>文档内以<code>&lt;html&gt;</code>开始，<code>&lt;/html&gt;</code>结束</li>
-<li>牢记，浏览器<strong>展示出来</strong>的是<code>&lt;body&gt;</code>与<code>&lt;/body&gt;</code>之间的内容！！！</li>
-<li>记得所有的tags都要<strong>小写</strong></li>
-</ul>
-<h3 id="Headings"><a href="#Headings" class="headerlink" title="Headings"></a>Headings</h3><blockquote>
-<p>Headings就是浏览器的标签页上显示的名字</p>
-</blockquote>
-<ul>
-<li>标题有<strong>六种</strong>大小,从<code>&lt;h1&gt;</code>到<code>&lt;h6&gt;</code></li>
-<li>Headings很重要，它在一定程度上反映了html页面的结构，而Headings中的title则反映了页面的主要内容</li>
-<li><p>你可以在<code>&lt;head&gt;</code>与<code>&lt;/head&gt;</code>之间定义你的title，甚至字符编码，就像这样：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>My First HTML<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p><code>&lt;hr&gt;</code>则可以定义内容主题的<strong>改变</strong>（很拗口是吗？简单点，加条横线，换一页）</p>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span> !不要忘记了</div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is heading 1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is some text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>This is heading 2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is some other text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>This is heading 2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is some other text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>就会展示成如下：</p>
-<html><br><body><br><br><h1>This is heading 1</h1><br><p>This is some text.</p><br><hr><br><br><h2>This is heading 2</h2><br><p>This is some other text.</p><br><hr><br><br></body><br></html>
-
-<h3 id="Paragraphs"><a href="#Paragraphs" class="headerlink" title="Paragraphs"></a>Paragraphs</h3><p>用<code>&lt;p&gt;</code>来展示段落正文，<code>&lt;/p&gt;</code>来结束</p>
-<blockquote>
-<p><code>&lt;br&gt;</code>即break，暂时理解成换行吧，</p>
-</blockquote>
-<p><strong>注意！<br>在浏览器展示html页面时，它会自动忽略空格与缩进，这时<code>&lt;br&gt;</code>就很有用了</strong></p>
-<p><strong>B！U!T!!!</strong><br>HTML提供了一个很有用的tag，就是<code>&lt;pre&gt;</code>,preformatted–预格式化，<code>&lt;pre&gt;</code>元素内的文本以固定宽度的字体（通常为Courier）显示，并且它保留空格和换行符，（你基本上可以理解为，你写成什么样，展示出来什么样！）</p>
-<h3 id="Tags的Attributes-特性"><a href="#Tags的Attributes-特性" class="headerlink" title="Tags的Attributes(特性)"></a>Tags的Attributes(特性)</h3><h4 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h4><p>标记在<code>&lt;html&gt;</code>中，如：<code>&lt;html lang=&quot;en-US&quot;&gt;</code></p>
-<p>这声明了你的语言类型，这对搜索引擎和展示页面来说，是非常重要的</p>
-<h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><p>可以声明在你的正文内：<code>&lt;p title=&quot;I&#39;m pretty&quot;&gt;</code>这样，你把鼠标放在那段正文上，会出现这个title</p>
-<h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><p>链接用<code>&lt;a&gt;</code>标签，用法如下：<code>&lt;a href=&quot;http://www.baidu.com&quot;&gt;This is baidu&#39;s  link&lt;/a&gt;</code><br><a href="http://www.w3schools.com" target="_blank" rel="external">This is baidu’s link</a>,你可以试试！</p>
-<h4 id="图片的尺寸"><a href="#图片的尺寸" class="headerlink" title="图片的尺寸"></a>图片的尺寸</h4><p>在<code>&lt;img&gt;</code>中去定义weight和height，</p>
-<blockquote>
-<p>src 是source的意思，源文件</p>
-</blockquote>
-<p><code>&lt;img src=&quot;/asset/blogimg/dog.jpg&quot; width=&quot;170&quot; height=&quot;142&quot;&gt;</code><br><img src="/asset/blogimg/dog.jpg" width="170" height="142"></p>
-<blockquote>
-<p><code>&lt;alt&gt;</code>标签，当无法显示图像时，alt属性指定要使用的替代文本。<br>属性的值可以由屏幕阅读器读取。 这样，某人“收听”网页，例如 一个盲人，可以“听到”的元素。</p>
-</blockquote>
-<p>今天先写到这里，做一个小复习：</p>
-<ul>
-<li>Headings有<code>&lt;h1&gt;</code>到<code>&lt;h6&gt;</code>标题大小,<code>&lt;hr&gt;</code>加横线，<code>&lt;title&gt;</code>写标题</li>
-<li>PAragraph中<code>&lt;p&gt;</code>写正文，<code>&lt;br&gt;</code>换行，<code>&lt;pre&gt;</code>预格式化</li>
-<li>语言，标题，链接，图片尺寸几个Attributes</li>
-<li>别忘了，要<strong>小写</strong>！</li>
-</ul>
-<h1 id="Good-luck-to-you-！"><a href="#Good-luck-to-you-！" class="headerlink" title="Good luck to you ！"></a>Good luck to you ！</h1>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/posts/uncategorized/2016-11-12-html笔记-基础.html" class="archive-article-date">
-  	<time datetime="2016-11-12T06:46:53.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-12</time>
 </a>
       
 	<div class="article-tag tagcloud">

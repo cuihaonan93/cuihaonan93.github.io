@@ -134,6 +134,193 @@
       <div class="body-wrap">
         
   
+    <article id="post-js学习3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-11-28-js学习3.html">js学习3</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数组Array与字典Object"><a href="#数组Array与字典Object" class="headerlink" title="数组Array与字典Object"></a>数组Array与字典Object</h1><h2 id="什么是数组？"><a href="#什么是数组？" class="headerlink" title="什么是数组？"></a>什么是数组？</h2><p>举个例子，你想买一些东西，都有：苹果，酸奶，卫生纸等等</p>
+<p>你可以用 <code>list</code>来表示，但是这里有一个更好的，叫Array，数组，实际上就是一堆东西的集合，<br>比如像这样：<code>var  buy_things = [&quot;apple&quot;,&quot;yogurt&quot;,&quot;toilet paper&quot;]</code>无论是看起来，还是整理起来都非常方便。</p>
+<h2 id="数组的方法"><a href="#数组的方法" class="headerlink" title="数组的方法"></a>数组的方法</h2><p>刚刚说了看起来和整理起来都非常方便，那我们分别来讨论一下“看”和“整理”的方法。</p>
+<h3 id="“看”的方法"><a href="#“看”的方法" class="headerlink" title="“看”的方法"></a>“看”的方法</h3><p>看，实际上就是显示数组<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo2"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">var</span> fruits = [<span class="string">"Banana"</span>, <span class="string">"Orange"</span>, <span class="string">"Apple"</span>, <span class="string">"Mango"</span>];</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = fruits.toString();</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo2"</span>).innerHTML = fruits;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo3"</span>).innerHTML = fruits.join(<span class="string">" * "</span>);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>两种方法显示的是一样的，因为默认数组展示是字符串，但如果你把数组中第一项改成数字，<br>然后   <code>document.getElementById(&quot;demo2&quot;).innerHTML = typeof(fruits[0])</code><br>(这句话同样解释了怎么看数组的某一项)，会返回 <code>number</code>，明白了吧！</p>
+<blockquote>
+<p> <code>demo3</code>会返回：<code>Banana * Orange * Apple * Mango</code></p>
+</blockquote>
+<h3 id="“整理”的方法"><a href="#“整理”的方法" class="headerlink" title="“整理”的方法"></a>“整理”的方法</h3><table>
+<thead>
+<tr>
+<th>描述</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>改变某一项的值</td>
+<td><code>fruits[3]=&quot;Strawberry&quot;</code>第4项变成草莓</td>
+</tr>
+<tr>
+<td>删除最后一项</td>
+<td><code>fruits.pop();</code>芒果就没了</td>
+</tr>
+<tr>
+<td>删除第一项</td>
+<td><code>fruits.shift();</code>香蕉会被删掉</td>
+</tr>
+<tr>
+<td>在最后加一项</td>
+<td><code>fruits.push(&quot;Bear&quot;) ;</code>最后多一个梨子</td>
+</tr>
+<tr>
+<td>删除第一项</td>
+<td><code>fruits.unshift();</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="删除、添加和切片"><a href="#删除、添加和切片" class="headerlink" title="删除、添加和切片"></a>删除、添加和切片</h4><p>在Js中你可以用delete来删除数组中的某一项，但是，删完之后会留一个空（hole）在那，那个空是undefined，非常难看。<br>因此常常用 <code>splice(2,0,&quot;Lemon&quot;,&quot;Kiwi&quot;)</code>这个函数：</p>
+<blockquote>
+<p>The first parameter (2) defines the position where new elements should be changed (spliced in).<br>The second parameter (0) defines how many elements should be removed.<br>The rest of the parameters (“Lemon” , “Kiwi”) define the new elements to be added.这两个可以省略的！</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fruits = [<span class="string">"Banana"</span>, <span class="string">"Orange"</span>, <span class="string">"Apple"</span>, <span class="string">"Mango"</span>];</div><div class="line">fruits.splice(<span class="number">2</span>, <span class="number">0</span>, <span class="string">"Lemon"</span>, <span class="string">"Kiwi"</span>); <span class="comment">//Return:Banana,Orange,Lemon,Kiwi,Apple,Mango</span></div><div class="line"></div><div class="line">fruits.splice(<span class="number">0</span>, <span class="number">1</span>);  <span class="comment">// Removes the first element of fruits</span></div></pre></td></tr></table></figure>
+<p>切片是 <code>slice()</code>,项一把刀，你指哪切哪，只要剩下的。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fruits = [<span class="string">"Banana"</span>, <span class="string">"Orange"</span>, <span class="string">"Lemon"</span>, <span class="string">"Apple"</span>, <span class="string">"Mango"</span>];</div><div class="line"><span class="keyword">var</span> citrus = fruits.slice(<span class="number">1</span>);  <span class="comment">//Return "Orange","Lemon", "Apple", "Mango"</span></div><div class="line"><span class="keyword">var</span> citrus = fruits.slice(<span class="number">3</span>);  <span class="comment">//Return "Apple", "Mango"</span></div><div class="line"><span class="keyword">var</span> citrus = fruits.slice(<span class="number">1</span>,<span class="number">3</span>);    <span class="comment">//Return"Orange", "Lemon"</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>留下限，不留上限，这样的形式：[low,up)</p>
+</blockquote>
+<h3 id="关于排序"><a href="#关于排序" class="headerlink" title="关于排序"></a>关于排序</h3><p>排序是最重要的一个方法了，字符串的排序就是 <code>a-z</code>，数字的排序就是从小到大了。<br>两个方法：</p>
+<ul>
+<li><code>array.sort()</code> 正序</li>
+<li><code>array.reverse()</code> 倒序</li>
+</ul>
+<p>至于别的，因为我的笔记的目的并不是希望做一个前端工程师，仅仅是希望了解更多。因此，原则就是<strong>遇到再说！</strong></p>
+<blockquote>
+<p>但如果你有兴趣，给你个<a href="http://www.w3schools.com/js/js_array_sort.asp" target="_blank" rel="external">网址</a>,你可以自己看看。</p>
+</blockquote>
+<h1 id="比较comparison"><a href="#比较comparison" class="headerlink" title="比较comparison"></a>比较comparison</h1><p>比较很好理解，这个一般我们用在函数里，我们希望程序按我们预期的发展，一般会用到比较，比如，最近很火的总统大选，你得满18才能投票。这其实是一个condition条件，但是第一步是比较！</p>
+<h2 id="简单的比较"><a href="#简单的比较" class="headerlink" title="简单的比较"></a>简单的比较</h2><p>比较的形式也有很多，比如，等于，不等于，大于，小于等等。</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>equal to    x == 8    false</td>
+</tr>
+<tr>
+<td>===</td>
+<td>equal value and equal type</td>
+<td>x === 5    true</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>not equal</td>
+<td>x != 8    true</td>
+</tr>
+<tr>
+<td>!==</td>
+<td>not equal value or not equal type</td>
+<td>x !== 5    false</td>
+</tr>
+<tr>
+<td>></td>
+<td>greater than</td>
+<td>x &gt; 8    false</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>less than</td>
+<td>x &lt; 8    true</td>
+</tr>
+<tr>
+<td>>=</td>
+<td>greater than or equal to</td>
+<td>x &gt;= 8    false</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>less than or equal to</td>
+<td>x &lt;= 8    true</td>
+</tr>
+</tbody>
+</table>
+<p>还有逻辑比较，与（<code>&amp;&amp;</code>,and），或（<code>||</code>,or），非（<code>!</code>,not）</p>
+<h2 id="比较后赋值"><a href="#比较后赋值" class="headerlink" title="比较后赋值"></a>比较后赋值</h2><p>就是在你比较后，如果yes返回a，not返回b。<br>语法如下：<br><code>variablename = (condition) ? A : B</code></p>
+<blockquote>
+<p>一定要注意比较，尽量去同类型比较，因此建议先转一下类型，看下面的例子</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Input your age and click the button:<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"age"</span> <span class="attr">placeholder</span>=<span class="string">"18"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"myFunction()"</span>&gt;</span>Commit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> age, voteable;</div><div class="line">    age = <span class="built_in">document</span>.getElementById(<span class="string">"age"</span>).value;</div><div class="line">    age = <span class="built_in">Number</span>(age);</div><div class="line"><span class="keyword">if</span> (<span class="built_in">isNaN</span>(age)) &#123;</div><div class="line">    voteable = <span class="string">"Error in input"</span>;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    voteable = (age &lt; <span class="number">18</span>) ? <span class="string">"Too young"</span> : <span class="string">"Old enough"</span>;</div><div class="line">&#125;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = voteable + <span class="string">" to vote."</span>;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Input your age and click the button:</p>
+
+<input id="age" placeholder="18">
+
+<button onclick="myFunction()">Commit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var age, voteable;
+    age = document.getElementById("age").value;
+    age = Number(age);
+if (isNaN(age)) {
+    voteable = "Error in input";
+} else {
+    voteable = (age < 18) ? "Too young" : "Old enough";
+}
+    document.getElementById("demo").innerHTML = voteable + " to vote.";
+}
+</script>
+
+
+<p>今天就先到这里，加油！</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-11-28-js学习3.html" class="archive-article-date">
+  	<time datetime="2016-11-28T10:36:24.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-28</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js学习/">js学习</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-js学习2.5" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -154,7 +341,7 @@
       
         <h1 id="Js中的时间"><a href="#Js中的时间" class="headerlink" title="Js中的时间"></a>Js中的时间</h1><h2 id="时间的格式"><a href="#时间的格式" class="headerlink" title="时间的格式"></a>时间的格式</h2><p>首先要了解一个小知识，即我们在许多编程语言当中会认为时间的开始是1970.01.01。</p>
 <blockquote>
-<p>一个很懒的解释：<br><br>很多编程语言起源于UNIX系统，而UNIX系统认为1970年1月1日0点是时间纪元，<br>所以我们常说的UNIX时间戳是以1970年1月1日0点为计时起点时间的。</p>
+<p>一个很懒的解释：<br>很多编程语言起源于UNIX系统，而UNIX系统认为1970年1月1日0点是时间纪元，<br>所以我们常说的UNIX时间戳是以1970年1月1日0点为计时起点时间的。</p>
 </blockquote>
 <p>还有详细的，可以自己去搜一下。</p>
 <p>因此，javascript中有四种时间的对象：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>()</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(milliseconds)</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(dateString)</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(year, month, day, hours, minutes, seconds, milliseconds)</div></pre></td></tr></table></figure></p>
@@ -567,158 +754,6 @@ var d4 = new Date(93,05,05,02,30,0);
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js学习/">js学习</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-css笔记2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-11-21-css笔记2.html">css笔记2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="CSS的盒子模型"><a href="#CSS的盒子模型" class="headerlink" title="CSS的盒子模型"></a>CSS的盒子模型</h1><p>这个系列的笔记是为了学一些布局和网页外观方面的知识，在讨论这个时，引入一种“盒子（box model）”。所有的html元素都看成box，就像下面的图一样！</p>
-<p><img src="/asset/blogimg/css/box.jpg" alt="box.jpg"></p>
-<ul>
-<li>Content - The content of the box, where text and images appear</li>
-<li>Padding - Clears an area around the content. The padding is transparent</li>
-<li>Border - A border that goes around the padding and content</li>
-<li>Margin - Clears an area outside the border. The margin is transparent</li>
-</ul>
-<p>定义的方法和从前一样：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">div &#123;</div><div class="line">    background-color: lightblue;</div><div class="line">    width: 200px;</div><div class="line">    padding: 25px;</div><div class="line">    border: 25px solid navy;</div><div class="line">    margin:25px;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h1 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h1><p>我们知道了“box model”之后，就明白了网页布局的形式了，下面我们专注于如何将网页上的文字更好的呈现。<br>文字有许多特性，下面可以看看这个表(考考你们的英文)：</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>color</td>
-<td>Sets the color of text</td>
-</tr>
-<tr>
-<td>direction</td>
-<td>Specifies the text direction/writing direction</td>
-</tr>
-<tr>
-<td>letter-spacing</td>
-<td>Increases or decreases the space between characters in a text</td>
-</tr>
-<tr>
-<td>line-height</td>
-<td>Sets the line height</td>
-</tr>
-<tr>
-<td>text-align</td>
-<td>Specifies the horizontal alignment of text</td>
-</tr>
-<tr>
-<td>text-decoration</td>
-<td>Specifies the decoration added to text</td>
-</tr>
-<tr>
-<td>text-indent</td>
-<td>Specifies the indentation of the first line in a text-block</td>
-</tr>
-<tr>
-<td>text-shadow</td>
-<td>Specifies the shadow effect added to text</td>
-</tr>
-<tr>
-<td>text-transform</td>
-<td>Controls the capitalization of text</td>
-</tr>
-<tr>
-<td>unicode-bidi</td>
-<td>Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document</td>
-</tr>
-<tr>
-<td>vertical-align</td>
-<td>Sets the vertical alignment of an element</td>
-</tr>
-<tr>
-<td>white-space</td>
-<td>Specifies how white-space inside an element is handled</td>
-</tr>
-<tr>
-<td>word-spacing</td>
-<td>Increases or decreases the space between words in a text</td>
-</tr>
-</tbody>
-</table>
-<p>详情请看<a href="http://www.w3schools.com/cssref/default.asp" target="_blank" rel="external">这个网址</a></p>
-<h2 id="简单用法："><a href="#简单用法：" class="headerlink" title="简单用法："></a>简单用法：</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">p.small &#123;</div><div class="line">    color:blue;</div><div class="line">    line-height: 0.7;</div><div class="line">    text-align:center;</div><div class="line">    text-decoration:overline;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">p.big &#123;</div><div class="line">    color:red;</div><div class="line">    text-indent: 5px;</div><div class="line">    line-height: 2.8;</div><div class="line">    text-transform: uppercase;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">This is a paragraph with a standard line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">The default line height in most browsers is about 110% to 120%.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"small"</span>&gt;</span></div><div class="line">This is a paragraph with a smaller line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">This is a paragraph with a smaller line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"big"</span>&gt;</span></div><div class="line">This is a paragraph with a bigger line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">This is a paragraph with a bigger line-height.<span class="tag">&lt;<span class="name">br</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>效果：</p>
-<p><style><br>p.small {<br>    color:blue;<br>    line-height: 0.7;<br>    text-align:center;<br>    text-decoration:overline;<br>}</p>
-<p>p.big {<br>    color:red;<br>    text-indent: 5px;<br>    line-height: 2.8;<br>    text-transform: uppercase;<br>}<br>}<br></style><br></p>
-<body>
-
-<p><br>This is a paragraph with a standard line-height.<br><br>The default line height in most browsers is about 110% to 120%.<br><br></p>
-
-<p class="small"><br>This is a paragraph with a smaller line-height.<br><br>This is a paragraph with a smaller line-height.<br><br></p>
-
-<p></p><p class="big"><br>This is a paragraph with a bigger line-height.<br><br>This is a paragraph with a bigger line-height.<br></p>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>一套漂亮的字体，能让你的网站，看起来更酷，因此，你需要自己去学一下，标签很简单，字体很多：</p>
-<ul>
-<li>字体：<code>&lt;font-family: &quot;Times New Roman&quot;, Times, serif;&gt;</code></li>
-<li>字体的样式(斜体)： <code>&lt;font-style: italic;&gt;</code></li>
-<li>是否加粗： <code>&lt;font-weight: bold;/normal;&gt;</code></li>
-<li>字体的大小： <code>&lt;font-size:40px;&gt;</code></li>
-</ul>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>可以把自己的链接做的更漂亮一点，比如下面的例子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">a:link, a:visited &#123;</div><div class="line">    background-color: powderblue;</div><div class="line">    color: white;</div><div class="line">    padding: 14px 25px;</div><div class="line">    text-align: center;</div><div class="line">    text-decoration: underline;</div><div class="line">    display: inline-block;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">a:hover, a:active &#123;</div><div class="line">    background-color: pink;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"www.baidu.com"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>This is a link<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>效果是这样：<br><img src="/asset/blogimg/css/link.jpg" alt="link.jpg"><br>当你把鼠标放在链接上，会变成粉色，（hover的作用）：<br><img src="/asset/blogimg/css/link2.jpg" alt="link2.jpg"></p>
-<h1 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h1><p>原文是：Pseudo-class，它的作用是为某一个元素定义一个特定的展示方式。<br>比如：hover，active，visited，focus，等等。</p>
-<p>给你个<a href="http://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank" rel="external">网址</a>，自己看看，非常详细。</p>
-<blockquote>
-<p>同样的，还有<a href="http://www.w3schools.com/css/css_pseudo_elements.asp" target="_blank" rel="external">伪元素</a>。</p>
-</blockquote>
-<h2 id="list的补充"><a href="#list的补充" class="headerlink" title="list的补充"></a>list的补充</h2><p>之前在html笔记中提过了，list 的样式，有个更全的，这是<a href="http://www.w3schools.com/css/tryit.asp?filename=trycss_list-style-type_all" target="_blank" rel="external">网址</a></p>
-<h1 id="Overflow"><a href="#Overflow" class="headerlink" title="Overflow"></a>Overflow</h1><p>溢出，这个是什么呢？<br>就是比如页面中有一个 <code>&lt;div&gt;</code>，里面有很多字，我们想更友好的显示它，看下面的例子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">div &#123;</div><div class="line">    background-color: #eee;</div><div class="line">    width: 200px;</div><div class="line">    height: 50px;</div><div class="line">    border: 1px dotted black;</div><div class="line">    overflow-x: hidden;</div><div class="line">    overflow-y: scroll;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>其实就是加个滚动条</p>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>其实CSS还有很多内容，我没有写，以后有时间我会把那些没用涉及到的写出来。</p>
-<p>网页的设计是非常零碎的知识，它不是一棵大树那样，有一条主干，反而像房子，用许多砖头盖起来，我们现在就是烧制砖头的时候！加油！！！</p>
-</body>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/posts/uncategorized/2016-11-21-css笔记2.html" class="archive-article-date">
-  	<time datetime="2016-11-21T00:51:56.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-21</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS笔记/">CSS笔记</a></li></ul>
 	</div>
 
       
