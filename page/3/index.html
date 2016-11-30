@@ -134,6 +134,137 @@
       <div class="body-wrap">
         
   
+    <article id="post-CSS笔记1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-11-20-CSS笔记1.html">CSS笔记1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="什么是CSS"><a href="#什么是CSS" class="headerlink" title="什么是CSS"></a>什么是CSS</h1><p>在之前的html笔记系列中，提到过一点CSS，它的作用是用来定义html文档如何更优雅的展示在用户的浏览器上。</p>
+<blockquote>
+<p>官方定义：<br></p>
+<ul>
+<li>CSS stands for Cascading Style Sheets</li>
+<li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+<li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+<li>External stylesheets are stored in CSS files</li>
+</ul>
+</blockquote>
+<p>看得懂吧？</p>
+<h1 id="CSS的语法"><a href="#CSS的语法" class="headerlink" title="CSS的语法"></a>CSS的语法</h1><p><img src="http://www.w3schools.com/css/selector.gif" alt="css.jpg"></p>
+<p>前面是selector，收集器（有点直），后面declaration，声明</p>
+<p>指定哪个部分，去如何展示！</p>
+<p>如何指定就是selector<br>如何展示就是declaration</p>
+<h2 id="selector的形式"><a href="#selector的形式" class="headerlink" title="selector的形式"></a>selector的形式</h2><p>指定的方式有很多种，比如：</p>
+<ul>
+<li>element name 元素</li>
+<li>id</li>
+<li>class</li>
+</ul>
+<h3 id="element"><a href="#element" class="headerlink" title="element"></a>element</h3><p>这是最常见的，<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">    <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="ID"><a href="#ID" class="headerlink" title="ID"></a>ID</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#para1</span> &#123;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">    <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.center &#123;</div><div class="line">    text-align: center;</div><div class="line">    color: red;</div><div class="line">&#125;</div><div class="line">p/h1.center &#123;</div><div class="line">    text-align: center;</div><div class="line">    color: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这个有点复杂，</p>
+<ul>
+<li>第一种形式，意思是所有的 <code>&lt;class=&quot;center&quot;&gt;</code>都会居中，红字</li>
+<li>第二种形式，则加了一个 <code>&lt;p&gt;</code>元素，就是说，段落中所有的 <code>&lt;class=&quot;center&quot;&gt;</code>都会居中，红字</li>
+</ul>
+<h1 id="CSS的使用"><a href="#CSS的使用" class="headerlink" title="CSS的使用"></a>CSS的使用</h1><p>之前提过一次，想用CSS有三种方式：</p>
+<ul>
+<li>引用外部文件</li>
+<li>在 <code>&lt;head&gt;</code> 中定义css style</li>
+<li>内嵌代码</li>
+</ul>
+<p>外部的引用如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"mystyle.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h1 id="CSS中的颜色"><a href="#CSS中的颜色" class="headerlink" title="CSS中的颜色"></a>CSS中的颜色</h1><p>颜色的表示有三种（之前也提过）</p>
+<ul>
+<li>a valid color name - like “red”</li>
+<li>an RGB value - like “rgb(255, 0, 0)”</li>
+<li>a HEX value - like “#ff0000”</li>
+</ul>
+<h2 id="颜色名字"><a href="#颜色名字" class="headerlink" title="颜色名字"></a>颜色名字</h2><p><table class="w3-table-all notranslate"><br>  <tr><th style="width:50%">Color</th><br>    <th>Name</th></tr><br>  <tr><td style="background-color:red">&nbsp;</td><td>Red</td></tr><br>  <tr><td style="background-color:green">&nbsp;</td><td>Green</td></tr><br>  <tr><td style="background-color:blue">&nbsp;</td><td>Blue</td></tr><br>  <tr><td style="background-color:orange">&nbsp;</td><td>Orange</td></tr><br>  <tr><td style="background-color:yellow">&nbsp;</td><td>Yellow</td></tr><br>  <tr><td style="background-color:cyan">&nbsp;</td><td>Cyan</td></tr><br>  <tr><td style="background-color:black">&nbsp;</td><td>Black</td></tr><br></table><br>（其实我建议，到了现在这个水平，您可以去读一下网页的源代码了，试着把上面这个表的源码扣出来）</p>
+<h2 id="RGB表示"><a href="#RGB表示" class="headerlink" title="RGB表示"></a>RGB表示</h2><div class="w3-responsive"><br><table class="w3-table-all notranslate"><br>  <tr><br>    <th style="width:50%">Color</th><br>    <th>RGB</th><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(255, 0, 0)">&nbsp;</td><br>    <td>rgb(255,0,0)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(0, 255, 0)">&nbsp;</td><br>    <td>rgb(0,255,0)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(0, 0, 255)">&nbsp;</td><br>    <td>rgb(0,0,255)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(255, 165, 0)">&nbsp;</td><br>    <td>rgb(255,165,0)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(255, 255, 0)">&nbsp;</td><br>    <td>rgb(255,255,0)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(0, 255, 255)">&nbsp;</td><br>    <td>rgb(0,255,255)</td><br>  </tr><br></table><br></div>
+
+<h2 id="HEX表示"><a href="#HEX表示" class="headerlink" title="HEX表示"></a>HEX表示</h2><p>这个留作业，自己查一下，因为html5更偏爱这个</p>
+<h1 id="CSS的背景"><a href="#CSS的背景" class="headerlink" title="CSS的背景"></a>CSS的背景</h1><p>CSS的background是用来定义html页面的背景的，可以有：</p>
+<ul>
+<li>背景颜色</li>
+<li>背景图片</li>
+<li>是否重复</li>
+<li>背景图片的位置</li>
+<li>背景固定</li>
+<li>shorthand（简写）</li>
+</ul>
+<p>正常写：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">    <span class="attribute">background-color</span>: white;</div><div class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">"img_tree.png"</span>);</div><div class="line">    <span class="attribute">background-repeat</span>:no-repeat;</div><div class="line">    <span class="attribute">background-position</span>:right top;</div><div class="line">    <span class="attribute">background-attachment</span>: fixed;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>shorthand的写法：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">      <span class="attribute">background</span>:  white <span class="built_in">url</span>(<span class="string">"img_tree.png"</span>) no-repeat right top;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is a Heading<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is a paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is another paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>效果如下：<br><img src="/asset/blogimg/css/backgroud.jpg" alt="background.jpg"></p>
+<h1 id="CSS中的边线"><a href="#CSS中的边线" class="headerlink" title="CSS中的边线"></a>CSS中的边线</h1><p>边线有很多形式，实线，点线等等：</p>
+<ul>
+<li>dotted - Defines a dotted border</li>
+<li>dashed - Defines a dashed border</li>
+<li>solid - Defines a solid border</li>
+<li>double - Defines a double border</li>
+<li>groove - Defines a 3D grooved border. Theeffect depends on the border-color value</li>
+<li>ridge - Defines a 3D ridged border. The effect depends on the border-color value</li>
+<li>inset - Defines a 3D inset border. The effect depends on the border-color value</li>
+<li>outset - Defines a 3D outset border. The effect depends on the border-color value</li>
+<li>none - Defines no border</li>
+<li>hidden - Defines a hidden border</li>
+</ul>
+<p>结果：<br><img src="/asset/blogimg/css/margin2.jpg" alt="margin2.jpg"></p>
+<h2 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h2><ul>
+<li>border的width</li>
+<li>border的color</li>
+<li>shorthand<br>用法：<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">p.three &#123;</div><div class="line">    border-style: dotted;</div><div class="line">    border-width: 2px;/medium/thick;</div><div class="line">    border-color: green;</div><div class="line">&#125;</div><div class="line">/*简写*/</div><div class="line">p &#123;</div><div class="line">    border: 5px solid red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="偏边界"><a href="#偏边界" class="headerlink" title="偏边界"></a>偏边界</h2><p>比如左边界：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span> <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"><span class="selector-tag">p</span> &#123;</span></div><div class="line">    <span class="attribute">border-left</span>: <span class="number">6px</span> solid pink;</div><div class="line">    <span class="attribute">background-color</span>: lightgrey;</div><div class="line">&#125;<span class="tag">&lt;/<span class="name">style</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span> 看看效果 <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><img src="/asset/blogimg/css/margin.jpg" alt="margin.jpg"></p>
+<h2 id="Padding"><a href="#Padding" class="headerlink" title="Padding"></a>Padding</h2><p>Padding填充，是这个区域内的填充，与margin的方式一样，有个小技巧，比如我们想把上下填充50px，左右25px，可以这么写：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">    <span class="attribute">background-color</span>: lightblue;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">50px</span> <span class="number">25px</span>;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="height-and-width"><a href="#height-and-width" class="headerlink" title="height and width"></a>height and width</h2><p>定义所在的标签，比如 <code>&lt;h1&gt;</code> 和 <code>&lt;p&gt;</code> 以及 <code>&lt;div&gt;</code>的高度和宽度，这里就不写了。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-11-20-CSS笔记1.html" class="archive-article-date">
+  	<time datetime="2016-11-20T02:22:29.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-20</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS笔记/">CSS笔记</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-html笔记-表单1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -324,85 +455,9 @@
 
 
   
-    <article id="post-html笔记-杂项" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-11-19-html笔记-杂项.html">html笔记-杂项</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 在这一章中，我们来大致的说说，html的布局，字符类型，解码，以及尺寸（适应不同的浏览器）<br> 等等，比较杂乱的东西。</p>
-<h1 id="head"><a href="#head" class="headerlink" title="head"></a>head</h1><p> 在head元素中，它包含了元数据(metadata)，我们可以这么理解，它是用来解释html的代码，在 <code>&lt;head&gt;</code>中<br> 我们常常定义:</p>
-<ul>
-<li><code>&lt;title&gt;</code>在你的标签页上，或者你添加收藏时的名字</li>
-<li><code>&lt;style&gt;</code>这个不用再讲了，页面的好看与否<ul>
-<li><code>&lt;link rel=stylesheet href=&quot;mystyle.css&quot;&gt;</code>之前说过了，可以单独引入CSS文件</li>
-</ul>
-</li>
-<li><p><code>&lt;meta&gt;</code>中可以定义许多，</p>
-<ul>
-<li>比如字符的解码， <code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>但如果包含中文的话，建议用charset=gb2312。</li>
-<li>比如description，arthur，keyword格式是这样： <code>&lt;meta name=&quot;arthur&quot; content=&quot;Andy Cui&quot;&gt;</code></li>
-</ul>
-<h4 id="小彩蛋"><a href="#小彩蛋" class="headerlink" title="小彩蛋"></a>小彩蛋</h4><p>记得高中的时候，手机刚刚能上网，我们就用诺基亚看球，当时一分钟一刷新，觉得非常神奇，可以这么来实现：</p>
-<p><code>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;60&quot;&gt;</code></p>
-<p>就实现了60s的刷新</p>
-</li>
-</ul>
-<h1 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h1><p>你可以把网站的布局想象成报纸，分栏，分块</p>
-<p>直接看一下html5布局英文的描述：<br><img src="/asset/blogimg/zatan/html.jpg" alt="html.jpg"></p>
-<p>实现布局强烈建议用CSS 框架或CSS flexbox，<br>至于详细的教程，可以看看<a href="http://www.w3schools.com/css/default.asp" target="_blank" rel="external">这个教程</a></p>
-<h1 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h1><p>Responsive Design可以确保你在不同尺寸的终端浏览器上，比如手机，平板，电脑，等等，都可以获得很好的浏览体验。<br>想学的话，还要看看CSS<a href="http://www.w3schools.com/css/default.asp" target="_blank" rel="external">这个教程</a></p>
-<h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>写到这里，其实仅仅是介绍了一些html的标签，目的是可以看得懂一些网站的源代码，一些html代码，<br>当然，我们也可以写出一些漂亮的，但是非常简陋的html页面，还要学习的还有很多，CSS，bootstrap，Jquery等等。</p>
-<p>就像之前说过的一句话，</p>
-<blockquote>
-<p>学习是一种生活方式，笑着学习，高兴着去了解更多，我们不一定要以此为生，但多看看，总是好的，这个世界总比我们所知道的更精彩</p>
-</blockquote>
-<h1 id="加油"><a href="#加油" class="headerlink" title="加油"></a>加油</h1>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/posts/uncategorized/2016-11-19-html笔记-杂项.html" class="archive-article-date">
-  	<time datetime="2016-11-19T06:19:34.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-19</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html笔记/">html笔记</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
@@ -466,7 +521,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 15px;">js学习</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
+    				<a href="/tags/CSS笔记/" style="font-size: 13.33px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 16.67px;">js学习</a> <a href="/tags/python教程/" style="font-size: 10px;">python教程</a> <a href="/tags/杂谈/" style="font-size: 13.33px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 13.33px;">翻译教程</a>
     			</div>
     	</section>
     

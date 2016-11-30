@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>给朋友的--python的使用 | 崔浩楠的网站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="《给朋友的–python的使用》写在前面前些天，在北京时，朋友建议我写一个python的简单入门教程，我答应了，也一直在思考如何下笔，一来是有些忙，学校里论文的事情；二来呢，没有一个成熟的思路，去完整的把一门语言的使用给架构起来。但就像李笑来说的，用必要的，最少的知识先去做起来。今天呢，突然想起来有一个有趣的网站叫python-challenge,你可以点开看看，它是一个网页的过关游戏，不仅仅用p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="给朋友的--python的使用">
+<meta property="og:url" content="http://yoursite.com/posts/uncategorized/2016-11-30-给朋友的-python的使用.html">
+<meta property="og:site_name" content="崔浩楠的网站">
+<meta property="og:description" content="《给朋友的–python的使用》写在前面前些天，在北京时，朋友建议我写一个python的简单入门教程，我答应了，也一直在思考如何下笔，一来是有些忙，学校里论文的事情；二来呢，没有一个成熟的思路，去完整的把一门语言的使用给架构起来。但就像李笑来说的，用必要的，最少的知识先去做起来。今天呢，突然想起来有一个有趣的网站叫python-challenge,你可以点开看看，它是一个网页的过关游戏，不仅仅用p">
+<meta property="og:image" content="http://www.pythonchallenge.com/pc/def/calc.jpg">
+<meta property="og:updated_time" content="2016-11-30T11:09:32.699Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="给朋友的--python的使用">
+<meta name="twitter:description" content="《给朋友的–python的使用》写在前面前些天，在北京时，朋友建议我写一个python的简单入门教程，我答应了，也一直在思考如何下笔，一来是有些忙，学校里论文的事情；二来呢，没有一个成熟的思路，去完整的把一门语言的使用给架构起来。但就像李笑来说的，用必要的，最少的知识先去做起来。今天呢，突然想起来有一个有趣的网站叫python-challenge,你可以点开看看，它是一个网页的过关游戏，不仅仅用p">
+<meta name="twitter:image" content="http://www.pythonchallenge.com/pc/def/calc.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="崔浩楠的网站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/asset/img/B.ico">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/asset/img/lion.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">崔浩楠</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">面朝大海     以梦为马</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/杂谈/">杂谈</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/cuihaonan93" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">崔浩楠</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/asset/img/lion.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">崔浩楠</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">面朝大海     以梦为马</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/杂谈/">杂谈</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/cuihaonan93" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-给朋友的-python的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      给朋友的--python的使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="《给朋友的–python的使用》"><a href="#《给朋友的–python的使用》" class="headerlink" title="《给朋友的–python的使用》"></a>《给朋友的–python的使用》</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>前些天，在北京时，朋友建议我写一个python的简单入门教程，我答应了，也一直在思考如何下笔，一来是有些忙，学校里论文的事情；二来呢，没有一个成熟的思路，去完整的把一门语言的使用给架构起来。<br>但就像李笑来说的，用必要的，最少的知识先去做起来。今天呢，突然想起来有一个有趣的网站叫<a href="http://www.pythonchallenge.com/" target="_blank" rel="external">python-challenge</a>,你可以点开看看，它是一个网页的过关游戏，不仅仅用python，java，C++等等都可以，就是你能破解了那个网页潜藏的意义，你就可以过关，它底下也有一点点提示。</p>
+<p>我就想，可以以这种方式来写一些东西，即有趣又能实现一些功能。<br>因此，在这里，先给这个系列的笔记租一个大致的目标：</p>
+<ul>
+<li>尽量用不同的方法去完成这个挑战</li>
+<li>尽可能生动有趣的讲解python的使用</li>
+<li>尽量不涉及晦涩难懂的概念</li>
+<li>对于我，尽快地更新这个笔记</li>
+</ul>
+<p>面对的目标群体也很明确：</p>
+<ul>
+<li>有兴趣的，不想当程序员的</li>
+<li>有点时间的</li>
+</ul>
+<blockquote>
+<p>为什么说不想当程序员的？<br>因为我在写时会把学程序语言的顺序打乱，而且，为了能更好的理解，我或许会说出一些不恰当的例子，进而影响了你编程道路的发展。</p>
+</blockquote>
+<h1 id="第零天"><a href="#第零天" class="headerlink" title="第零天"></a>第零天</h1><p>你可以点开这个网址<a href="http://www.pythonchallenge.com/pc/def/0.html" target="_blank" rel="external">python-challenge0</a>看看，</p>
+<h3 id="为什么说零？"><a href="#为什么说零？" class="headerlink" title="为什么说零？"></a>为什么说零？</h3><p>记住从零开始，先不要问为什么，因为下面你将会明白。</p>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>会出现如下的一张图：<br><img src="http://www.pythonchallenge.com/pc/def/calc.jpg" alt="python-challenge0"></p>
+<p>给你5秒钟，仔细看看，告诉我你的想法，</p>
+<blockquote>
+<p>知道吗？我用了半小时也没想出来。</p>
+</blockquote>
+<p>2，3，8，三个数字代表了什么？<br>下面还有一句话：</p>
+<blockquote>
+<p><code>Hint: try to change the URL address.</code></p>
+</blockquote>
+<p>哦，明白了，看网址：<code>http://www.pythonchallenge.com/pc/def/0.html</code></p>
+<p>中间有个数字是<code>0</code>,<br>38又在2的右上方，突然明白了，2的38次幂！<br>把0改成2的38次幂，就可以进入下一关了。</p>
+<p>Ok，next！</p>
+<h2 id="python的实现"><a href="#python的实现" class="headerlink" title="python的实现"></a>python的实现</h2><p>我们的任务是用python实现2的38次幂！</p>
+<blockquote>
+<p>在这里，我默认了你的电脑里装了python，对了，Mac里好像是python2.7，我建议你用python3，因为与时俱进嘛！(如果不会，请自行谷歌)</p>
+</blockquote>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>创建一个python的文件，（很简单，如果你是Mac，试着学会去用Terminal，如果你是windows，试着用用命令行）<br>不过，我的编辑器是用的Atom，用了一个插件叫<a href="https://atom.io/packages/atom-runner" target="_blank" rel="external">Atom-runner</a>，你也可以安装，玩一下。</p>
+<p>我的文件名叫’c1.py’</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>在”c1.py”中输入：<code>print(2**38)</code><br>按 <code>ctrl+R</code> ，看看运行结果是什么？</p>
+<blockquote>
+<p>结果：<code>274877906944</code><br>python是脚本语言，可以这么理解，所见即所得，再加上python语言的集成度相当高，基本接近人类的自然语言（英语啊）。<br>所以，会一点英语，都可以看明白，<code>print(2**38)</code>–&gt;<code>打印2的38次幂</code><br>下面说python的运算符：（a=10,b=20)</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>中文</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>加法</td>
+<td>对操作符的两侧增加值</td>
+<td>a + b = 30</td>
+</tr>
+<tr>
+<td>-</td>
+<td>减法</td>
+<td>减去从左侧操作数右侧操作数</td>
+<td>a - b = -10</td>
+</tr>
+<tr>
+<td>*</td>
+<td>乘法</td>
+<td>相乘的运算符两侧的值</td>
+<td>a * b = 200</td>
+</tr>
+<tr>
+<td>/</td>
+<td>除</td>
+<td>由右侧操作数除以左侧操作数</td>
+<td>b / a = 2</td>
+</tr>
+<tr>
+<td>%</td>
+<td>模</td>
+<td>由右侧操作数和余返回除以左侧操作数</td>
+<td>b % a = 0</td>
+</tr>
+<tr>
+<td>**</td>
+<td>指数</td>
+<td>执行对操作指数（幂）的计算</td>
+<td>a**b = 10 的20幂</td>
+</tr>
+<tr>
+<td>//</td>
+<td>地板除</td>
+<td>操作数的除法，其中结果是将小数点后的位数被除去的商。</td>
+<td>9//2 =  4 而 9.0//2.0 = 4.0</td>
+</tr>
+</tbody>
+</table>
+<p>非常简单，你可以自己试试。</p>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>换一种思路，将2<em>2重复37次，可以吧？<br>那我们怎么写程序呢？总不能`2</em>2<em>2</em>2….(38个2)`，那也太笨了，当然，这是可以的。<br>因此，下面，我介绍一下循环的思路。</p>
+<h4 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h4><p>for循环在Python中有遍历所有序列的项目，如列表或一个字符串。<br>语法这么写：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</div><div class="line">    <span class="comment">#python的注释非常简单，前面加一个“#”</span></div><div class="line">    <span class="comment"># 前面空了4格</span></div><div class="line">    print(<span class="string">"This is block1"</span>)</div><div class="line">    print(i)</div><div class="line"></div><div class="line">print(<span class="string">"This is block2"</span>)</div></pre></td></tr></table></figure></p>
+<p>python的语法非常简单，就两个字：缩进，它是一个一个的代码块儿组成，判断下一行语句就看它的缩进，牢记4个空格！</p>
+<p>看运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">0</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">1</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">2</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">3</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">4</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">5</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">6</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">7</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">8</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">9</span></div><div class="line">This <span class="keyword">is</span> block2</div></pre></td></tr></table></figure></p>
+<p><code>range()</code>这个函数是范围的意思，里面应当输入数字，比如例子中的<code>range(10)</code>,意思是，从0开始，数10个数，到9，正好。<br>应该能明白吧？<br>那for循环中，什么叫遍历呢，就是每个都走一遍，看下面的例子：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> letter <span class="keyword">in</span> <span class="string">'Python'</span>:     <span class="comment"># First Example</span></div><div class="line">   print(<span class="string">'Current Letter :'</span>, letter)</div><div class="line"></div><div class="line">fruits = [<span class="string">'banana'</span>, <span class="string">'apple'</span>,  <span class="string">'mango'</span>]</div><div class="line"><span class="keyword">for</span> fruit <span class="keyword">in</span> fruits:        <span class="comment"># Second Example</span></div><div class="line">   print(<span class="string">'Current fruit :'</span>, fruit)</div></pre></td></tr></table></figure></p>
+<p>结果是：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Current Letter : P</div><div class="line">Current Letter : y</div><div class="line">Current Letter : t</div><div class="line">Current Letter : h</div><div class="line">Current Letter : o</div><div class="line">Current Letter : n</div><div class="line">Current fruit : banana</div><div class="line">Current fruit : apple</div><div class="line">Current fruit : mango</div></pre></td></tr></table></figure></p>
+<p>代码中，<code>&#39;Python&#39;</code>是字符串，<code>for letter in</code>的意思就是，每个字母走一遍。<br><code>fruits</code>是一个列表，</p>
+<blockquote>
+<p>什么是列表？就是一堆东西的集合</p>
+</blockquote>
+<p><code>fruits</code>是字符串的集合，能看出来吗？<br>列表呢，有许多特性及方法，你可以看<a href="http://www.runoob.com/python/python-lists.html" target="_blank" rel="external">这里</a></p>
+<p>明白了for的遍历，就可以尝试for循环37次就可以了，看看下面的代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">answer = <span class="number">2</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">37</span>):</div><div class="line">    answer = answer*<span class="number">2</span></div><div class="line">print(answer)</div></pre></td></tr></table></figure></p>
+<p>结果也是<code>274877906944</code><br>首先先让一个变量=2，然后用这个变量乘2，得出一个结果，再用这个结果去乘以2，重复37次。</p>
+<blockquote>
+<p>还有一个while循环，我先不讲，你可以自己搜一下，自己试着写写。</p>
+</blockquote>
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>刚刚说了for还可以遍历字符串，那我们能不能从这里着手呢？</p>
+<p>可以，请看：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">str_1= <span class="string">"2"</span>*<span class="number">38</span></div><div class="line">answer_2 = <span class="number">1</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(str_1)):</div><div class="line">    two = int(str_1[i])</div><div class="line">    answer_2 = two*answer_2</div><div class="line">print(answer_2)</div></pre></td></tr></table></figure></p>
+<p>先看2分钟代码。<br>我们把<code>2</code>先当成字符串，<code>&quot;2&quot;*38</code>就会变成有38个2的字符串，<br>然后呢，<code>len(str_1)</code>意思是，计算这个字符串的长度，（即38）<br>这次，我们不乘以37次，乘以38次。<br><code>int(str_1[i])</code>意思是，将<code>str_1</code>这个字符串中的第<code>[i]</code>项，变成整数，<code>int</code>这个函数，你可以查一下！</p>
+<p>然后呢就是乘以38次，结果依旧！</p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>不知道这么写，你们的接受度怎么样，如果有不明白的，或者，你对哪种方式接受度更高，可以随时告诉我！</p>
+<blockquote>
+<p>这一章先做个尝试</p>
+</blockquote>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-11-30-给朋友的-python的使用.html" class="archive-article-date">
+  	<time datetime="2016-11-30T11:08:59.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-30</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python教程/">python教程</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/posts/uncategorized/2016-11-28-js学习3.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js学习3</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="给朋友的-python的使用" data-title="给朋友的--python的使用" data-url="http://yoursite.com/posts/uncategorized/2016-11-30-给朋友的-python的使用.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 崔浩楠
+    	</div>
+      	<div class="footer-right">
+      		这个主题是 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/CSS笔记/" style="font-size: 13.33px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 16.67px;">js学习</a> <a href="/tags/python教程/" style="font-size: 10px;">python教程</a> <a href="/tags/杂谈/" style="font-size: 13.33px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 13.33px;">翻译教程</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://xiaolai.li/">笑来的网站</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br&gt; 你好&lt;/br&gt;&lt;br&gt;我是崔浩楠&lt;/br&gt;&lt;br&gt;爱爸妈，爱朋友&lt;/br&gt;想去北极</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

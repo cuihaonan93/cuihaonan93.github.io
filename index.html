@@ -134,6 +134,174 @@
       <div class="body-wrap">
         
   
+    <article id="post-给朋友的-python的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-11-30-给朋友的-python的使用.html">给朋友的--python的使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="《给朋友的–python的使用》"><a href="#《给朋友的–python的使用》" class="headerlink" title="《给朋友的–python的使用》"></a>《给朋友的–python的使用》</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>前些天，在北京时，朋友建议我写一个python的简单入门教程，我答应了，也一直在思考如何下笔，一来是有些忙，学校里论文的事情；二来呢，没有一个成熟的思路，去完整的把一门语言的使用给架构起来。<br>但就像李笑来说的，用必要的，最少的知识先去做起来。今天呢，突然想起来有一个有趣的网站叫<a href="http://www.pythonchallenge.com/" target="_blank" rel="external">python-challenge</a>,你可以点开看看，它是一个网页的过关游戏，不仅仅用python，java，C++等等都可以，就是你能破解了那个网页潜藏的意义，你就可以过关，它底下也有一点点提示。</p>
+<p>我就想，可以以这种方式来写一些东西，即有趣又能实现一些功能。<br>因此，在这里，先给这个系列的笔记租一个大致的目标：</p>
+<ul>
+<li>尽量用不同的方法去完成这个挑战</li>
+<li>尽可能生动有趣的讲解python的使用</li>
+<li>尽量不涉及晦涩难懂的概念</li>
+<li>对于我，尽快地更新这个笔记</li>
+</ul>
+<p>面对的目标群体也很明确：</p>
+<ul>
+<li>有兴趣的，不想当程序员的</li>
+<li>有点时间的</li>
+</ul>
+<blockquote>
+<p>为什么说不想当程序员的？<br>因为我在写时会把学程序语言的顺序打乱，而且，为了能更好的理解，我或许会说出一些不恰当的例子，进而影响了你编程道路的发展。</p>
+</blockquote>
+<h1 id="第零天"><a href="#第零天" class="headerlink" title="第零天"></a>第零天</h1><p>你可以点开这个网址<a href="http://www.pythonchallenge.com/pc/def/0.html" target="_blank" rel="external">python-challenge0</a>看看，</p>
+<h3 id="为什么说零？"><a href="#为什么说零？" class="headerlink" title="为什么说零？"></a>为什么说零？</h3><p>记住从零开始，先不要问为什么，因为下面你将会明白。</p>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>会出现如下的一张图：<br><img src="http://www.pythonchallenge.com/pc/def/calc.jpg" alt="python-challenge0"></p>
+<p>给你5秒钟，仔细看看，告诉我你的想法，</p>
+<blockquote>
+<p>知道吗？我用了半小时也没想出来。</p>
+</blockquote>
+<p>2，3，8，三个数字代表了什么？<br>下面还有一句话：</p>
+<blockquote>
+<p><code>Hint: try to change the URL address.</code></p>
+</blockquote>
+<p>哦，明白了，看网址：<code>http://www.pythonchallenge.com/pc/def/0.html</code></p>
+<p>中间有个数字是<code>0</code>,<br>38又在2的右上方，突然明白了，2的38次幂！<br>把0改成2的38次幂，就可以进入下一关了。</p>
+<p>Ok，next！</p>
+<h2 id="python的实现"><a href="#python的实现" class="headerlink" title="python的实现"></a>python的实现</h2><p>我们的任务是用python实现2的38次幂！</p>
+<blockquote>
+<p>在这里，我默认了你的电脑里装了python，对了，Mac里好像是python2.7，我建议你用python3，因为与时俱进嘛！(如果不会，请自行谷歌)</p>
+</blockquote>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>创建一个python的文件，（很简单，如果你是Mac，试着学会去用Terminal，如果你是windows，试着用用命令行）<br>不过，我的编辑器是用的Atom，用了一个插件叫<a href="https://atom.io/packages/atom-runner" target="_blank" rel="external">Atom-runner</a>，你也可以安装，玩一下。</p>
+<p>我的文件名叫’c1.py’</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>在”c1.py”中输入：<code>print(2**38)</code><br>按 <code>ctrl+R</code> ，看看运行结果是什么？</p>
+<blockquote>
+<p>结果：<code>274877906944</code><br>python是脚本语言，可以这么理解，所见即所得，再加上python语言的集成度相当高，基本接近人类的自然语言（英语啊）。<br>所以，会一点英语，都可以看明白，<code>print(2**38)</code>–&gt;<code>打印2的38次幂</code><br>下面说python的运算符：（a=10,b=20)</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>中文</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>加法</td>
+<td>对操作符的两侧增加值</td>
+<td>a + b = 30</td>
+</tr>
+<tr>
+<td>-</td>
+<td>减法</td>
+<td>减去从左侧操作数右侧操作数</td>
+<td>a - b = -10</td>
+</tr>
+<tr>
+<td>*</td>
+<td>乘法</td>
+<td>相乘的运算符两侧的值</td>
+<td>a * b = 200</td>
+</tr>
+<tr>
+<td>/</td>
+<td>除</td>
+<td>由右侧操作数除以左侧操作数</td>
+<td>b / a = 2</td>
+</tr>
+<tr>
+<td>%</td>
+<td>模</td>
+<td>由右侧操作数和余返回除以左侧操作数</td>
+<td>b % a = 0</td>
+</tr>
+<tr>
+<td>**</td>
+<td>指数</td>
+<td>执行对操作指数（幂）的计算</td>
+<td>a**b = 10 的20幂</td>
+</tr>
+<tr>
+<td>//</td>
+<td>地板除</td>
+<td>操作数的除法，其中结果是将小数点后的位数被除去的商。</td>
+<td>9//2 =  4 而 9.0//2.0 = 4.0</td>
+</tr>
+</tbody>
+</table>
+<p>非常简单，你可以自己试试。</p>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>换一种思路，将2<em>2重复37次，可以吧？<br>那我们怎么写程序呢？总不能`2</em>2<em>2</em>2….(38个2)`，那也太笨了，当然，这是可以的。<br>因此，下面，我介绍一下循环的思路。</p>
+<h4 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h4><p>for循环在Python中有遍历所有序列的项目，如列表或一个字符串。<br>语法这么写：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</div><div class="line">    <span class="comment">#python的注释非常简单，前面加一个“#”</span></div><div class="line">    <span class="comment"># 前面空了4格</span></div><div class="line">    print(<span class="string">"This is block1"</span>)</div><div class="line">    print(i)</div><div class="line"></div><div class="line">print(<span class="string">"This is block2"</span>)</div></pre></td></tr></table></figure></p>
+<p>python的语法非常简单，就两个字：缩进，它是一个一个的代码块儿组成，判断下一行语句就看它的缩进，牢记4个空格！</p>
+<p>看运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">0</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">1</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">2</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">3</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">4</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">5</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">6</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">7</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">8</span></div><div class="line">This <span class="keyword">is</span> block1</div><div class="line"><span class="number">9</span></div><div class="line">This <span class="keyword">is</span> block2</div></pre></td></tr></table></figure></p>
+<p><code>range()</code>这个函数是范围的意思，里面应当输入数字，比如例子中的<code>range(10)</code>,意思是，从0开始，数10个数，到9，正好。<br>应该能明白吧？<br>那for循环中，什么叫遍历呢，就是每个都走一遍，看下面的例子：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> letter <span class="keyword">in</span> <span class="string">'Python'</span>:     <span class="comment"># First Example</span></div><div class="line">   print(<span class="string">'Current Letter :'</span>, letter)</div><div class="line"></div><div class="line">fruits = [<span class="string">'banana'</span>, <span class="string">'apple'</span>,  <span class="string">'mango'</span>]</div><div class="line"><span class="keyword">for</span> fruit <span class="keyword">in</span> fruits:        <span class="comment"># Second Example</span></div><div class="line">   print(<span class="string">'Current fruit :'</span>, fruit)</div></pre></td></tr></table></figure></p>
+<p>结果是：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Current Letter : P</div><div class="line">Current Letter : y</div><div class="line">Current Letter : t</div><div class="line">Current Letter : h</div><div class="line">Current Letter : o</div><div class="line">Current Letter : n</div><div class="line">Current fruit : banana</div><div class="line">Current fruit : apple</div><div class="line">Current fruit : mango</div></pre></td></tr></table></figure></p>
+<p>代码中，<code>&#39;Python&#39;</code>是字符串，<code>for letter in</code>的意思就是，每个字母走一遍。<br><code>fruits</code>是一个列表，</p>
+<blockquote>
+<p>什么是列表？就是一堆东西的集合</p>
+</blockquote>
+<p><code>fruits</code>是字符串的集合，能看出来吗？<br>列表呢，有许多特性及方法，你可以看<a href="http://www.runoob.com/python/python-lists.html" target="_blank" rel="external">这里</a></p>
+<p>明白了for的遍历，就可以尝试for循环37次就可以了，看看下面的代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">answer = <span class="number">2</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">37</span>):</div><div class="line">    answer = answer*<span class="number">2</span></div><div class="line">print(answer)</div></pre></td></tr></table></figure></p>
+<p>结果也是<code>274877906944</code><br>首先先让一个变量=2，然后用这个变量乘2，得出一个结果，再用这个结果去乘以2，重复37次。</p>
+<blockquote>
+<p>还有一个while循环，我先不讲，你可以自己搜一下，自己试着写写。</p>
+</blockquote>
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>刚刚说了for还可以遍历字符串，那我们能不能从这里着手呢？</p>
+<p>可以，请看：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">str_1= <span class="string">"2"</span>*<span class="number">38</span></div><div class="line">answer_2 = <span class="number">1</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(str_1)):</div><div class="line">    two = int(str_1[i])</div><div class="line">    answer_2 = two*answer_2</div><div class="line">print(answer_2)</div></pre></td></tr></table></figure></p>
+<p>先看2分钟代码。<br>我们把<code>2</code>先当成字符串，<code>&quot;2&quot;*38</code>就会变成有38个2的字符串，<br>然后呢，<code>len(str_1)</code>意思是，计算这个字符串的长度，（即38）<br>这次，我们不乘以37次，乘以38次。<br><code>int(str_1[i])</code>意思是，将<code>str_1</code>这个字符串中的第<code>[i]</code>项，变成整数，<code>int</code>这个函数，你可以查一下！</p>
+<p>然后呢就是乘以38次，结果依旧！</p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>不知道这么写，你们的接受度怎么样，如果有不明白的，或者，你对哪种方式接受度更高，可以随时告诉我！</p>
+<blockquote>
+<p>这一章先做个尝试</p>
+</blockquote>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-11-30-给朋友的-python的使用.html" class="archive-article-date">
+  	<time datetime="2016-11-30T11:08:59.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-30</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python教程/">python教程</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-js学习3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -489,293 +657,9 @@ var d4 = new Date(93,05,05,02,30,0);
 
 
   
-    <article id="post-js学习2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-11-25-js学习2.html">js学习2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>上次写到了，函数，方法的使用，这里呢有一个要注意的地方。<br>就是局部变量与全局变量(Local JavaScript Variables and Global JavaScript Variables).</p>
-<p>很好理解，看你把变量的声明（declare，其实就是那个<code>var</code>）写在哪。看下面的代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// code here can not use carName</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> carName = <span class="string">"Volvo"</span>;</div><div class="line">    <span class="comment">// code here can use carName</span></div><div class="line">&#125;</div><div class="line">------------------------------------------------</div><div class="line"><span class="keyword">var</span> carName = <span class="string">" Volvo"</span>;</div><div class="line"><span class="comment">// code here can use carName</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// code here can use carName</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>很好懂吧？上面是局部，下面是全局！</p>
-<h1 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h1><p>事件，在JS中是一个很重要的概念，它可以用于改变html页面的元素，比如：</p>
-<ul>
-<li>An HTML web page has finished loading</li>
-<li>An HTML input field was changed</li>
-<li>An HTML button was clicked</li>
-</ul>
-<p>在这些时候，绑定一个事件，将会发生。<br>比如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo').innerHTML=Date()"</span>&gt;</span>The time is?<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
-
-<p></p><p id="demo"></p><br>它把获取当前时间这个函数绑定在了button上，onclick时，就是改变页面文档的<code>id = &quot;demo&quot;</code>处为，当前时间。<p></p>
-<p>但更常见的，我们这么写：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Click the button to display the date.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"displayDate()"</span>&gt;</span>The time is?<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">displayDate</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="built_in">Date</span>();</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>把这个过程封装成一个函数，减少代码的重复性！（很重要的概念）</p>
-<p>当然了，动作不仅仅onclick（点击）这一个动作，更多的<a href="http://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank" rel="external">在这里</a></p>
-<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>字符串，这是每个编程语言都会设计到的，js也不例外，它的字符串特性也没有什么例外的。</p>
-<blockquote>
-<p>但更建议用双引号，如<code>&quot;&quot;</code></p>
-</blockquote>
-<p>简要的写一些：</p>
-<ul>
-<li>双引号中可以加单引号，如：<code>var answer = &quot;It&#39;s alright&quot;;</code></li>
-<li>都是双引号，用<code>\</code>转义，如：<code>var y = &quot;We are the so-called &quot;Vikings&quot; from the north.&quot;</code></li>
-<li><code>\\</code>表示它本身，</li>
-</ul>
-<p>常见的转义：</p>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>\b</code></td>
-<td>Backspace</td>
-</tr>
-<tr>
-<td>\r</td>
-<td>Carriage Return</td>
-</tr>
-<tr>
-<td>\f</td>
-<td>Form Feed</td>
-</tr>
-<tr>
-<td>\t</td>
-<td>Horizontal Tabulator</td>
-</tr>
-<tr>
-<td>\v</td>
-<td>Vertical Tabulator</td>
-</tr>
-</tbody>
-</table>
-<h2 id="String’s-methods"><a href="#String’s-methods" class="headerlink" title="String’s methods"></a>String’s methods</h2><h3 id="简单的方法"><a href="#简单的方法" class="headerlink" title="简单的方法"></a>简单的方法</h3><p>length（长度），返回字符串的长度：<br><code>sln = txt.length;</code></p>
-<p><code>indexof()</code>寻找字符串在另一个字符串中的位置，下面的会返回<code>7</code>,用法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"Please locate where 'locate' occurs!"</span>;</div><div class="line"><span class="keyword">var</span> pos = str.indexOf(<span class="string">"locate"</span>);</div></pre></td></tr></table></figure></p>
-<p><code>serach()</code>与indexof同样，但是serach更强大。</p>
-<h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><p><code>slice(start, end)</code> 会返回切好的字符</p>
-<blockquote>
-<p>start与end可正可负，与所有的编程语言一样，从零开始。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"Apple, Banana, Kiwi"</span>;</div><div class="line"><span class="keyword">var</span> res = str.slice(<span class="number">7</span>,<span class="number">13</span>);</div></pre></td></tr></table></figure>
-<p>返回：<code>Banana</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"Apple, Banana, Kiwi"</span>;</div><div class="line"><span class="keyword">var</span> res = str.slice(<span class="number">-12</span>,<span class="number">-6</span>);</div></pre></td></tr></table></figure></p>
-<p>返回：<code>Banana</code></p>
-<p><code>substring</code>与<code>slice</code>类似，只不过不接受负值。<br><code>substr</code>与<code>slice</code>基本一样，但那个<code>(end)</code>变成了想要的字符串的长度，比如刚刚那个<code>Banana</code>长度是6，<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"Apple, Banana, Kiwi"</span>;</div><div class="line"><span class="keyword">var</span> res = str.slice(<span class="number">7</span>,<span class="number">6</span>);</div></pre></td></tr></table></figure></p>
-<p>返回：<code>Banana</code>，这样更方便了！</p>
-<h3 id="Replace"><a href="#Replace" class="headerlink" title="Replace"></a>Replace</h3><p>替换，这个更加简单，用法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">str = <span class="string">"Please visit Microsoft!"</span>;</div><div class="line"><span class="keyword">var</span> n = str.replace(<span class="string">"Microsoft"</span>,<span class="string">"W3Schools"</span>);</div></pre></td></tr></table></figure></p>
-<p>但这个<code>replace</code>只匹配第一个，要想全换掉，就得用正则，用<code>g</code>为标志：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">str = <span class="string">"Please visit Microsoft!"</span>;</div><div class="line"><span class="keyword">var</span> n = str.replace(<span class="regexp">/Microsoft/g</span>,<span class="string">"W3Schools"</span>);</div></pre></td></tr></table></figure></p>
-<h3 id="大小写"><a href="#大小写" class="headerlink" title="大小写"></a>大小写</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> text1 = <span class="string">"Hello World!"</span>;       <span class="comment">// String</span></div><div class="line"><span class="keyword">var</span> text2 = text1.toLowerCase();  <span class="comment">// text2</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> text1 = <span class="string">"Hello World!"</span>;       <span class="comment">// String</span></div><div class="line"><span class="keyword">var</span> text2 = text1.toUpperCase();</div></pre></td></tr></table></figure>
-<h3 id="字符串的连接"><a href="#字符串的连接" class="headerlink" title="字符串的连接"></a>字符串的连接</h3><p>用<code>concat()</code>这个函数，用法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> text1 = <span class="string">"Hello"</span>;</div><div class="line"><span class="keyword">var</span> text2 = <span class="string">"World"</span>;</div><div class="line">text3 = text1.concat(<span class="string">" "</span>,text2);</div></pre></td></tr></table></figure></p>
-<p>之前写过可以用加号，这个与加号一样。</p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>与其他编程语言一样，你可以做很多，我做了个简表，你看看。</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>方法的描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>str.charAt(数字)</td>
-<td>返回字符串中第几个字符</td>
-</tr>
-<tr>
-<td>str[]</td>
-<td>可以把字符串当成了数组array</td>
-</tr>
-<tr>
-<td>str.split(“./,/ “)</td>
-<td>分割字符串，标志分别为 <code>. ,  空格</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><p>number就像我们生活中的数字，只不过在JS中，数字永远都是64位的浮点数，储存的位置如下：</p>
-<table>
-<thead>
-<tr>
-<th>Value (aka Fraction/Mantissa)</th>
-<th>Exponent</th>
-<th>Sign</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>52 bits (0 - 51)&nbsp;</td>
-<td>11 bits (52 - 62)</td>
-<td>1 bit (63)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>别的就没有什么了，支持转换成2进制，16进制等等，但我建议不用。</p>
-</blockquote>
-<h3 id="Number’s-method"><a href="#Number’s-method" class="headerlink" title="Number’s method"></a>Number’s method</h3><table>
-<thead>
-<tr>
-<th>function</th>
-<th>description</th>
-<th>usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>toString()</td>
-<td>返回成字符串</td>
-<td><code>(123).toString();</code></td>
-</tr>
-<tr>
-<td>toFixed()</td>
-<td>固定小数点后的位数，四舍五入</td>
-<td><code>(9.656).toFixed(2);           // returns 9.66</code></td>
-</tr>
-<tr>
-<td>toPrecision()</td>
-<td>固定长度</td>
-<td><code>(9.656)toPrecision(2);       // returns 9.7</code></td>
-</tr>
-</tbody>
-</table>
-<p>常用的就是这几个，还有许多，请看<a href="http://www.w3schools.com/jsref/jsref_obj_number.asp" target="_blank" rel="external">这里</a></p>
-<h2 id="Js中的数学方法"><a href="#Js中的数学方法" class="headerlink" title="Js中的数学方法"></a>Js中的数学方法</h2><table>
-<thead>
-<tr>
-<th>Method</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>abs(x)</td>
-<td>Returns the absolute value of x</td>
-</tr>
-<tr>
-<td>acos(x)</td>
-<td>Returns the arccosine of x, in radians</td>
-</tr>
-<tr>
-<td>asin(x)</td>
-<td>Returns the arcsine of x, in radians</td>
-</tr>
-<tr>
-<td>atan(x)</td>
-<td>Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians</td>
-</tr>
-<tr>
-<td>atan2(y,x)</td>
-<td>Returns the arctangent of the quotient of its arguments</td>
-</tr>
-<tr>
-<td>ceil(x)</td>
-<td>Returns the value of x rounded up to its nearest integer</td>
-</tr>
-<tr>
-<td>cos(x)</td>
-<td>Returns the cosine of x (x is in radians)</td>
-</tr>
-<tr>
-<td>exp(x)</td>
-<td>Returns the value of Ex</td>
-</tr>
-<tr>
-<td>floor(x)</td>
-<td>Returns the value of x rounded down to its nearest integer</td>
-</tr>
-<tr>
-<td>log(x)</td>
-<td>Returns the natural logarithm (base E) of x</td>
-</tr>
-<tr>
-<td>max(x,y,z,…,n)</td>
-<td>Returns the number with the highest value</td>
-</tr>
-<tr>
-<td>min(x,y,z,…,n)</td>
-<td>Returns the number with the lowest value</td>
-</tr>
-<tr>
-<td>pow(x,y)</td>
-<td>Returns the value of x to the power of y</td>
-</tr>
-<tr>
-<td>random()</td>
-<td>Returns a random number between 0 and 1</td>
-</tr>
-<tr>
-<td>round(x)</td>
-<td>Returns the value of x rounded to its nearest integer</td>
-</tr>
-<tr>
-<td>sin(x)</td>
-<td>Returns the sine of x (x is in radians)</td>
-</tr>
-<tr>
-<td>sqrt(x)</td>
-<td>Returns the square root of x</td>
-</tr>
-<tr>
-<td>tan(x)</td>
-<td>Returns the tangent of an angle</td>
-</tr>
-</tbody>
-</table>
-<h3 id="生成随机数"><a href="#生成随机数" class="headerlink" title="生成随机数"></a>生成随机数</h3><p>这是个有趣的功能，相信我，在你的编程生涯中，你一定会遇到，而解决办法各种各样。<br>在Js中 <code>Math.random();              // returns a random number</code></p>
-<blockquote>
-<p>但是，它会返回一个[0,1)的数，非常不方便，如果要整数怎么办呢、？</p>
-</blockquote>
-<p>上一部分中有个 <code>floor()</code>函数，(floor,地板，往下)因此，它的作用是向下取整。比如<code>floor(4.7)</code>，会返回4.</p>
-<p>因此，<code>Math.floor(Math.random() * 10);     // returns a number between 0 and 9</code></p>
-<p>但是，在实际写代码时，我们一般把生成随机数的这个过程封装成一个函数，就像之前提过的：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo').innerHTML = getRndInteger(0,10)"</span>&gt;</span>Click Me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRndInteger</span>(<span class="params">min, max</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (max - min)) + min;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>会生成[0,9]的随机数。</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/posts/uncategorized/2016-11-25-js学习2.html" class="archive-article-date">
-  	<time datetime="2016-11-25T09:08:38.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-25</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js学习/">js学习</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -839,7 +723,7 @@ var d4 = new Date(93,05,05,02,30,0);
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 15px;">js学习</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
+    				<a href="/tags/CSS笔记/" style="font-size: 13.33px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 16.67px;">js学习</a> <a href="/tags/python教程/" style="font-size: 10px;">python教程</a> <a href="/tags/杂谈/" style="font-size: 13.33px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 13.33px;">翻译教程</a>
     			</div>
     	</section>
     

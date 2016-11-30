@@ -134,6 +134,290 @@
       <div class="body-wrap">
         
   
+    <article id="post-js学习2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-11-25-js学习2.html">js学习2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>上次写到了，函数，方法的使用，这里呢有一个要注意的地方。<br>就是局部变量与全局变量(Local JavaScript Variables and Global JavaScript Variables).</p>
+<p>很好理解，看你把变量的声明（declare，其实就是那个<code>var</code>）写在哪。看下面的代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// code here can not use carName</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> carName = <span class="string">"Volvo"</span>;</div><div class="line">    <span class="comment">// code here can use carName</span></div><div class="line">&#125;</div><div class="line">------------------------------------------------</div><div class="line"><span class="keyword">var</span> carName = <span class="string">" Volvo"</span>;</div><div class="line"><span class="comment">// code here can use carName</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// code here can use carName</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>很好懂吧？上面是局部，下面是全局！</p>
+<h1 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h1><p>事件，在JS中是一个很重要的概念，它可以用于改变html页面的元素，比如：</p>
+<ul>
+<li>An HTML web page has finished loading</li>
+<li>An HTML input field was changed</li>
+<li>An HTML button was clicked</li>
+</ul>
+<p>在这些时候，绑定一个事件，将会发生。<br>比如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo').innerHTML=Date()"</span>&gt;</span>The time is?<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+<p></p><p id="demo"></p><br>它把获取当前时间这个函数绑定在了button上，onclick时，就是改变页面文档的<code>id = &quot;demo&quot;</code>处为，当前时间。<p></p>
+<p>但更常见的，我们这么写：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Click the button to display the date.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"displayDate()"</span>&gt;</span>The time is?<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">displayDate</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="built_in">Date</span>();</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>把这个过程封装成一个函数，减少代码的重复性！（很重要的概念）</p>
+<p>当然了，动作不仅仅onclick（点击）这一个动作，更多的<a href="http://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank" rel="external">在这里</a></p>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>字符串，这是每个编程语言都会设计到的，js也不例外，它的字符串特性也没有什么例外的。</p>
+<blockquote>
+<p>但更建议用双引号，如<code>&quot;&quot;</code></p>
+</blockquote>
+<p>简要的写一些：</p>
+<ul>
+<li>双引号中可以加单引号，如：<code>var answer = &quot;It&#39;s alright&quot;;</code></li>
+<li>都是双引号，用<code>\</code>转义，如：<code>var y = &quot;We are the so-called &quot;Vikings&quot; from the north.&quot;</code></li>
+<li><code>\\</code>表示它本身，</li>
+</ul>
+<p>常见的转义：</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\b</code></td>
+<td>Backspace</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>Carriage Return</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>Form Feed</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>Horizontal Tabulator</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>Vertical Tabulator</td>
+</tr>
+</tbody>
+</table>
+<h2 id="String’s-methods"><a href="#String’s-methods" class="headerlink" title="String’s methods"></a>String’s methods</h2><h3 id="简单的方法"><a href="#简单的方法" class="headerlink" title="简单的方法"></a>简单的方法</h3><p>length（长度），返回字符串的长度：<br><code>sln = txt.length;</code></p>
+<p><code>indexof()</code>寻找字符串在另一个字符串中的位置，下面的会返回<code>7</code>,用法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"Please locate where 'locate' occurs!"</span>;</div><div class="line"><span class="keyword">var</span> pos = str.indexOf(<span class="string">"locate"</span>);</div></pre></td></tr></table></figure></p>
+<p><code>serach()</code>与indexof同样，但是serach更强大。</p>
+<h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><p><code>slice(start, end)</code> 会返回切好的字符</p>
+<blockquote>
+<p>start与end可正可负，与所有的编程语言一样，从零开始。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"Apple, Banana, Kiwi"</span>;</div><div class="line"><span class="keyword">var</span> res = str.slice(<span class="number">7</span>,<span class="number">13</span>);</div></pre></td></tr></table></figure>
+<p>返回：<code>Banana</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"Apple, Banana, Kiwi"</span>;</div><div class="line"><span class="keyword">var</span> res = str.slice(<span class="number">-12</span>,<span class="number">-6</span>);</div></pre></td></tr></table></figure></p>
+<p>返回：<code>Banana</code></p>
+<p><code>substring</code>与<code>slice</code>类似，只不过不接受负值。<br><code>substr</code>与<code>slice</code>基本一样，但那个<code>(end)</code>变成了想要的字符串的长度，比如刚刚那个<code>Banana</code>长度是6，<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"Apple, Banana, Kiwi"</span>;</div><div class="line"><span class="keyword">var</span> res = str.slice(<span class="number">7</span>,<span class="number">6</span>);</div></pre></td></tr></table></figure></p>
+<p>返回：<code>Banana</code>，这样更方便了！</p>
+<h3 id="Replace"><a href="#Replace" class="headerlink" title="Replace"></a>Replace</h3><p>替换，这个更加简单，用法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">str = <span class="string">"Please visit Microsoft!"</span>;</div><div class="line"><span class="keyword">var</span> n = str.replace(<span class="string">"Microsoft"</span>,<span class="string">"W3Schools"</span>);</div></pre></td></tr></table></figure></p>
+<p>但这个<code>replace</code>只匹配第一个，要想全换掉，就得用正则，用<code>g</code>为标志：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">str = <span class="string">"Please visit Microsoft!"</span>;</div><div class="line"><span class="keyword">var</span> n = str.replace(<span class="regexp">/Microsoft/g</span>,<span class="string">"W3Schools"</span>);</div></pre></td></tr></table></figure></p>
+<h3 id="大小写"><a href="#大小写" class="headerlink" title="大小写"></a>大小写</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> text1 = <span class="string">"Hello World!"</span>;       <span class="comment">// String</span></div><div class="line"><span class="keyword">var</span> text2 = text1.toLowerCase();  <span class="comment">// text2</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> text1 = <span class="string">"Hello World!"</span>;       <span class="comment">// String</span></div><div class="line"><span class="keyword">var</span> text2 = text1.toUpperCase();</div></pre></td></tr></table></figure>
+<h3 id="字符串的连接"><a href="#字符串的连接" class="headerlink" title="字符串的连接"></a>字符串的连接</h3><p>用<code>concat()</code>这个函数，用法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> text1 = <span class="string">"Hello"</span>;</div><div class="line"><span class="keyword">var</span> text2 = <span class="string">"World"</span>;</div><div class="line">text3 = text1.concat(<span class="string">" "</span>,text2);</div></pre></td></tr></table></figure></p>
+<p>之前写过可以用加号，这个与加号一样。</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>与其他编程语言一样，你可以做很多，我做了个简表，你看看。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>方法的描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str.charAt(数字)</td>
+<td>返回字符串中第几个字符</td>
+</tr>
+<tr>
+<td>str[]</td>
+<td>可以把字符串当成了数组array</td>
+</tr>
+<tr>
+<td>str.split(“./,/ “)</td>
+<td>分割字符串，标志分别为 <code>. ,  空格</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><p>number就像我们生活中的数字，只不过在JS中，数字永远都是64位的浮点数，储存的位置如下：</p>
+<table>
+<thead>
+<tr>
+<th>Value (aka Fraction/Mantissa)</th>
+<th>Exponent</th>
+<th>Sign</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>52 bits (0 - 51)&nbsp;</td>
+<td>11 bits (52 - 62)</td>
+<td>1 bit (63)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>别的就没有什么了，支持转换成2进制，16进制等等，但我建议不用。</p>
+</blockquote>
+<h3 id="Number’s-method"><a href="#Number’s-method" class="headerlink" title="Number’s method"></a>Number’s method</h3><table>
+<thead>
+<tr>
+<th>function</th>
+<th>description</th>
+<th>usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>toString()</td>
+<td>返回成字符串</td>
+<td><code>(123).toString();</code></td>
+</tr>
+<tr>
+<td>toFixed()</td>
+<td>固定小数点后的位数，四舍五入</td>
+<td><code>(9.656).toFixed(2);           // returns 9.66</code></td>
+</tr>
+<tr>
+<td>toPrecision()</td>
+<td>固定长度</td>
+<td><code>(9.656)toPrecision(2);       // returns 9.7</code></td>
+</tr>
+</tbody>
+</table>
+<p>常用的就是这几个，还有许多，请看<a href="http://www.w3schools.com/jsref/jsref_obj_number.asp" target="_blank" rel="external">这里</a></p>
+<h2 id="Js中的数学方法"><a href="#Js中的数学方法" class="headerlink" title="Js中的数学方法"></a>Js中的数学方法</h2><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abs(x)</td>
+<td>Returns the absolute value of x</td>
+</tr>
+<tr>
+<td>acos(x)</td>
+<td>Returns the arccosine of x, in radians</td>
+</tr>
+<tr>
+<td>asin(x)</td>
+<td>Returns the arcsine of x, in radians</td>
+</tr>
+<tr>
+<td>atan(x)</td>
+<td>Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians</td>
+</tr>
+<tr>
+<td>atan2(y,x)</td>
+<td>Returns the arctangent of the quotient of its arguments</td>
+</tr>
+<tr>
+<td>ceil(x)</td>
+<td>Returns the value of x rounded up to its nearest integer</td>
+</tr>
+<tr>
+<td>cos(x)</td>
+<td>Returns the cosine of x (x is in radians)</td>
+</tr>
+<tr>
+<td>exp(x)</td>
+<td>Returns the value of Ex</td>
+</tr>
+<tr>
+<td>floor(x)</td>
+<td>Returns the value of x rounded down to its nearest integer</td>
+</tr>
+<tr>
+<td>log(x)</td>
+<td>Returns the natural logarithm (base E) of x</td>
+</tr>
+<tr>
+<td>max(x,y,z,…,n)</td>
+<td>Returns the number with the highest value</td>
+</tr>
+<tr>
+<td>min(x,y,z,…,n)</td>
+<td>Returns the number with the lowest value</td>
+</tr>
+<tr>
+<td>pow(x,y)</td>
+<td>Returns the value of x to the power of y</td>
+</tr>
+<tr>
+<td>random()</td>
+<td>Returns a random number between 0 and 1</td>
+</tr>
+<tr>
+<td>round(x)</td>
+<td>Returns the value of x rounded to its nearest integer</td>
+</tr>
+<tr>
+<td>sin(x)</td>
+<td>Returns the sine of x (x is in radians)</td>
+</tr>
+<tr>
+<td>sqrt(x)</td>
+<td>Returns the square root of x</td>
+</tr>
+<tr>
+<td>tan(x)</td>
+<td>Returns the tangent of an angle</td>
+</tr>
+</tbody>
+</table>
+<h3 id="生成随机数"><a href="#生成随机数" class="headerlink" title="生成随机数"></a>生成随机数</h3><p>这是个有趣的功能，相信我，在你的编程生涯中，你一定会遇到，而解决办法各种各样。<br>在Js中 <code>Math.random();              // returns a random number</code></p>
+<blockquote>
+<p>但是，它会返回一个[0,1)的数，非常不方便，如果要整数怎么办呢、？</p>
+</blockquote>
+<p>上一部分中有个 <code>floor()</code>函数，(floor,地板，往下)因此，它的作用是向下取整。比如<code>floor(4.7)</code>，会返回4.</p>
+<p>因此，<code>Math.floor(Math.random() * 10);     // returns a number between 0 and 9</code></p>
+<p>但是，在实际写代码时，我们一般把生成随机数的这个过程封装成一个函数，就像之前提过的：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo').innerHTML = getRndInteger(0,10)"</span>&gt;</span>Click Me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRndInteger</span>(<span class="params">min, max</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (max - min)) + min;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>会生成[0,9]的随机数。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-11-25-js学习2.html" class="archive-article-date">
+  	<time datetime="2016-11-25T09:08:38.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-25</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js学习/">js学习</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-css笔记2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -419,140 +703,9 @@
 
 
   
-    <article id="post-CSS笔记1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-11-20-CSS笔记1.html">CSS笔记1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="什么是CSS"><a href="#什么是CSS" class="headerlink" title="什么是CSS"></a>什么是CSS</h1><p>在之前的html笔记系列中，提到过一点CSS，它的作用是用来定义html文档如何更优雅的展示在用户的浏览器上。</p>
-<blockquote>
-<p>官方定义：<br></p>
-<ul>
-<li>CSS stands for Cascading Style Sheets</li>
-<li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
-<li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
-<li>External stylesheets are stored in CSS files</li>
-</ul>
-</blockquote>
-<p>看得懂吧？</p>
-<h1 id="CSS的语法"><a href="#CSS的语法" class="headerlink" title="CSS的语法"></a>CSS的语法</h1><p><img src="http://www.w3schools.com/css/selector.gif" alt="css.jpg"></p>
-<p>前面是selector，收集器（有点直），后面declaration，声明</p>
-<p>指定哪个部分，去如何展示！</p>
-<p>如何指定就是selector<br>如何展示就是declaration</p>
-<h2 id="selector的形式"><a href="#selector的形式" class="headerlink" title="selector的形式"></a>selector的形式</h2><p>指定的方式有很多种，比如：</p>
-<ul>
-<li>element name 元素</li>
-<li>id</li>
-<li>class</li>
-</ul>
-<h3 id="element"><a href="#element" class="headerlink" title="element"></a>element</h3><p>这是最常见的，<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">    <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="ID"><a href="#ID" class="headerlink" title="ID"></a>ID</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#para1</span> &#123;</div><div class="line">    <span class="attribute">text-align</span>: center;</div><div class="line">    <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.center &#123;</div><div class="line">    text-align: center;</div><div class="line">    color: red;</div><div class="line">&#125;</div><div class="line">p/h1.center &#123;</div><div class="line">    text-align: center;</div><div class="line">    color: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这个有点复杂，</p>
-<ul>
-<li>第一种形式，意思是所有的 <code>&lt;class=&quot;center&quot;&gt;</code>都会居中，红字</li>
-<li>第二种形式，则加了一个 <code>&lt;p&gt;</code>元素，就是说，段落中所有的 <code>&lt;class=&quot;center&quot;&gt;</code>都会居中，红字</li>
-</ul>
-<h1 id="CSS的使用"><a href="#CSS的使用" class="headerlink" title="CSS的使用"></a>CSS的使用</h1><p>之前提过一次，想用CSS有三种方式：</p>
-<ul>
-<li>引用外部文件</li>
-<li>在 <code>&lt;head&gt;</code> 中定义css style</li>
-<li>内嵌代码</li>
-</ul>
-<p>外部的引用如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"mystyle.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h1 id="CSS中的颜色"><a href="#CSS中的颜色" class="headerlink" title="CSS中的颜色"></a>CSS中的颜色</h1><p>颜色的表示有三种（之前也提过）</p>
-<ul>
-<li>a valid color name - like “red”</li>
-<li>an RGB value - like “rgb(255, 0, 0)”</li>
-<li>a HEX value - like “#ff0000”</li>
-</ul>
-<h2 id="颜色名字"><a href="#颜色名字" class="headerlink" title="颜色名字"></a>颜色名字</h2><p><table class="w3-table-all notranslate"><br>  <tr><th style="width:50%">Color</th><br>    <th>Name</th></tr><br>  <tr><td style="background-color:red">&nbsp;</td><td>Red</td></tr><br>  <tr><td style="background-color:green">&nbsp;</td><td>Green</td></tr><br>  <tr><td style="background-color:blue">&nbsp;</td><td>Blue</td></tr><br>  <tr><td style="background-color:orange">&nbsp;</td><td>Orange</td></tr><br>  <tr><td style="background-color:yellow">&nbsp;</td><td>Yellow</td></tr><br>  <tr><td style="background-color:cyan">&nbsp;</td><td>Cyan</td></tr><br>  <tr><td style="background-color:black">&nbsp;</td><td>Black</td></tr><br></table><br>（其实我建议，到了现在这个水平，您可以去读一下网页的源代码了，试着把上面这个表的源码扣出来）</p>
-<h2 id="RGB表示"><a href="#RGB表示" class="headerlink" title="RGB表示"></a>RGB表示</h2><div class="w3-responsive"><br><table class="w3-table-all notranslate"><br>  <tr><br>    <th style="width:50%">Color</th><br>    <th>RGB</th><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(255, 0, 0)">&nbsp;</td><br>    <td>rgb(255,0,0)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(0, 255, 0)">&nbsp;</td><br>    <td>rgb(0,255,0)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(0, 0, 255)">&nbsp;</td><br>    <td>rgb(0,0,255)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(255, 165, 0)">&nbsp;</td><br>    <td>rgb(255,165,0)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(255, 255, 0)">&nbsp;</td><br>    <td>rgb(255,255,0)</td><br>  </tr><br>  <tr><br>    <td style="background-color:rgb(0, 255, 255)">&nbsp;</td><br>    <td>rgb(0,255,255)</td><br>  </tr><br></table><br></div>
-
-<h2 id="HEX表示"><a href="#HEX表示" class="headerlink" title="HEX表示"></a>HEX表示</h2><p>这个留作业，自己查一下，因为html5更偏爱这个</p>
-<h1 id="CSS的背景"><a href="#CSS的背景" class="headerlink" title="CSS的背景"></a>CSS的背景</h1><p>CSS的background是用来定义html页面的背景的，可以有：</p>
-<ul>
-<li>背景颜色</li>
-<li>背景图片</li>
-<li>是否重复</li>
-<li>背景图片的位置</li>
-<li>背景固定</li>
-<li>shorthand（简写）</li>
-</ul>
-<p>正常写：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">    <span class="attribute">background-color</span>: white;</div><div class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">"img_tree.png"</span>);</div><div class="line">    <span class="attribute">background-repeat</span>:no-repeat;</div><div class="line">    <span class="attribute">background-position</span>:right top;</div><div class="line">    <span class="attribute">background-attachment</span>: fixed;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>shorthand的写法：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">      <span class="attribute">background</span>:  white <span class="built_in">url</span>(<span class="string">"img_tree.png"</span>) no-repeat right top;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is a Heading<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is a paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is another paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>效果如下：<br><img src="/asset/blogimg/css/backgroud.jpg" alt="background.jpg"></p>
-<h1 id="CSS中的边线"><a href="#CSS中的边线" class="headerlink" title="CSS中的边线"></a>CSS中的边线</h1><p>边线有很多形式，实线，点线等等：</p>
-<ul>
-<li>dotted - Defines a dotted border</li>
-<li>dashed - Defines a dashed border</li>
-<li>solid - Defines a solid border</li>
-<li>double - Defines a double border</li>
-<li>groove - Defines a 3D grooved border. Theeffect depends on the border-color value</li>
-<li>ridge - Defines a 3D ridged border. The effect depends on the border-color value</li>
-<li>inset - Defines a 3D inset border. The effect depends on the border-color value</li>
-<li>outset - Defines a 3D outset border. The effect depends on the border-color value</li>
-<li>none - Defines no border</li>
-<li>hidden - Defines a hidden border</li>
-</ul>
-<p>结果：<br><img src="/asset/blogimg/css/margin2.jpg" alt="margin2.jpg"></p>
-<h2 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h2><ul>
-<li>border的width</li>
-<li>border的color</li>
-<li>shorthand<br>用法：<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">p.three &#123;</div><div class="line">    border-style: dotted;</div><div class="line">    border-width: 2px;/medium/thick;</div><div class="line">    border-color: green;</div><div class="line">&#125;</div><div class="line">/*简写*/</div><div class="line">p &#123;</div><div class="line">    border: 5px solid red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="偏边界"><a href="#偏边界" class="headerlink" title="偏边界"></a>偏边界</h2><p>比如左边界：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span> <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"><span class="selector-tag">p</span> &#123;</span></div><div class="line">    <span class="attribute">border-left</span>: <span class="number">6px</span> solid pink;</div><div class="line">    <span class="attribute">background-color</span>: lightgrey;</div><div class="line">&#125;<span class="tag">&lt;/<span class="name">style</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span> 看看效果 <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><img src="/asset/blogimg/css/margin.jpg" alt="margin.jpg"></p>
-<h2 id="Padding"><a href="#Padding" class="headerlink" title="Padding"></a>Padding</h2><p>Padding填充，是这个区域内的填充，与margin的方式一样，有个小技巧，比如我们想把上下填充50px，左右25px，可以这么写：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">    <span class="attribute">background-color</span>: lightblue;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">50px</span> <span class="number">25px</span>;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h2 id="height-and-width"><a href="#height-and-width" class="headerlink" title="height and width"></a>height and width</h2><p>定义所在的标签，比如 <code>&lt;h1&gt;</code> 和 <code>&lt;p&gt;</code> 以及 <code>&lt;div&gt;</code>的高度和宽度，这里就不写了。</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/posts/uncategorized/2016-11-20-CSS笔记1.html" class="archive-article-date">
-  	<time datetime="2016-11-20T02:22:29.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-20</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS笔记/">CSS笔记</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -616,7 +769,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 15px;">js学习</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
+    				<a href="/tags/CSS笔记/" style="font-size: 13.33px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 16.67px;">js学习</a> <a href="/tags/python教程/" style="font-size: 10px;">python教程</a> <a href="/tags/杂谈/" style="font-size: 13.33px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 13.33px;">翻译教程</a>
     			</div>
     	</section>
     
