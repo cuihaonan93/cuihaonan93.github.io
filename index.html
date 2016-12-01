@@ -134,6 +134,126 @@
       <div class="body-wrap">
         
   
+    <article id="post-给朋友的-python的使用2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-12-01-给朋友的-python的使用2.html">给朋友的-python的使用2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h1><p>昨天写了第一篇简单的使用，也问了几个好朋友，他们读后的感想，非常感谢朋友X，他给我了几点建议，<br>现在呢，我试着去改正。</p>
+<h2 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h2><p>上一篇的代码块：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</div><div class="line">    <span class="comment">#python的注释非常简单，前面加一个“#”</span></div><div class="line">    <span class="comment"># 前面空了4格</span></div><div class="line">    print(<span class="string">"This is block1"</span>)</div><div class="line">    print(i)</div><div class="line"></div><div class="line">print(<span class="string">"This is block2"</span>)</div></pre></td></tr></table></figure></p>
+<p>在这里，我想要说明两点：</p>
+<ul>
+<li>python的注释符号是<code>#</code>，加一个＃，就是注释的意思，程序便不会运行注释的代码</li>
+<li>python的代码块儿的级别，是用缩进（4个空格）来表示的，比如例子中，<br><code>print(&quot;This is block1&quot;)</code> 和<code>print(i)</code>是一个级别的，都隶属于<code>for循环里</code><br>而下面的<code>print(&quot;This is block2&quot;)</code>则与for是一个级别，<br>即for循环执行完，才会去执行<code>print(&quot;This is block2&quot;)</code></li>
+</ul>
+<h2 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h2><p>python中的数据形式，其实这里我不想讲太多，因为在开头时已经说过，想把这个系列做的有意思，不要那么枯燥。<br>但是涉及到了，我就简单说一下。</p>
+<blockquote>
+<p>学语言(无论是计算机语言也好，还是外语)，都要用已知来推未知，就是类比，学习的过程就是一直类比，并发现不同，从而不断扩展自己的知识面的过程。</p>
+</blockquote>
+<p>因此，想，我们人类的数据类型都有什么，简单了，文字和数字。<br>基本是这两大类吧？<br>当然了，文字还可以再分类，数字也可以再分。但基本就是这样吧。<br>python基本也是这样，字符串呢，就把它想成文字，它的表示方法有三种：</p>
+<ul>
+<li>使用单引号(‘)<ul>
+<li>用单引号括起来表示字符串，例如：</li>
+<li><code>str=&#39;this is string&#39;;</code></li>
+</ul>
+</li>
+<li>使用双引号(“)<ul>
+<li>双引号中的字符串与单引号中的字符串用法完全相同，例如：</li>
+<li><code>str=&quot;this is string&quot;;</code></li>
+</ul>
+</li>
+<li>使用三引号(‘’’)<ul>
+<li>利用三引号，表示多行的字符串，可以在三引号中自由的使用单引号和双引号，例如：</li>
+<li>str=’’’this is string<br>this is pythod string<br>this is string’’’</li>
+</ul>
+</li>
+</ul>
+<p>数字呢，也有很多种，</p>
+<ul>
+<li>整数 int</li>
+<li>浮点数 float</li>
+<li>布尔型 True(1)/False(0)</li>
+</ul>
+<p>我不想讲太多书上的东西，就说这么多吧，附个<a href="http://www.cnblogs.com/linjiqin/p/3608541.html" target="_blank" rel="external">网址</a>，自己看看！</p>
+<h2 id="问题3"><a href="#问题3" class="headerlink" title="问题3"></a>问题3</h2><p>列表的使用，也在那个页面里，不讲了。<br>列表呢就像我说的，是一堆东西的集合。仅此而已。<br>关于字典，等碰到时再讲。</p>
+<h1 id="第二个挑战"><a href="#第二个挑战" class="headerlink" title="第二个挑战"></a>第二个挑战</h1><p>网址：<a href="http://www.pythonchallenge.com/pc/def/map.html" target="_blank" rel="external">http://www.pythonchallenge.com/pc/def/map.html</a><br>（这里呢，用了一个重定向，原始网址应该是昨天算出来的那个0替换成274877906944）</p>
+<p>打开网址，看到了什么？<br>一张图片：<br><img src="http://www.pythonchallenge.com/pc/def/map.jpg" alt="challenge2"><br>还有几行字：<br>‘’’<br>everybody thinks twice before solving this.</p>
+<p>g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr’q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj.<br>‘’’</p>
+<p>现在，一分钟的思考时间！</p>
+<div><br><br>  <p id="numDiv"><br>    60<br>  </p><br>    <input type="button" value="Begin" onclick="daojishi()"><br></div>
+
+<script type="text/javascript">
+function daojishi(){
+var num=60;
+var interval=setInterval(function(){
+if(num==0){
+clearInterval(interval);
+}
+numDiv.innerHTML=num--;
+},1000);
+}
+</script>
+
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>其实很简单，k往后移两位是M，O往后移两位是Q，E往后移两位是G，所有，我们应当用这个规律，把那段话给破解出来！</p>
+<h2 id="python实现"><a href="#python实现" class="headerlink" title="python实现"></a>python实现</h2><p>第一步：新建一个文件，c2.py<br>第二步：输入<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">origintext = <span class="string">'''</span></div><div class="line">g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj</div><div class="line">'''</div></pre></td></tr></table></figure></p>
+<p>这一步呢，先把原文用origintext来表示。</p>
+<p>第三步：给出破解的规则，用语言好描述，26个英文字母，找到它，往后移两位。但怎么用程序来说明呢？</p>
+<h3 id="漂亮的方法"><a href="#漂亮的方法" class="headerlink" title="漂亮的方法"></a>漂亮的方法</h3><p>很简单！看代码！<br>1、<code>translatebook = &quot;abcdefghijklmnopqrstuvwxyz&quot;</code><br>定义好英文字母的顺序。<br>2、如何找它呢？<br>记不记得for循环了？<br>现在介绍一个好方法叫<code>find()</code></p>
+<blockquote>
+<p>Python find() 方法检测字符串中是否包含子字符串 str ，如果指定 beg（开始） 和 end（结束） 范围，则检查是否包含在指定范围内，如果包含子字符串返回开始的索引值，否则返回-1。</p>
+</blockquote>
+<p>所以呢，直接对origintext遍历一下，每一个字符都去translatebook中去<code>find</code>返回的位置就是我们要的位置，<br>再将那个位置加2，再翻译出来就可以了！<br>3、试一下吧<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> origintext:</div><div class="line">    print( i , translatebook.find(i))</div></pre></td></tr></table></figure></p>
+<p>但运行结果却是这样：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">g <span class="number">6</span></div><div class="line">  <span class="number">-1</span></div><div class="line">f <span class="number">5</span></div><div class="line">m <span class="number">12</span></div><div class="line">n <span class="number">13</span></div><div class="line">c <span class="number">2</span></div><div class="line">  <span class="number">-1</span></div><div class="line">w <span class="number">22</span></div><div class="line">m <span class="number">12</span></div><div class="line">s <span class="number">18</span></div><div class="line">  <span class="number">-1</span></div><div class="line">  ...</div></pre></td></tr></table></figure></p>
+<p>为什么呢？<br>哦，原来origintext中含有空格，句号等，怎么办呢？<br>好办，find特殊符号返回的值都是“-1”，因此，我们加个条件判断就好了呢！<br>就是说小于零的都不去替换，保留原来的符号。</p>
+<h2 id="最终的实现"><a href="#最终的实现" class="headerlink" title="最终的实现"></a>最终的实现</h2><p>刚刚已经把破解的过程解释了，破解完怎么办呢？<br>我们要输出一个翻译好的字符串。<br>所以，先定义一个空的字符串<code>result = &quot;&quot;</code><br>然后将翻译好的字符，加到result里就可以了。</p>
+<p>附上最终代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">origintext = <span class="string">'''</span></div><div class="line">g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp.\</div><div class="line"> bmgle gr gl zw fylb gq glcddgagclr ylb rfyrq ufw rfgq rcvr gq qm jmle.\</div><div class="line"> sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj.</div><div class="line"> '''</div><div class="line"></div><div class="line">translatebook = <span class="string">"abcdefghijklmnopqrstuvwxyz"</span></div><div class="line">result = <span class="string">""</span></div><div class="line"></div><div class="line"><span class="keyword">for</span> j <span class="keyword">in</span> origintext:</div><div class="line">    first_place =  translatebook.find(j)</div><div class="line">    <span class="comment">#print( i , first_place)</span></div><div class="line">    <span class="keyword">if</span> first_place &gt;= <span class="number">0</span>:</div><div class="line">        second_place = first_place + <span class="number">2</span></div><div class="line">        <span class="keyword">if</span> first_place &gt; <span class="number">23</span>:</div><div class="line">            second_place = first_place - <span class="number">24</span></div><div class="line">        result += (translatebook[second_place])</div><div class="line">    <span class="keyword">else</span> :</div><div class="line">        result += j</div><div class="line"></div><div class="line">print(result)</div></pre></td></tr></table></figure></p>
+<h2 id="运行结果："><a href="#运行结果：" class="headerlink" title="运行结果："></a>运行结果：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">i hope you didnt translate it by hand. thats what computers are <span class="keyword">for</span>. doing it <span class="keyword">in</span> by hand <span class="keyword">is</span> inefficient <span class="keyword">and</span> thats why this text <span class="keyword">is</span> so long. using string.maketrans() <span class="keyword">is</span> recommended. now apply on the url.</div></pre></td></tr></table></figure>
+<h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3><p>结果中提示了一个方法，看到了吗？<br><code>string.maketrans()</code>这个方法，你可以搜一下，我把它提示的方法写出的代码附上，大家做个参考！<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> string</div><div class="line"></div><div class="line">origintext = <span class="string">'g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp.\</span></div><div class="line">bmgle gr gl zw fylb gq glcddgagclr ylb rfyrq ufw rfgq rcvr gq qm jmle.\</div><div class="line">sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj.'</div><div class="line">               </div><div class="line">print(string.translate(origintext, string.maketrans(<span class="string">'abcdefghijklmnopqrstuvwxyz'</span>, <span class="string">'cdefghijklmnopqrstuvwxyzab'</span>)))</div></pre></td></tr></table></figure></p>
+<p>最后呢，把网页的网址中的<code>map</code>替换成<code>ocr</code>就可以进入下一关了！</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-12-01-给朋友的-python的使用2.html" class="archive-article-date">
+  	<time datetime="2016-12-01T13:29:56.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-01</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python教程/">python教程</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-给朋友的-python的使用" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -489,174 +609,6 @@ if (isNaN(age)) {
 
 
   
-    <article id="post-js学习2.5" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-11-28-js学习2.5.html">js学习2.5</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Js中的时间"><a href="#Js中的时间" class="headerlink" title="Js中的时间"></a>Js中的时间</h1><h2 id="时间的格式"><a href="#时间的格式" class="headerlink" title="时间的格式"></a>时间的格式</h2><p>首先要了解一个小知识，即我们在许多编程语言当中会认为时间的开始是1970.01.01。</p>
-<blockquote>
-<p>一个很懒的解释：<br>很多编程语言起源于UNIX系统，而UNIX系统认为1970年1月1日0点是时间纪元，<br>所以我们常说的UNIX时间戳是以1970年1月1日0点为计时起点时间的。</p>
-</blockquote>
-<p>还有详细的，可以自己去搜一下。</p>
-<p>因此，javascript中有四种时间的对象：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>()</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(milliseconds)</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(dateString)</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(year, month, day, hours, minutes, seconds, milliseconds)</div></pre></td></tr></table></figure></p>
-<p>我写个简单的代码，你们可以看一下效果：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo1').innerHTML=d1"</span>&gt;</span>Date1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo1"</span>&gt;</span> <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo2').innerHTML=d2"</span>&gt;</span>Date2<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo2"</span>&gt;</span> <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo3').innerHTML=d3"</span>&gt;</span>Date3<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo3"</span>&gt;</span> <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.getElementById('demo4').innerHTML=d4"</span>&gt;</span>Date4<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo4"</span>&gt;</span> <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">var</span> d1 = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="keyword">var</span> d2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"October 13, 2014 11:13:00"</span>);</div><div class="line"><span class="keyword">var</span> d3 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">74382198478</span>);</div><div class="line"><span class="keyword">var</span> d4 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">93</span>,<span class="number">05</span>,<span class="number">05</span>,<span class="number">02</span>,<span class="number">30</span>,<span class="number">0</span>); <span class="comment">//我的生日930606，但是我在一开始就说了，从零开始！</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<button onclick="document.getElementById('demo1').innerHTML=d1">Date1</button>
-
-<p id="demo1"> </p><br><button onclick="document.getElementById('demo2').innerHTML=d2.toString()">Date2</button><br><br><p id="demo2"> </p><br><button onclick="document.getElementById('demo3').innerHTML=d3.toUTCString()">Date3</button><br><br><p id="demo3"> </p><br><button onclick="document.getElementById('demo4').innerHTML=d4.toDateString()">Date4</button><br><br><p id="demo4"> </p>
-
-<script>
-var d1 = new Date();
-var d2 = new Date("October 13, 2014 11:13:00");
-var d3 = new Date(74382198478);
-var d4 = new Date(93,05,05,02,30,0);
-</script>
-
-<p>Date3中，我随便加了个数，单位是秒（s）。</p>
-<blockquote>
-<p>我没有把展示时间即 <code>document.getElementById(&#39;demo4&#39;).innerHTML=d</code>写成一个函数，是因为我想展示的更清楚，而且时间的展示格式也不同。但你们以后再写的时候要写成函数（尽量少写重复代码）</p>
-</blockquote>
-<h2 id="时间的展示"><a href="#时间的展示" class="headerlink" title="时间的展示"></a>时间的展示</h2><p>展示时间基本上都是字符串的形式。</p>
-<ul>
-<li><code>toString</code>就是默认的展示方式，上面出现的那几种都是。</li>
-<li><code>toUTCString</code>是以UTC（一种标准）的形式来展示。</li>
-<li><code>toDateString</code>就是我们平常看到的那种形式。</li>
-</ul>
-<blockquote>
-<p>上面的例子都有，自己琢磨一下。</p>
-</blockquote>
-<p>还有许多时间的格式，你可以看看<a href="http://www.w3schools.com/js/js_date_formats.asp" target="_blank" rel="external">这个网站</a></p>
-<h2 id="时间的函数"><a href="#时间的函数" class="headerlink" title="时间的函数"></a>时间的函数</h2><p>有很多，get类和set类,看下面的两个表：</p>
-<table>
-<thead>
-<tr>
-<th>Method</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>getDate()</td>
-<td>Get the day as a number (1-31)</td>
-</tr>
-<tr>
-<td>getDay()</td>
-<td>Get the weekday as a number (0-6)</td>
-</tr>
-<tr>
-<td>getFullYear()</td>
-<td>Get the four digit year (yyyy)</td>
-</tr>
-<tr>
-<td>getHours()</td>
-<td>Get the hour (0-23)</td>
-</tr>
-<tr>
-<td>getMilliseconds()</td>
-<td>Get the milliseconds (0-999)</td>
-</tr>
-<tr>
-<td>getMinutes()</td>
-<td>Get the minutes (0-59)</td>
-</tr>
-<tr>
-<td>getMonth()</td>
-<td>Get the month (0-11)</td>
-</tr>
-<tr>
-<td>getSeconds()</td>
-<td>Get the seconds (0-59)</td>
-</tr>
-<tr>
-<td>getTime()</td>
-<td>Get the time (milliseconds since January 1, 1970)</td>
-</tr>
-<tr>
-<td>———————</td>
-<td>——————-</td>
-</tr>
-<tr>
-<td>setDate()</td>
-<td>Set the day as a number (1-31)</td>
-</tr>
-<tr>
-<td>setFullYear()</td>
-<td>Set the year (optionally month and day)</td>
-</tr>
-<tr>
-<td>setHours()</td>
-<td>Set the hour (0-23)</td>
-</tr>
-<tr>
-<td>setMilliseconds()</td>
-<td>Set the milliseconds (0-999)</td>
-</tr>
-<tr>
-<td>setMinutes()</td>
-<td>Set the minutes (0-59)</td>
-</tr>
-<tr>
-<td>setMonth()</td>
-<td>Set the month (0-11)</td>
-</tr>
-<tr>
-<td>setSeconds()</td>
-<td>Set the seconds (0-59)</td>
-</tr>
-<tr>
-<td>setTime()</td>
-<td>Set the time (milliseconds since January 1, 1970)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>对了，在Js中，时间是可以很容易比较的，看下面的例子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">var</span> today, someday, text;</div><div class="line">today = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">someday = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">someday.setFullYear(<span class="number">2100</span>, <span class="number">0</span>, <span class="number">14</span>);</div><div class="line"></div><div class="line"><span class="keyword">if</span> (someday &gt; today) &#123;</div><div class="line">    text = <span class="string">"Today is before January 14, 2100."</span>;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    text = <span class="string">"Today is after January 14, 2100."</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = text;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<p>你说会 <code>&lt;p&gt;</code>那里会变成那句话呢？</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/posts/uncategorized/2016-11-28-js学习2.5.html" class="archive-article-date">
-  	<time datetime="2016-11-28T09:23:46.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-28</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js学习/">js学习</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -723,7 +675,7 @@ var d4 = new Date(93,05,05,02,30,0);
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/CSS笔记/" style="font-size: 13.33px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 16.67px;">js学习</a> <a href="/tags/python教程/" style="font-size: 10px;">python教程</a> <a href="/tags/杂谈/" style="font-size: 13.33px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 13.33px;">翻译教程</a>
+    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 15px;">js学习</a> <a href="/tags/python教程/" style="font-size: 10px;">python教程</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
     			</div>
     	</section>
     
