@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>给朋友的--python的使用3 | 崔浩楠的网站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="反思前几天病了，就没有精力来写，今天感觉状态不错，就更新一点。之前两篇，实现了两个小挑战，针对的都是字符串的操作，但我一直也没有系统的将字符串以及它的特性来描述一下，这个是我的失误，我应当写在前面的。
+字符串字符，我更希望你去把他当成我们人类的文字去理解；字符串，就是一堆文字的集合。因此字符串有三种表达方式（类比我们的句子，段落）：
+
+var1 = &amp;#39;Hello World!&amp;#39;
+v">
+<meta property="og:type" content="article">
+<meta property="og:title" content="给朋友的--python的使用3">
+<meta property="og:url" content="http://yoursite.com/posts/uncategorized/2016-12-05-给朋友的-python的使用3.html">
+<meta property="og:site_name" content="崔浩楠的网站">
+<meta property="og:description" content="反思前几天病了，就没有精力来写，今天感觉状态不错，就更新一点。之前两篇，实现了两个小挑战，针对的都是字符串的操作，但我一直也没有系统的将字符串以及它的特性来描述一下，这个是我的失误，我应当写在前面的。
+字符串字符，我更希望你去把他当成我们人类的文字去理解；字符串，就是一堆文字的集合。因此字符串有三种表达方式（类比我们的句子，段落）：
+
+var1 = &amp;#39;Hello World!&amp;#39;
+v">
+<meta property="og:image" content="http://www.pythonchallenge.com/pc/def/ocr.jpg">
+<meta property="og:updated_time" content="2016-12-05T07:46:12.814Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="给朋友的--python的使用3">
+<meta name="twitter:description" content="反思前几天病了，就没有精力来写，今天感觉状态不错，就更新一点。之前两篇，实现了两个小挑战，针对的都是字符串的操作，但我一直也没有系统的将字符串以及它的特性来描述一下，这个是我的失误，我应当写在前面的。
+字符串字符，我更希望你去把他当成我们人类的文字去理解；字符串，就是一堆文字的集合。因此字符串有三种表达方式（类比我们的句子，段落）：
+
+var1 = &amp;#39;Hello World!&amp;#39;
+v">
+<meta name="twitter:image" content="http://www.pythonchallenge.com/pc/def/ocr.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="崔浩楠的网站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/asset/img/B.ico">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/asset/img/lion.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">崔浩楠</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">面朝大海     以梦为马</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/杂谈/">杂谈</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/cuihaonan93" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">崔浩楠</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/asset/img/lion.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">崔浩楠</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">面朝大海     以梦为马</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/杂谈/">杂谈</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/cuihaonan93" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-给朋友的-python的使用3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      给朋友的--python的使用3
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h1><p>前几天病了，就没有精力来写，今天感觉状态不错，就更新一点。<br>之前两篇，实现了两个小挑战，针对的都是字符串的操作，但我一直也没有系统的将字符串以及它的特性来描述一下，这个是我的失误，我应当写在前面的。</p>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符，我更希望你去把他当成我们人类的文字去理解；字符串，就是一堆文字的集合。<br>因此字符串有三种表达方式（类比我们的句子，段落）：</p>
+<ul>
+<li><code>var1 = &#39;Hello World!&#39;</code></li>
+<li><code>var2 = &quot;Python Programming&quot;</code></li>
+<li>还有三引号的，只不过三引号可以是多行的。</li>
+</ul>
+<blockquote>
+<p>在此，有一些叫转义字符串，我希望你能去自己百度一下。<br>我给个简单的例子，在字符串中想表示空格及回车，可以用：<code>\s</code>和<code>\n</code></p>
+</blockquote>
+<h3 id="查看及操作字符串"><a href="#查看及操作字符串" class="headerlink" title="查看及操作字符串"></a>查看及操作字符串</h3><p>就想象成对我们的句子来进行操作，如下表：<br>a = “Hello” b = “Python”</p>
+<table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>串联 - 添加操作两边的值</td>
+<td>a + b –&gt; HelloPython</td>
+</tr>
+<tr>
+<td>*</td>
+<td>重复 - 就是重复n遍，会得到一个新字符串</td>
+<td>a*2 –&gt; -HelloHello</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>切片 - 从给定的索引字符</td>
+<td>a[1] –&gt; e</td>
+</tr>
+<tr>
+<td>[ : ]</td>
+<td>范围切片 - 从给定范围内的字符</td>
+<td>a[1:4] —&gt; ell</td>
+</tr>
+<tr>
+<td>in</td>
+<td>成员关系 - 返回true，如果存在一个字符在给定的字符串</td>
+<td>H in a –&gt; 1</td>
+</tr>
+<tr>
+<td>not in</td>
+<td>成员关系 - 返回true如果不存在一个字符在给定的字符串</td>
+<td>M not in a –&gt; 1</td>
+</tr>
+<tr>
+<td>%</td>
+<td>格式化 - 执行字符串格式</td>
+<td>看下面</td>
+</tr>
+</tbody>
+</table>
+<h4 id="格式化"><a href="#格式化" class="headerlink" title="%格式化"></a>%格式化</h4><p>Python的最酷的功能之一是字符串格式符％。这个操作符是唯一的字符串，从C的printf（）系列函数的包。</p>
+<blockquote>
+<p>我们可以将这个功能想象成占位子，先用一个符号把那个位置占掉，然后再用真正的补上，比如下面：</p>
+</blockquote>
+<p><code>print &quot;My name is %s and weight is %d kg!&quot; % (&#39;Zara&#39;, 21)</code><br>这将输出以下结果：<br><code>My name is Zara and weight is 21 kg!</code></p>
+<h3 id="别的字符串"><a href="#别的字符串" class="headerlink" title="别的字符串"></a>别的字符串</h3><h4 id="原始字符串"><a href="#原始字符串" class="headerlink" title="原始字符串"></a>原始字符串</h4><p>什么是原始字符串呢？可以这么认为，就是去掉所有的加工，比如，你在转述别人跟你说的<strong>原话</strong>时，你会说，他是这么说的：‘’，你就相当输出了原始字符串！<br>python中也一样：<code>print(r&#39;C:\\nowhere&#39;)</code><br>你要知道，如果不加<code>r</code>，那两个<code>\\</code>是只能输出一个的，那是转义符，（让你自己百度了！）<br>但加了<code>r</code>就会把原始的字符串输出，相当于去掉了转述人的理解。</p>
+<h4 id="Unicode字符串"><a href="#Unicode字符串" class="headerlink" title="Unicode字符串"></a>Unicode字符串</h4><p>存储字节的位数不同，在python中，正常字符串在内部存储为8位ASCII，Unicode字符串存储为16位Unicode。这使得更加多样化的字符集，包括在世界上大多数语言的特殊字符。用法如下：<br><code>print(u&#39;Hello, world!&#39;)</code></p>
+<blockquote>
+<p>因为不想讲太多无趣的东西，至于为什么要有16位的存储，有兴趣就去百度。</p>
+</blockquote>
+<h2 id="字符串的方法"><a href="#字符串的方法" class="headerlink" title="字符串的方法"></a>字符串的方法</h2><p>python的字符串方法众多，详细的可以查看官方手册，网址在<a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str" target="_blank" rel="external">这里</a><br>,我把常用的写了出来、（今天就要用到哦）：</p>
+<table>
+<thead>
+<tr>
+<th>method</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string.count(str, beg=0, end=len(string))</td>
+<td>返回 str 在 string 里面出现的次数，如果 beg 或者 end 指定则返回指定范围内 str 出现的次数</td>
+</tr>
+<tr>
+<td>string.endswith(obj, beg=0, end=len(string))</td>
+<td>检查字符串是否以 obj 结束，如果beg 或者 end 指定则检查指定的范围内是否以 obj 结束，如果是，返回 True,否则返回 False.</td>
+</tr>
+<tr>
+<td>string.find(str, beg=0, end=len(string))</td>
+<td>检测 str 是否包含在 string 中，如果 beg 和 end 指定范围，则检查是否包含在指定范围内，如果是返回开始的索引值，否则返回-1</td>
+</tr>
+<tr>
+<td>string.index(str, beg=0, end=len(string))</td>
+<td>跟find()方法一样，只不过如果str不在 strin</td>
+</tr>
+<tr>
+<td>string.join(seq)</td>
+<td>以 string 作为分隔符，将 seq 中所有的元素(的字符串表示)合并为一个新的字符串</td>
+</tr>
+<tr>
+<td>string.replace(str1, str2,  num=string.count(str1))</td>
+<td>把 string 中的 str1 替换成 str2,如果 num 指定，则替换不超过 num 次.</td>
+</tr>
+<tr>
+<td>string.split(str=””, num=string.count(str))</td>
+<td>str 为分隔符切片 string，如果 num有指定值，则仅分隔 num 个子字符串</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>可以注意到，方法我讲的不细，其实很简单，因为概念很重要，要讲的细一些，等理解了之后，方法呢？是具体怎么用，不明白的百度一下就好了。</p>
+</blockquote>
+<h2 id="今天的挑战"><a href="#今天的挑战" class="headerlink" title="今天的挑战"></a>今天的挑战</h2><p>网址：<a href="http://www.pythonchallenge.com/pc/def/ocr.html" target="_blank" rel="external">http://www.pythonchallenge.com/pc/def/ocr.html</a></p>
+<p>打开之后会有如下的图片：<br><img src="http://www.pythonchallenge.com/pc/def/ocr.jpg" alt="challenge3"></p>
+<p>下面有这么一段话：</p>
+<blockquote>
+<p>recognize the characters. maybe they are in the book,<br>but MAYBE they are in the page source.</p>
+</blockquote>
+<p>那我明白了，密码就在页面的源代码中，点右键查看源代码。</p>
+<blockquote>
+<p>其实打开之后，可以看出，页面的构造十分简单，你有空可以看看我之前写的“html笔记”，绝对能看懂它的页面源代码</p>
+</blockquote>
+<p>打开之后，发现有一行注释(html的注释符是<code>!</code>)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--</div><div class="line">find rare characters in the mess below:</div><div class="line">--&gt;</div></pre></td></tr></table></figure></p>
+<p>找出下面罕见的字符串？<br>底下是一堆字符串，一堆符号，别的字符，非常乱，就像这样！我们怎么找呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">%%$@_$^__#)^)&amp;!_+]!*@&amp;^&#125;@[@%]()%+$&amp;[(_@%+%$*^@$^!+]!&amp;_#)_*&#125;&#123;&#125;&#125;!&#125;_]$[%&#125;@[&#123;_@#_^&#123;*</div><div class="line">@##&amp;&#123;#&amp;&#123;&amp;)*%(]&#123;&#123;([*&#125;@[@&amp;]+!!*&#123;)!&#125;&#123;%+&#123;))])[!^&#125;)+)$]#&#123;*+^((@^@&#125;$[**$&amp;^&#123;$!@#$%)!@(&amp;</div><div class="line">+^!&#123;%_$&amp;@^!&#125;$_$&#123;)$_#)!(&#123;@!)(^&#125;!*^&amp;!$%_&amp;&amp;&#125;&amp;_#&amp;@&#123;)]&#123;+)%*&#123;&amp;*%*&amp;@%$+]!*__(#!*)&#123;%&amp;@++</div><div class="line">!_)^$&amp;&amp;%#+)&#125;!@!)&amp;^&#125;**#!_$([$!$&#125;#*^&#125;$+&amp;#[&#123;*&#123;&#125;&#123;((#$]&#123;[$[$$()_#&#125;!@&#125;^@_&amp;%^*!)&#123;*^^_$^</div><div class="line">]@&#125;#%[%!^[^_&#125;)+@&amp;&#125;&#123;@*!(@$%$^)&#125;[_!&#125;(*&#125;#&#125;#___&#125;!](@_&#123;&#123;(*#%!%%+*)^+#%&#125;$+_]#&#125;%!**#!^_</div><div class="line">)@)$%%^&#123;_%!@(&amp;&#123;!&#125;$_$[)*!^&amp;&#123;&#125;*#&#123;!)@&#125;)!*&#123;^&amp;[&amp;$#@)*@#@_@^_#*!@_#&#125;)+[^&amp;!@*&#125;^)&#123;%%&#123;&amp;#@</div><div class="line">@&#123;%(&amp;&#123;+(#^&#123;@&#123;)%_$[+&#125;]$]^&#123;^#(*&#125;%)@$@&#125;(#&#123;_&amp;]#%#]&#123;_*(&#123;(])$%[!&#125;#@@&amp;_)([*]&#125;$&#125;&amp;$&#123;^&#125;@(%</div></pre></td></tr></table></figure></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>没关系，记得刚刚讲的python的string的method中有一个<code>count()</code>函数吗？</p>
+<blockquote>
+<p>string.count(str, beg=0, end=len(string)) : 返回str在 string 里面出现的次数，如果 beg 或者 end 指定则返回指定范围内 str 出现的次数</p>
+</blockquote>
+<p>这样的话，我们就有思路了：去对每个出现的字符进行计数（count），最少的就是我们要的！</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>第一步：建立<code>c3.py</code><br>第二步：<code>origintext =&quot;   &quot;</code>将源代码中那一堆字符串，给复制进去。<br>第三步：<code>handed = &quot;&quot;</code>建立一个空的字符串，看它的名字，就是表明它是已经处理过的意思。（我们不想对一堆字符串每一个字符进行比较，我们就把已经比较过的放在一个地方，遇到已经处理过的，就不管！）<br>第四步：直接上代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> origintext:</div><div class="line">    <span class="keyword">if</span> i <span class="keyword">in</span> handed:</div><div class="line">        <span class="keyword">pass</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        handed = handed+ i</div><div class="line">        print(i,origintext.count(i))</div></pre></td></tr></table></figure></p>
+<p>结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">% 6104</div><div class="line">$ 6046</div><div class="line">@ 6157</div><div class="line">_ 6112</div><div class="line">^ 6030</div><div class="line"># 6115</div><div class="line">) 6186</div><div class="line">&amp; 6043</div><div class="line">! 6079</div><div class="line">+ 6066</div><div class="line">] 6152</div><div class="line">* 6034</div><div class="line">&#125; 6105</div><div class="line">[ 6108</div><div class="line">( 6154</div><div class="line">&#123; 6046</div><div class="line"></div><div class="line"> 1220</div><div class="line">e 1</div><div class="line">q 1</div><div class="line">u 1</div><div class="line">a 1</div><div class="line">l 1</div><div class="line">i 1</div><div class="line">t 1</div><div class="line">y 1</div></pre></td></tr></table></figure></p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>equality就是我们要的结果，因此，将网址中的<code>ocr</code>替换为：<code>equality</code>即可。</p>
+<h3 id="待续"><a href="#待续" class="headerlink" title="待续"></a>待续</h3><p>这种方法过于繁琐，实际上等以后，我们的知识积累到了一定的水平，我们用爬虫的方法再做一遍，代码更少，运行不一定更快哦，此处留个悬念！</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-12-05-给朋友的-python的使用3.html" class="archive-article-date">
+  	<time datetime="2016-12-05T07:45:51.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-05</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python教程/">python教程</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/posts/uncategorized/2016-12-01-给朋友的-python的使用2.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">给朋友的-python的使用2</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="给朋友的-python的使用3" data-title="给朋友的--python的使用3" data-url="http://yoursite.com/posts/uncategorized/2016-12-05-给朋友的-python的使用3.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 崔浩楠
+    	</div>
+      	<div class="footer-right">
+      		这个主题是 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 16.67px;">js学习</a> <a href="/tags/python教程/" style="font-size: 13.33px;">python教程</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://xiaolai.li/">笑来的网站</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br&gt; 你好&lt;/br&gt;&lt;br&gt;我是崔浩楠&lt;/br&gt;&lt;br&gt;爱爸妈，爱朋友&lt;/br&gt;想去北极</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

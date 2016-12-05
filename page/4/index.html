@@ -134,6 +134,118 @@
       <div class="body-wrap">
         
   
+    <article id="post-html笔记-表单1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/uncategorized/2016-11-19-html笔记-表单1.html">html笔记-表单1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="html的表单"><a href="#html的表单" class="headerlink" title="html的表单"></a>html的表单</h1><p> 我单独把表单拿出来了，写一篇笔记，是因为我觉得重要，因为在几个月前，我在Atom实习时，需要做一个登陆界面，涉及到了表单（Form）的知识，我认为这个很重要，因此，单拿出来写。</p>
+<h2 id="什么是form"><a href="#什么是form" class="headerlink" title="什么是form"></a>什么是form</h2><blockquote>
+<p>官方定义：<br><br> The HTML <code>&lt;form&gt;</code> element defines a form that is used to collect user input</p>
+</blockquote>
+<p> 回忆一下，你在网页上登陆你的微博，邮箱时，你输入你的用户名，密码等，这个就是表单，它能够捕捉到用户输入.。</p>
+<h3 id="fieldset"><a href="#fieldset" class="headerlink" title="fieldset"></a>fieldset</h3><p><code>&lt;fieldset&gt;</code>代码表示对标签区域内的表单数据进行分组，<br><code>&lt;legend&gt;</code>的意思是<code>&lt;fieldset&gt;</code>的标题</p>
+<h3 id="action"><a href="#action" class="headerlink" title="action"></a>action</h3><p><code>&lt;action&gt;</code>属性定义在提交表单时要执行的操作。比如，在提交完你的账号密码后，<code>&lt;action&gt;</code>会链接到一个js的代码，与数据库中已存的你的账号密码，去验证，如果符合，则登陆成功。</p>
+<h3 id="method"><a href="#method" class="headerlink" title="method"></a>method</h3><p>方法有“GET”和”POST”,我建议去搜一下，自己总结一下它们的不同。</p>
+<h2 id="form中的input"><a href="#form中的input" class="headerlink" title="form中的input"></a>form中的input</h2><p><code>&lt;input&gt;</code>是表单中最重要的元素，捕捉输入！<br>它的 <code>&lt;type&gt;</code> 属性有三种常见的方式：</p>
+<ul>
+<li><code>&lt;input type=&quot;text&quot;&gt;</code></li>
+<li><code>&lt;input type=&quot;radio&quot;&gt;</code></li>
+<li><code>&lt;input type=&quot;submit&quot;&gt;</code><h3 id="text"><a href="#text" class="headerlink" title="text"></a>text</h3>会出现一个文本框，你可以输入你的文本（默认20个字符）<br><br><code>&lt;textarea name=&quot;message&quot; rows=&quot;10&quot; cols=&quot;30&quot;&gt;</code>会定义一个多行的文本框<h3 id="radio"><a href="#radio" class="headerlink" title="radio"></a>radio</h3>会出现单选按钮（radio button），适用于可选项<h3 id="submit"><a href="#submit" class="headerlink" title="submit"></a>submit</h3>从字母意思可看出，会生成一个提交按钮</li>
+</ul>
+<p>有两个重要的属性：<br><code>&lt;name=&quot;&quot;&gt;</code>：把这个<code>&lt;input&gt;</code>中得到的信息看成一个变量，这就是变量名<br><code>&lt;value=&quot;&quot;&gt;</code>而这个就是变量的值，在 <code>&lt;type=&quot;text&quot;&gt;</code>中，value就是默认的填好的值</p>
+<blockquote>
+<p>怎么叫一个变量？<br><br>比如 <code>&lt;x = 5&gt;</code> x就是变量名，5是x默认的值</p>
+<p>为什么要把我们的输入当成变量呢？<br><br>还是刚刚的例子，你的用户名密码，在输入之后，去数据库中对比，怎么找？怎么对比？根据 <code>&lt;username=&quot;你的用户名&quot;&gt;</code>去找你的信息，应该明白了吧？</p>
+</blockquote>
+<h2 id="form标签"><a href="#form标签" class="headerlink" title="form标签"></a>form标签</h2><h3 id="select"><a href="#select" class="headerlink" title="select"></a>select</h3><p><code>&lt;select&gt;</code>标签定义了一个下拉式的选项。<br>在它之下， <code>&lt;option&gt;</code>定义可选项</p>
+<h3 id="button"><a href="#button" class="headerlink" title="button"></a>button</h3><p><code>&lt;button type=&quot;button&quot; onclick=&quot;alert(&#39;hello&#39;)&quot;&gt;点一下&lt;/button&gt;</code></p>
+<button type="button" onclick="alert('hello')">点一下</button>
+
+<p>这个就是button的大致用法，先知道，不用太清，因为还有很多的function，我们不知道（<code>&quot;alert(&#39;hello&#39;)&quot;</code>这个就是一个function）</p>
+<h3 id="html5中的标签"><a href="#html5中的标签" class="headerlink" title="html5中的标签"></a>html5中的标签</h3><p>html5中新添了3个更方便的标签，用到时再讲，如果有兴趣，可以自己google一下：</p>
+<ul>
+<li><code>&lt;datalist&gt;</code></li>
+<li><code>&lt;keygen&gt;</code></li>
+<li><code>&lt;output&gt;</code></li>
+</ul>
+<h2 id="input中的type"><a href="#input中的type" class="headerlink" title="input中的type"></a>input中的type</h2><p>刚刚稍微谈到了 <code>&lt;input&gt;</code>，这个标签时表单中最重要的，它有许多的类型，刚刚只提到了 <code>type=&quot;text&quot;/&quot;radio&quot;/&quot;submit&quot;</code>其实还有很多，下面我们简单地来看一看。</p>
+<h3 id="Password和Reset"><a href="#Password和Reset" class="headerlink" title="Password和Reset"></a>Password和Reset</h3><p>我们在输入密码时，一定是不希望别人看到，因此html提供了一种密码的type；而我们输错了，想重新输入时，也有一种重置的type。<br>用法如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line">  User name:<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">  User password:<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"psw"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"reset"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>你可以往密码框里输入试试：</p>
+<form><br>  User name:<br><br>  <input type="text" name="username"><br><br>  User password:<br><br>  <input type="password" name="psw"><br><br>  <input type="submit"><br>  <input type="reset"><br></form>
+
+<h3 id="radio和checkbox"><a href="#radio和checkbox" class="headerlink" title="radio和checkbox"></a>radio和checkbox</h3><p>radio大家已经知道了，checkbox就是可选项，非常简单，可以看一下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"All-stars"</span> <span class="attr">value</span>=<span class="string">"KOBE"</span>&gt;</span>Kobe</div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"All-stars"</span> <span class="attr">value</span>=<span class="string">"James"</span>&gt;</span>Jame</div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"All-stars"</span> <span class="attr">value</span>=<span class="string">"Wade"</span>&gt;</span>Wade<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"All-stars"</span> <span class="attr">value</span>=<span class="string">"Rose"</span>&gt;</span>Rose</div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"All-stars"</span> <span class="attr">value</span>=<span class="string">"Jordan"</span>&gt;</span>Jordan</div></pre></td></tr></table></figure></p>
+<p><input type="radio" name="All-stars" value="KOBE">Kobe</p>
+<p><input type="radio" name="All-stars" value="James">Jame</p>
+<p><input type="radio" name="All-stars" value="Wade">Wade<br></p>
+<p><input type="checkbox" name="All-stars" value="Rose">Rose</p>
+<p><input type="checkbox" name="All-stars" value="Jordan">Jordan</p>
+<h3 id="Button"><a href="#Button" class="headerlink" title="Button"></a>Button</h3><p>按钮的type，这个的标签的意义是，可以制作一个按钮，往按钮上绑定一个function，比如你点击它时，会弹出一个窗口，涉及到了一些后续的知识，先看一下吧。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"点我"</span> <span class="attr">onclick</span>=<span class="string">"alert('你好啊！')"</span>&gt;</span></div></pre></td></tr></table></figure></p>
+  <form><br>    <input type="button" value="点我" onclick="alert('你好啊！')"><br>    可以试着点一下<br>  </form>
+
+<h3 id="html5中的方便标签"><a href="#html5中的方便标签" class="headerlink" title="html5中的方便标签"></a>html5中的方便标签</h3><p>在html5中增加了许多的我们用起来很方便的type，实质上它们都是一些集成好function，你一定会看见你比较熟悉的type的。</p>
+<h4 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h4><p><code>&lt;input type=&quot;number&quot; min=&quot;2&quot; step=&quot;5&quot;&gt;</code>可以定义一个数字输入框，你可以加限制min,max,也可以指定步长step</p>
+<h4 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h4><p><code>&lt;input type=&quot;color&quot; name=&quot;favcolor&quot; value=&quot;pink&quot;&gt;</code><br>可以出现一个颜色选择框，默认选好是粉色</p>
+<h4 id="范围"><a href="#范围" class="headerlink" title="范围"></a>范围</h4><p><code>&lt;input type=&quot;range&quot; name=&quot;points&quot; min=&quot;0&quot; max=&quot;10&quot;&gt;</code>可以出现一个滑动条，最小值是0，最大值是10。</p>
+<h4 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h4><p><code>&lt;input type=&quot;date&quot; name=&quot;出行日期&quot;&gt;</code><br>你一定买过火车票，在你选择出行日期时，那个包含年月日的选择框，就是这个</p>
+<p>还有跟这个类似的type，比如：</p>
+<ul>
+<li><code>&lt;input type=&quot;month&quot;&gt;</code> 这个只能选到月份</li>
+<li><code>&lt;input type=&quot;week&quot;&gt;</code></li>
+<li><code>&lt;input type=&quot;time&quot;&gt;</code>这个呢，就是选一个时间，24小时制</li>
+</ul>
+<h4 id="邮件"><a href="#邮件" class="headerlink" title="邮件"></a>邮件</h4><p><code>&lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;</code>这个就是自动检测你输入的邮件地址是否合法，比如有没有@，</p>
+<h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><p><code>&lt;input type=&quot;tel&quot; name=&quot;主页&quot;&gt;</code>这个最简单了，检测你输入的url是否合法，比如我们在浏览器上改主页设置时，就会用到。</p>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p>把前面几个代码放上来，不知道能否正确显示：</p>
+<form><br>  Add your homepage:<br>  <input type="url" name="homepage"><br><br>your email:<br><input type="email" name="email"><br><br>your date:<input type="date" name="出行日期"><br><br><br>input range:<input type="range" name="points" min="0" max="10"><br><br><br>choose a color:<input type="color" name="favcolor" value="pink"><br><br><br><br>  <input type="submit"><br></form>
+
+
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p>在 <code>&lt;input&gt;</code> 中还有许多特性，比如disabled（禁用，你在text表单中加上这个，这一栏就不能更改了），再比如 <code>&lt;input type=&quot;text&quot; name=&quot;名字&quot; size=&quot;30&quot;&gt;</code>，这个意思就是最长允许输入30个字符</p>
+<p>还有很多，边用边学吧！</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/posts/uncategorized/2016-11-19-html笔记-表单1.html" class="archive-article-date">
+  	<time datetime="2016-11-19T08:31:01.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-19</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html笔记/">html笔记</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-杂谈-驴得水" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -288,85 +400,6 @@
 
 
   
-    <article id="post-html笔记-美化4" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/uncategorized/2016-11-18-html笔记-美化4.html">html笔记-美化4</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="新的一天，空气可不好"><a href="#新的一天，空气可不好" class="headerlink" title="新的一天，空气可不好"></a>新的一天，空气可不好</h1><p>今天继续讲一下，html的一些必要的，涉及到布局的标签，这个系列的笔记的目的，不是说看完就可以去搞前端了，而仅仅是希望能读懂网页的源代码，能够自己写一些静态的网页。仅此而已，学习是一种生活方式，没有那么多的目的。</p>
-<h2 id="html中的块和行"><a href="#html中的块和行" class="headerlink" title="html中的块和行"></a>html中的块和行</h2><p>就像我们写文章一样，有的要另起一行，变成新的段，这个叫block；有的呢，就是在句号后面的新的句子，这个叫inline（内嵌，在句子中的）。</p>
-<ul>
-<li>block-level有：<ul>
-<li><code>&lt;div&gt;</code></li>
-<li><code>&lt;h1&gt;-&lt;h6&gt;</code></li>
-<li><code>&lt;p&gt;</code></li>
-<li><code>&lt;form&gt;</code></li>
-</ul>
-</li>
-<li>inline-level的有：<ul>
-<li><code>&lt;span&gt;</code></li>
-<li><code>&lt;a&gt;</code></li>
-<li><code>&lt;img&gt;</code></li>
-</ul>
-</li>
-</ul>
-<p>简单的小例子吧：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"background-color:powderblue;color:purple;padding:20px;"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h2</span>&gt;</span>以梦为马<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span>面对大河我无限惭愧</div><div class="line">我年华虚度 空有一身疲倦</div><div class="line">和所有以梦为马的诗人一样  <span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">岁月易逝 一滴不剩 水滴中有一匹马儿一命 归天</div><div class="line"><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>效果：<br><img src="/asset/blogimg/meihua4/block.jpg" alt="block.jpg"></p>
-<h2 id="html中的class类"><a href="#html中的class类" class="headerlink" title="html中的class类"></a>html中的class类</h2><p>可以与刚刚说的block和inline一起使用，在 <code>&lt;head&gt;</code>中定义 <code>&lt;style&gt;</code>声明一个类名，定义这个类的背景色，字体颜色，边框等等，然后在 <code>&lt;div&gt;</code><br>或 <code>&lt;p/span&gt;</code>中加一个 <code>&lt;class=&quot;类的名字&quot;&gt;</code></p>
-<p>比如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">span</span><span class="selector-class">.note</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">150%</span>;</div><div class="line">    <span class="attribute">color</span>: pink;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>My <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"note"</span>&gt;</span>Important<span class="tag">&lt;/<span class="name">span</span>&gt;</span> Heading<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is some <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"note"</span>&gt;</span>important<span class="tag">&lt;/<span class="name">span</span>&gt;</span> text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>效果：<br><img src="/asset/blogimg/meihua4/class.jpg" alt="class.jpg"></p>
-<h2 id="页面中的页面iframe"><a href="#页面中的页面iframe" class="headerlink" title="页面中的页面iframe"></a>页面中的页面iframe</h2><p>iframe，如它的字面意思，就是页面中的页面，用 <code>&lt;iframe src=&quot;链接&quot;&gt;</code>这个标签，和前面的一样，可以在标签里定义它的style，我们来做一个页面中的百度：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"http://www.baidu.com"</span> <span class="attr">style</span>=<span class="string">"border:medium solid powderblue;width:600px;height:600px"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<iframe src="http://www.baidu.com" style="border:medium solid powderblue;width:600px;height:400px"></iframe>
-
-<blockquote>
-<p>是不是非常的酷炫?<br>你也可以的！加油</p>
-</blockquote>
-<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>到这里呢，html的页面基本要素就差不多了（当然，一定有许多，我没有涉及到的，你要自己google，尽量去阅读英文文档）</p>
-<h2 id="期待"><a href="#期待" class="headerlink" title="期待"></a>期待</h2><p>下一个系列，就会涉及到javascript，会使你的页面更加动态，更加有交互性！</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/posts/uncategorized/2016-11-18-html笔记-美化4.html" class="archive-article-date">
-  	<time datetime="2016-11-18T01:00:07.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-18</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html笔记/">html笔记</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
@@ -433,7 +466,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 15px;">js学习</a> <a href="/tags/python教程/" style="font-size: 10px;">python教程</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
+    				<a href="/tags/CSS笔记/" style="font-size: 10px;">CSS笔记</a> <a href="/tags/html笔记/" style="font-size: 20px;">html笔记</a> <a href="/tags/js学习/" style="font-size: 16.67px;">js学习</a> <a href="/tags/python教程/" style="font-size: 13.33px;">python教程</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/翻译教程/" style="font-size: 10px;">翻译教程</a>
     			</div>
     	</section>
     
